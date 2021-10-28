@@ -27,7 +27,9 @@
 
     <body>
         
-        @yield('content') 
+        <div class="container-fluid p-0" style="background-color:#EBEDEF; min-height: 100vh;">
+            @yield('content') 
+        </div>
 
         <script src="{{ asset('/css/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>

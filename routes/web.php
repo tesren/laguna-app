@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//public routes
 Route::get('/', function () {
     return view('pages.home');
 });
@@ -36,3 +38,8 @@ Route::get('/progress', function () {
 Route::get('/inventory', function () {
     return view('pages.inventory');
 });
+
+//admin routes
+Route::get('/admin/messages', 'MessagesController@index');
+Route::get('/admin/messages/{id}', 'MessagesController@show');
+Route::get('/admin/dashboard',[DashboardController::class, 'index'])->name('dashboard');
