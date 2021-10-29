@@ -27,7 +27,7 @@
 
     <body>
         
-        <div class="container-fluid p-0" style="background-color:#EBEDEF; min-height: 100vh;">
+        <div class="row justify-content-center" style="background-color:#EBEDEF; min-height: 100vh;">
             @yield('content') 
         </div>
 

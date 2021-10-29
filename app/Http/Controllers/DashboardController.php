@@ -12,6 +12,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('admin.dashboard', ['messages' => Message::all() ]);
+        return view('admin.dashboard', ['messages' => Message::all(),  ]);
     }
 }

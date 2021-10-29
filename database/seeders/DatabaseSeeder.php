@@ -32,6 +32,8 @@ class DatabaseSeeder extends Seeder
             TowerSeeder::class,
             UnitSeeder::class,
             MessagesSeeder::class,
+            ProgressSeeder::class,
+            ProgressPostsSeeder::class,
         ]);
     }
 }

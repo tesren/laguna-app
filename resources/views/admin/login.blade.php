@@ -2,9 +2,7 @@
 
 @section('content')
 
-    <div class="row justify-content-center text-center pt-5">
-
-        <div class="col-12 col-md-8 col-lg-4">
+        <div class="col-12 col-md-8 col-lg-4 text-center pt-5">
             <img class="w-100" src="{{asset('/assets/img/laguna-logo-negro.png')}}" alt="Laguna Logo">
 
             <div class="card shadow-8 w-100">
@@ -61,6 +59,5 @@
 
         </div>
 
-    </div>
     
 @endsection

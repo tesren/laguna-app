@@ -22,6 +22,15 @@ html, body{
     font-weight: bold;
 }
 
+.bg-green{
+    background-color:#275F60;
+    color: #ffffff;
+}
+
+.bg-darkgreen{
+    background-color: #1E4748;
+}
+
 .secondary-text{
     color:#6c757d !important;
 }
@@ -29,6 +38,43 @@ html, body{
 input{
     accent-color: #1E4748 ;
 }
+
+/*sidebar*/
+#sidebar{
+    min-height: 100vh;
+    width: 320px;
+}
+
+#sidebar .nav-item:hover{
+    background-color: #1E4748;
+    transition: 0.2s;
+    animation: ease-in-out;
+}
+
+/*Dashboard*/
+#dashboard .card strong{
+    font-size: 3rem;
+}
+
+#dashboard .card a{
+    position: absolute;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+#dashboard .card{
+    height: 220px;
+}
+
+.bg-blue{
+    background-color: #25607D ;
+    color: #ffffff;
+}
+
+.bg-darkblue{
+    background-color: #1D4D64;
+}
+
 
 @media (max-width: 767px) {
 }
