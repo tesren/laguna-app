@@ -26,6 +26,7 @@ class MessagesSeeder extends Seeder
                     'subject' => $faker->sentence(4,true),
                     'email' => $faker->unique()->safeEmail(),
                     'phone' =>random_int(3221111111, 3229999999),
+                    'type' =>'General',
                     'unit' => random_int(1, 100),
                     'content' => $faker->paragraph(3,true),
                     'created_at' => $faker->date(),

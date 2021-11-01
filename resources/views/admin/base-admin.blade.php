@@ -22,7 +22,8 @@
         <link href="https://www.dafontfree.net/embed/c2Fja2Vycy1nb3RoaWMtbGlnaHQtYXQtcmVndWxhciZkYXRhLzQ2L3MvNjMyODYvU2Fja2VycyBHb3RoaWMgTGlnaHQgQVQub3Rm" rel="stylesheet" type="text/css"/>
         <!--Styles-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-style.css') }}"/>
-        
+        {{--Data tables--}}
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}"/>
     </head>
 
     <body>
@@ -31,8 +32,13 @@
             @yield('content') 
         </div>
 
-        <script src="{{ asset('/css/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ asset('/js/jquery-3.3.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/datatables.min.js') }}"></script>
+        <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
+        @yield('javascript')
+
+        @include('admin.shared.footer')
     </body>
 
 </html>

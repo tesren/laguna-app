@@ -18,7 +18,7 @@ class CreateUnitsTable extends Migration
             $table->string('name');
             $table->integer('tower_id')->index();
             $table->integer('type_id')->index();
-            $table->string('unit_floor')->nullable();
+            $table->string('floor')->nullable();
             $table->double('price')->unsigned();
             $table->string('status');
             $table->boolean('visible')->default(1);

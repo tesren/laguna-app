@@ -19,10 +19,11 @@ class CreateMessagesTable extends Migration
             $table->string('subject');
             $table->string('email');
             $table->string('phone')->nullable();
+            $table->string('type')->nullable();
             $table->string('unit')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();
-            $table->softDeletes();
+            //$table->softDeletes();
         });
     }
 

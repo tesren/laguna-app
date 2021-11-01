@@ -41,6 +41,8 @@ input{
 
 /*sidebar*/
 #sidebar{
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
     width: 320px;
 }
@@ -49,6 +51,16 @@ input{
     background-color: #1E4748;
     transition: 0.2s;
     animation: ease-in-out;
+}
+/*footer*/
+footer{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid rgb(194, 195, 197);
+    height: 46px;
 }
 
 /*Dashboard*/
@@ -66,6 +78,10 @@ input{
     height: 220px;
 }
 
+.units .card{
+    height: 150px !important;
+}
+
 .bg-blue{
     background-color: #25607D ;
     color: #ffffff;
@@ -75,6 +91,35 @@ input{
     background-color: #1D4D64;
 }
 
+#prog-thumbnail{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/*Units*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #0d6efd;
+    box-shadow: 0 5px 5px -3px #0003,0 8px 10px 1px #00000024,0 3px 14px 2px #0000001f;
+}
+.nav-pills .link-success.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #198754;
+    box-shadow: 0 5px 5px -3px #0003,0 8px 10px 1px #00000024,0 3px 14px 2px #0000001f;
+}
+
+.nav-pills .link-danger.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #dc3545;
+    box-shadow: 0 5px 5px -3px #0003,0 8px 10px 1px #00000024,0 3px 14px 2px #0000001f;
+}
+
+.nav-pills .link-warning.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #ffc107;
+    box-shadow: 0 5px 5px -3px #0003,0 8px 10px 1px #00000024,0 3px 14px 2px #0000001f;
+}
 
 @media (max-width: 767px) {
 }

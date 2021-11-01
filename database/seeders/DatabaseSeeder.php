@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             MessagesSeeder::class,
             ProgressSeeder::class,
             ProgressPostsSeeder::class,
+            ProgressImgsSeeder::class,
         ]);
     }
 }

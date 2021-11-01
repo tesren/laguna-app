@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\UnitsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +43,15 @@ Route::get('/inventory', function () {
 });
 
 //admin routes
-Route::get('/admin/messages', 'MessagesController@index');
-Route::get('/admin/messages/{id}', 'MessagesController@show');
-Route::get('/admin/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+Route::prefix('admin')->group(function () {
+    Route::get('/messages', [MessagesController::class, 'index'])->name('all.messages');
+    Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('show.message');
+    Route::delete('/messages/{id}/delete', [MessagesController::class, 'destroy'])->name('delete.message');
+
+    Route::get('/units', [UnitsController::class, 'index'])->name('all.units');
+
+    Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+
+});
+
+
