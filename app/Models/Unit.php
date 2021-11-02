@@ -17,7 +17,7 @@ class Unit extends Model
 
     public function tower()
     {
-        return $this->belongsTo( Shape::class, 'tower_id' );
+        return $this->belongsTo( Tower::class, 'tower_id' );
     }
 
     public function shape()

@@ -29,23 +29,23 @@
 
                     <div class="card shadow-7">
                         <div class="card-header">
-                            <i class="fas fa-envelope-open-text"></i>
+                            <i class="far fa-list-alt"></i>
                             Todas las unidades
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped" id="all_units_table" data-page-length='10'>
+                            <table class="table table-responsive-sm table-striped table-bordered" id="all_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
-                                    <th class="table-secondary">Unidad</th>
+                                    <th>Unidad</th>
                                     <th>Tipo</th>
-                                    <th class="table-secondary">BR</th>
+                                    <th>BR</th>
                                     <th>BA</th>
-                                    <th class="table-secondary">Torre</th>
+                                    <th>Torre</th>
                                     <th>Nivel</th>
-                                    <th class="table-secondary">Estado</th>
+                                    <th>Estado</th>
                                     <th>Precio</th>
-                                    <th class="table-secondary text-center">Acciones</th>
+                                    <th class="text-center">Acciones</th>
                                   </tr>
                                 </thead>
                 
@@ -54,15 +54,15 @@
                                   @foreach($units->all() as $unit)
                                         <tr>
                                             <td>{{ $unit->name; }}</td>
-                                            <td>{{ $unit->type_id; }} </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>{{$unit->tower_id}}</td>
+                                            <td>{{ $unit->unitType->name; }}</td>
+                                            <td>{{ $unit->unitType->bedrooms; }}</td>
+                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td>{{$unit->tower->name}}</td>
                                             <td>{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="{{ route('show.message', ['id' => 1] ) }}" class="btn btn-primary">Editar</a>
+                                                <a href="{{ route('show.unit', ['id' => $unit->id] ) }}" class="btn btn-primary">Editar</a>
                                             </td>
                                         </tr>
                                   @endforeach
@@ -83,18 +83,18 @@
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped" id="avaliable_units_table" data-page-length='10'>
+                            <table class="table table-responsive-sm table-striped table-bordered" id="avaliable_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
-                                    <th class="table-secondary">Unidad</th>
+                                    <th>Unidad</th>
                                     <th>Tipo</th>
-                                    <th class="table-secondary">BR</th>
+                                    <th>BR</th>
                                     <th>BA</th>
-                                    <th class="table-secondary">Torre</th>
+                                    <th>Torre</th>
                                     <th>Nivel</th>
-                                    <th class="table-secondary">Estado</th>
+                                    <th>Estado</th>
                                     <th>Precio</th>
-                                    <th class="table-secondary text-center">Acciones</th>
+                                    <th class="text-center">Acciones</th>
                                   </tr>
                                 </thead>
                 
@@ -103,15 +103,15 @@
                                   @foreach($avaliableUnits->all() as $unit)
                                         <tr>
                                             <td>{{ $unit->name; }}</td>
-                                            <td>{{ $unit->type_id; }} </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>{{$unit->tower_id}}</td>
+                                            <td>{{ $unit->unitType->name; }}</td>
+                                            <td>{{ $unit->unitType->bedrooms; }}</td>
+                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td>{{$unit->tower->name}}</td>
                                             <td>{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="{{ route('show.message', ['id' => 1] ) }}" class="btn btn-primary">Editar</a>
+                                              <a href="{{ route('show.unit', ['id' => $unit->id] ) }}" class="btn btn-primary">Editar</a>
                                             </td>
                                         </tr>
                                   @endforeach
@@ -131,18 +131,18 @@
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped" id="onHold_units_table" data-page-length='10'>
+                            <table class="table table-responsive-sm table-striped table-bordered" id="onHold_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
-                                    <th class="table-secondary">Unidad</th>
+                                    <th>Unidad</th>
                                     <th>Tipo</th>
-                                    <th class="table-secondary">BR</th>
+                                    <th>BR</th>
                                     <th>BA</th>
-                                    <th class="table-secondary">Torre</th>
+                                    <th>Torre</th>
                                     <th>Nivel</th>
-                                    <th class="table-secondary">Estado</th>
+                                    <th>Estado</th>
                                     <th>Precio</th>
-                                    <th class="table-secondary text-center">Acciones</th>
+                                    <th class="text-center">Acciones</th>
                                   </tr>
                                 </thead>
                 
@@ -151,15 +151,15 @@
                                   @foreach($onHoldUnits->all() as $unit)
                                         <tr>
                                             <td>{{ $unit->name; }}</td>
-                                            <td>{{ $unit->type_id; }} </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>{{$unit->tower_id}}</td>
+                                            <td>{{ $unit->unitType->name; }}</td>
+                                            <td>{{ $unit->unitType->bedrooms; }}</td>
+                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td>{{$unit->tower->name}}</td>
                                             <td>{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="{{ route('show.message', ['id' => 1] ) }}" class="btn btn-primary">Editar</a>
+                                              <a href="{{ route('show.unit', ['id' => $unit->id] ) }}" class="btn btn-primary">Editar</a>
                                             </td>
                                         </tr>
                                   @endforeach
@@ -179,18 +179,18 @@
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped" id="sold_units_table" data-page-length='10'>
+                            <table class="table table-responsive-sm table-striped table-bordered" id="sold_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
-                                    <th class="table-secondary">Unidad</th>
+                                    <th>Unidad</th>
                                     <th>Tipo</th>
-                                    <th class="table-secondary">BR</th>
+                                    <th>BR</th>
                                     <th>BA</th>
-                                    <th class="table-secondary">Torre</th>
+                                    <th>Torre</th>
                                     <th>Nivel</th>
-                                    <th class="table-secondary">Estado</th>
+                                    <th>Estado</th>
                                     <th>Precio</th>
-                                    <th class="table-secondary text-center">Acciones</th>
+                                    <th class="text-center">Acciones</th>
                                   </tr>
                                 </thead>
                 
@@ -199,15 +199,15 @@
                                   @foreach($soldUnits->all() as $unit)
                                         <tr>
                                             <td>{{ $unit->name; }}</td>
-                                            <td>{{ $unit->type_id; }} </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>{{$unit->tower_id}}</td>
+                                            <td>{{ $unit->unitType->name; }}</td>
+                                            <td>{{ $unit->unitType->bedrooms; }}</td>
+                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td>{{$unit->tower->name}}</td>
                                             <td>{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="{{ route('show.message', ['id' => 1] ) }}" class="btn btn-primary">Editar</a>
+                                              <a href="{{ route('show.unit', ['id' => $unit->id] ) }}" class="btn btn-primary">Editar</a>
                                             </td>
                                         </tr>
                                   @endforeach

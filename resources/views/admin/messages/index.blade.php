@@ -15,14 +15,14 @@
             </div>
 
             <div class="card-body">
-                <table class="table table-responsive-sm table-striped" id="messages_table" data-page-length='10'>
+                <table class="table table-responsive-sm table-striped table-bordered" id="messages_table" data-page-length='10'>
                     <thead>
                       <tr>
-                        <th class="table-secondary">Nombre</th>
+                        <th>Nombre</th>
                         <th>Asunto</th>
-                        <th class="table-secondary">Correo</th>
+                        <th>Correo</th>
                         <th>Tipo de contacto</th>
-                        <th class="table-secondary text-center">Acciones</th>
+                        <th class="text-center">Acciones</th>
                       </tr>
                     </thead>
     

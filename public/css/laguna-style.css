@@ -1,6 +1,6 @@
 /*Estilos genereales*/
 html, body{
-    font-family: 'sackers-gothic-light-at-regular', sans-serif !important;
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 .row{
@@ -37,6 +37,13 @@ html, body{
 
 input{
     accent-color: #1E4748 ;
+}
+
+label{
+    color: gray;
+    font-size: 0.8rem;
+    padding-left: 0.3rem;
+    font-weight: lighter;
 }
 
 /*sidebar*/
