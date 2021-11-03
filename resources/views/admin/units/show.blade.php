@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form class="row" action="" method="post">
+                    <form class="row" action="{{route('edit.unit', $unit->id)}}" method="post">
                         @csrf
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="unit">Unidad</label>

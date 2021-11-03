@@ -10,7 +10,9 @@
             <div class="col-12 col-md-11 col-lg-10 card px-0 shadow-8">
 
                 <div class="card-header d-flex justify-content-between">
-                    <span class="fs-4"><i class="fas fa-envelope-open-text"></i> Mensaje</span>
+                    <span class="fs-4 d-block" style="align-self: center">
+                        <i class="fas fa-envelope-open-text"></i> Mensaje
+                    </span>
             
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">

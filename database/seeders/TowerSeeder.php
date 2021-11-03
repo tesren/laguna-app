@@ -20,11 +20,13 @@ class TowerSeeder extends Seeder
             [
                 'name' => 'Caoba',
                 'units' => '30',
+                'floors'=> 6,
                 'created_at' => now(),
             ],
             [
                 'name' => 'Cedro',
                 'units' => '36',
+                'floors'=> 7,
                 'created_at' => now(),
             ],
        ]);

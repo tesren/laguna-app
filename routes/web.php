@@ -5,7 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\UnitsController;
 use App\Http\Controllers\UnitTypesController;
-
+use App\Http\Controllers\TowersController;
 
 
 /*
@@ -50,12 +50,25 @@ Route::prefix('admin')->group(function () {
     Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('show.message');
     Route::delete('/messages/{id}/delete', [MessagesController::class, 'destroy'])->name('delete.message');
 
+    Route::get('/unit/create',[UnitsController::class, 'create'])->name('create.unit');
+    Route::post('/unit/store', [UnitsController::class, 'store'])->name('store.unit');
     Route::get('/units', [UnitsController::class, 'index'])->name('all.units');
     Route::get('/unit/{id}', [UnitsController::class, 'show'])->name('show.unit');
+    Route::post('/unit/{id}/update',[UnitsController::class, 'update'])->name('edit.unit');
 
     Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
+    Route::get('/prototypes/create', [UnitTypesController::class, 'create'])->name('create.type');
+    Route::post('/prototype/store', [UnitTypesController::class, 'store'])->name('store.type');
+    Route::get('/prototypes', [UnitTypesController::class, 'index'])->name('all.prototypes');
+    Route::get('/prototype/{id}', [UnitTypesController::class, 'edit'])->name('edit.prototypes');
+
     Route::post('/unit/types',[UnitTypesController::class, 'all'])->name('all.unit.types');
+    Route::post('/unit/{id}/update',[UnitTypesController::class, 'update'])->name('update.type');
+
+    Route::get('/tower/create', [TowersController::class, 'create'])->name('create.tower');
+    Route::get('/towers',[TowersController::class, 'index'])->name('all.towers');
+    Route::post('/tower/visible/{id}',[TowersController::class, 'changeVisibility'])->name('tower.visible');
 });
 
 

@@ -28,13 +28,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link link-light">
+                <a href="{{route('all.prototypes')}}" class="nav-link link-light">
                     <i class="fas fa-home"></i>
                     Prototipos
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link link-light">
+                <a href="{{route('all.towers')}}" class="nav-link link-light">
                     <i class="far fa-building"></i>
                     Torres
                 </a>

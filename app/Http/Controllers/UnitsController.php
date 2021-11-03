@@ -24,4 +24,42 @@ class UnitsController extends Controller
             'towers'    => Tower::all(), 
         ]);
     }
+
+    public function create(){
+        return view('admin.units.create', [
+            'unitTypes' => UnitType::all(),
+            'towers'    => Tower::all(), 
+        ]);
+    }
+
+    public function store(Request $request){
+        $unit = new Unit();
+        $unit->name = $request->input('unit');
+        $unit->tower_id = $request->input('tower');
+        $unit->type_id = $request->input('type');
+        $unit->floor = $request->input('floor');
+        $unit->price = $request->input('price');
+        $unit->status = $request->input('status');
+        $unit->created_at = now();
+        $unit->save();
+
+        $request->session()->flash('message', 'Unidad registrada exitosamente');
+        return redirect()->route('all.units');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $unit = Unit::find($id);
+        $unit->name = $request->input('unit');
+        $unit->tower_id = $request->input('tower');
+        $unit->type_id = $request->input('type');
+        $unit->floor = $request->input('floor');
+        $unit->price = $request->input('price');
+        $unit->status = $request->input('status');
+        $unit->updated_at = now();
+        $unit->save();
+        //$request->session()->flash('message', 'Cambios Guardados');
+        
+        return redirect()->route('all.units');
+    }
 }

@@ -46,6 +46,11 @@ label{
     font-weight: lighter;
 }
 
+tr:hover{
+    background-color: #d1e7dd;
+    transition: 0.2s;
+}
+
 /*sidebar*/
 #sidebar{
     position: relative;

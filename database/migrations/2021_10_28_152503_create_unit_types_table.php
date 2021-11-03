@@ -22,6 +22,7 @@ class CreateUnitTypesTable extends Migration
             $table->string('meters_total');
             $table->string('meters_int');
             $table->string('meters_ext');
+            $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

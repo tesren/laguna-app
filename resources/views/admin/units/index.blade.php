@@ -28,9 +28,13 @@
                 <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
 
                     <div class="card shadow-7">
-                        <div class="card-header">
+
+                        <div class="card-header d-flex justify-content-between">
+                          <span class="fs-5 d-block" style="align-self: center">
                             <i class="far fa-list-alt"></i>
                             Todas las unidades
+                          </span>
+                          <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
                         </div>
             
                         <div class="card-body">
@@ -77,10 +81,14 @@
                 {{-- Unidades Disponibles --}}
                 <div class="tab-pane fade" id="pills-avaliable" role="tabpanel" aria-labelledby="pills-avaliable-tab">
                     <div class="card shadow-7">
-                        <div class="card-header">
-                            <i class="fas fa-envelope-open-text"></i>
-                            Unidades Disponibles
-                        </div>
+
+                      <div class="card-header d-flex justify-content-between">
+                        <span class="fs-5 d-block" style="align-self: center">
+                          <i class="far fa-list-alt"></i>
+                          Unidades Disponibles
+                        </span>
+                        <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                      </div>
             
                         <div class="card-body">
                             <table class="table table-responsive-sm table-striped table-bordered" id="avaliable_units_table" data-page-length='10'>
@@ -125,9 +133,13 @@
                 {{-- Unidades Apartadas --}}
                 <div class="tab-pane fade" id="pills-hold" role="tabpanel" aria-labelledby="pills-hold-tab">
                     <div class="card shadow-7">
-                        <div class="card-header">
-                            <i class="fas fa-envelope-open-text"></i>
+
+                        <div class="card-header d-flex justify-content-between">
+                          <span class="fs-5 d-block" style="align-self: center">
+                            <i class="far fa-list-alt"></i>
                             Unidades Apartadas
+                          </span>
+                          <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
                         </div>
             
                         <div class="card-body">
@@ -173,10 +185,14 @@
                 {{-- Unidades Vendidas --}}
                 <div class="tab-pane fade" id="pills-sold" role="tabpanel" aria-labelledby="pills-sold-tab">
                     <div class="card shadow-7">
-                        <div class="card-header">
-                            <i class="fas fa-envelope-open-text"></i>
-                            Unidades Vendidas
-                        </div>
+
+                      <div class="card-header d-flex justify-content-between">
+                        <span class="fs-5 d-block" style="align-self: center">
+                          <i class="far fa-list-alt"></i>
+                          Unidades Vendidas
+                        </span>
+                        <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                      </div>
             
                         <div class="card-body">
                             <table class="table table-responsive-sm table-striped table-bordered" id="sold_units_table" data-page-length='10'>
