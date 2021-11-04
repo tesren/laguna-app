@@ -32,7 +32,7 @@
                         <div class="card-header d-flex justify-content-between">
                           <span class="fs-5 d-block" style="align-self: center">
                             <i class="far fa-list-alt"></i>
-                            Todas las unidades
+                            Todas las Unidades
                           </span>
                           <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
                         </div>

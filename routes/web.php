@@ -67,8 +67,10 @@ Route::prefix('admin')->group(function () {
     Route::post('/unit/{id}/update',[UnitTypesController::class, 'update'])->name('update.type');
 
     Route::get('/tower/create', [TowersController::class, 'create'])->name('create.tower');
+    Route::post('/tower/store', [TowersController::class, 'store'])->name('store.tower');
     Route::get('/towers',[TowersController::class, 'index'])->name('all.towers');
     Route::post('/tower/visible/{id}',[TowersController::class, 'changeVisibility'])->name('tower.visible');
+    Route::get('/tower/{id}', [TowersController::class, 'edit'])->name('edit.tower');
 });
 
 

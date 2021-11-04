@@ -15,7 +15,8 @@
             </div>
 
             <div class="card-body">
-                <form method="POST" action="">
+                <form method="POST" action="{{route('store.tower');}}" enctype="multipart/form-data">
+                    @csrf
                     <label for="name">Nombre de la Torre</label>
                     <input class="form-control mb-3" type="text" name="name" id="name" required>
 

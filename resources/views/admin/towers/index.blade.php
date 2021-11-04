@@ -35,7 +35,7 @@
                                 <td>{{ $tower->units; }}</td>
                                 <td>{{ $tower->floors; }}</td>
                                 <td class="d-flex justify-content-center">
-                                    <a href="" class="btn btn-primary me-1">Editar</a>
+                                    <a href="{{route('edit.tower',['id'=>$tower->id]);}}" class="btn btn-primary me-1">Editar</a>
 
                                     @if ($tower->visible == 1)
                                         <form action="{{route('tower.visible',['id'=>$tower->id]);}}" method="post">
