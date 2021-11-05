@@ -18,7 +18,7 @@ class CreateTowersTable extends Migration
             $table->string('name');
             $table->integer('units')->unsigned()->nullable();
             $table->integer('floors')->unsigned()->nullable();
-            $table->string('render_url')->nullable();
+            //$table->string('render_url')->nullable();
             $table->boolean('visible')->default(0);
             $table->timestamps();
             $table->softDeletes();

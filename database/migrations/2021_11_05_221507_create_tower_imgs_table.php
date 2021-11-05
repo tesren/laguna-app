@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUnitTypesImgTable extends Migration
+class CreateTowerImgsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateUnitTypesImgTable extends Migration
      */
     public function up()
     {
-        Schema::create('unit_types_img', function (Blueprint $table) {
+        Schema::create('tower_imgs', function (Blueprint $table) {
             $table->id();
-            $table->integer('unit_type_id')->index();
+            $table->integer('tower_id')->index();
             $table->string('url')->nullable();
             $table->string('type')->nullable();
             $table->string('size')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -31,6 +30,6 @@ class CreateUnitTypesImgTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unit_types_img');
+        Schema::dropIfExists('tower_imgs');
     }
 }

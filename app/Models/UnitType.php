@@ -16,4 +16,9 @@ class UnitType extends Model
         return $this->hasMany( Unit::class );
     }
 
+    public function images()
+    {
+        return $this->hasMany( UnitTypesImg::class );
+    }
+
 }

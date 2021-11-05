@@ -5,9 +5,9 @@
 
 <div class="col">
 
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center my-5">
 
-        <div class="col-12 col-md-10 col-lg-8 card px-0 shadow-8">
+        <div class="col-12 col-md-11 col-lg-8 card px-0 shadow-8">
 
             <div class="card-header">
                 <i class="fas fa-home"></i>
@@ -16,7 +16,7 @@
 
             <div class="card-body">
 
-                <form class="row" action="{{route('store.type');}}" method="post">
+                <form class="row" action="{{route('store.type');}}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="col-12 mb-3">
@@ -59,8 +59,24 @@
                         <textarea class="form-control" name="description" id="description" maxlength="500" rows="4"></textarea>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="mainfile" class="form-label">Suba la imagen principal de la unidad</label>
+                        <input class="form-control" type="file" id="mainfile" name="mainfile" accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="imgfiles" class="form-label">Suba imágenes para la galería</label>
+                        <input class="form-control" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                    </div>
+
+                    @if (session('errors'))
+                        <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                            <i class="fas fa-exclamation-circle"></i> Cada imagen debe pesar menos de 2 MB.
+                        </span>
+                    @endif
+
                     <div class="col-12">
-                        <button type="submit" class="btn btn-success w-100">Registrar Prototipo</button>
+                        <button type="submit" class="btn btn-success w-100" onclick="this.disabled=true;this.form.submit();">Registrar Prototipo</button>
                     </div>
                     
                 </form>

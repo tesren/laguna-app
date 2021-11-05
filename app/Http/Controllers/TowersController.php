@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tower;
+use App\Models\TowerImg;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Validator;
 
 class TowersController extends Controller
 {
@@ -25,19 +27,71 @@ class TowersController extends Controller
         $tower->units = $request->input('units');
         $tower->floors = $request->input('floors');
         $tower->created_at = now();
-      
+        $tower->save();
 
-        $nameImg = 'img-render-'.strtolower(str_replace(" ", "", $request->input('name')));
+        //crear imagenes en 3 tamaños
+        //large
+        $mainImg = new TowerImg();
+        $mainImg->tower_id = $tower->id;
+        $mainImg->type = 'main';
+        $mainImg->size = 'large';
+
+        $nameImg = 'img-torre-large-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
         
-        $imgPath = storage_path() . '/app/public/img/towers/' . $nameImg.'.webp';
+        $imgPath = storage_path() . '/app/public/img/towers/' . $nameImg;
 
         $imgFile = $request->file('imgfile');
 
-        Image::make($imgFile)->save($imgPath.'.webp', 90, 'webp');
+        Image::make($imgFile)->resize(1920, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($imgPath, 100, 'webp');
 
         //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-        $tower->render_url = '/storage/img/towers/'.$nameImg.'.webp';
-        $tower->save();
+        $mainImg->url = '/storage/img/towers/'.$nameImg;
+        $mainImg ->created_at = now();
+        $mainImg->save();
+
+        //medium img
+        $mainImgMed = new TowerImg();
+        $mainImgMed->tower_id = $tower->id;
+        $mainImgMed->type = 'main';
+        $mainImgMed->size = 'medium';
+
+        $nameImgMed = 'img-torre-medium-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+        
+        $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgMed;
+
+
+        Image::make($imgFile)->resize(1000, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($imgPath, 90, 'webp');
+
+        //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+        $mainImgMed->url = '/storage/img/towers/'.$nameImgMed;
+        $mainImgMed ->created_at = now();
+        $mainImgMed->save();
+
+
+         //small img
+         $mainImgSm = new TowerImg();
+         $mainImgSm->tower_id = $tower->id;
+         $mainImgSm->type = 'main';
+         $mainImgSm->size = 'small';
+ 
+         $nameImgSm = 'img-torre-small-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+         
+         $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgSm;
+ 
+ 
+         Image::make($imgFile)->resize(600, null, function ($constraint) {
+             $constraint->aspectRatio();
+         })->save($imgPath, 80, 'webp');
+ 
+         //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+         $mainImgSm->url = '/storage/img/towers/'.$nameImgSm;
+         $mainImgSm ->created_at = now();
+         $mainImgSm->save();
+        
 
         $request->session()->flash('message', 'Torre Registrada Existosamente');
         return redirect()->route('all.towers');
@@ -55,5 +109,32 @@ class TowersController extends Controller
 
     public function edit($id){
         return view('admin.towers.edit', ['tower' => Tower::find($id) ]);
+    }
+
+    public function update(Request $request, $id){
+        $tower = Tower::find($id);
+        $tower->name = $request->input('name');
+        $tower->units = $request->input('units');
+        $tower->floors = $request->input('floors');
+        
+        if(!empty($request->file('imgfile'))){
+
+            $nameImg = 'img-render-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+        
+            $imgPath = storage_path() . '/app/public/img/towers/' . $nameImg;
+    
+            $imgFile = $request->file('imgfile');
+    
+            Image::make($imgFile)->save($imgPath, 90, 'webp');
+    
+            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+            $tower->render_url = '/storage/img/towers/'.$nameImg;
+        }
+
+        $tower->updated_at = now();
+        $tower->save();
+
+        $request->session()->flash('message', 'Cambios Guardados');
+        return redirect()->route('all.towers');
     }
 }

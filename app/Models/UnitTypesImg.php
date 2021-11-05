@@ -11,4 +11,9 @@ class UnitTypesImg extends Model
 
     protected $table = "unit_types_img";
 
+    public function unitType()
+    {
+        return $this->hasOne( UnitType::class );
+    }
+
 }

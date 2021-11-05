@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\UnitsController;
 use App\Http\Controllers\UnitTypesController;
+use App\Http\Controllers\UnitTypesImgController;
 use App\Http\Controllers\TowersController;
 
 
@@ -71,6 +72,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/towers',[TowersController::class, 'index'])->name('all.towers');
     Route::post('/tower/visible/{id}',[TowersController::class, 'changeVisibility'])->name('tower.visible');
     Route::get('/tower/{id}', [TowersController::class, 'edit'])->name('edit.tower');
+    Route::post('/tower/{id}/update',[TowersController::class, 'update'])->name('update.tower');
+
+    Route::get('/unit-type/{id}/upload', [UnitTypesImgController::class, 'upload'])->name('upload.type.imgs');
+
 });
 
 

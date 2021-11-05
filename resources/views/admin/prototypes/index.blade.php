@@ -37,12 +37,11 @@
                                 <td>{{ $type->name; }}</td>
                                 <td>{{ $type->bedrooms; }}</td>
                                 <td>{{ $type->bathrooms; }}</td>
-                                <td>{{$type->meters_total}}</td>
-                                <td>{{$type->meters_int}}</td>
-                                <td>{{$type->meters_ext}}</td>
+                                <td>{{$type->meters_total}} m²</td>
+                                <td>{{$type->meters_int}} m²</td>
+                                <td>{{$type->meters_ext}} m²</td>
                                 <td class="d-flex justify-content-evenly">
                                     <a href="{{route('edit.prototypes', ['id' => $type->id])}}" class="btn btn-primary">Editar</a>
-                                    <a href="" class="btn btn-primary"><i class="far fa-images"></i></a>
                                 </td>
                             </tr>
                       @endforeach

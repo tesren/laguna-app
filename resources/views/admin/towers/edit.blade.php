@@ -5,7 +5,7 @@
 
 <div class="col">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4">
 
         <div class="col-12 col-md-10 col-lg-6 card px-0 shadow-8">
 
@@ -16,24 +16,25 @@
             </div>
 
             <div class="card-body">
-                <form method="POST" action="" enctype="multipart/form-data">
+                <form method="POST" action="{{route('update.tower',['id'=>$tower->id]);}}" enctype="multipart/form-data">
                     @csrf
                     <label for="name">Nombre de la Torre</label>
-                    <input class="form-control mb-3" type="text" name="name" id="name" value="{{$tower->name}}" required>
+                    <input class="form-control mb-3" type="text" name="name" id="name" value="{{$tower->name}}" required onchange="enableBtn();">
 
                     <label for="units">Unidades en venta</label>
-                    <input class="form-control mb-3" type="number" min="0" step="1" name="units" id="units" value="{{$tower->units}}" required>
+                    <input class="form-control mb-3" type="number" min="0" step="1" name="units" id="units" value="{{$tower->units}}" required onchange="enableBtn();">
 
                     <label for="floors">Pisos</label>
-                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" value="{{$tower->floors}}" required>
+                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" value="{{$tower->floors}}" required onchange="enableBtn();">
 
                     <div class="mb-4">
-                        <label for="imgfile" class="form-label">Render de la Torre</label>
-                        <img class="w-100" src="{{asset($tower->render_url);}}" alt="Imagen">
-                        <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg">
+                        <label class="form-label">Render Actual de la Torre</label>
+                        <img class="w-100 mb-2" src="{{asset($tower->images($tower->id, 'large')->url);}}" alt="Imagen">
+                        <label for="imgfile" class="form-label">Elige un nuevo render</label>
+                        <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg" onchange="enableBtn();">
                     </div>
 
-                    <button class="btn btn-primary w-100" type="submit">Guardar Cambios</button>
+                    <button id="update" class="btn btn-primary w-100 disabled" type="submit">Guardar Cambios</button>
                 </form>
             </div>
 
@@ -43,4 +44,14 @@
 </div>
 
 
+@endsection
+
+@section('javascript')
+    <script>
+
+        function enableBtn(){
+            $('#update').removeClass('disabled');
+        }
+        
+    </script>
 @endsection
