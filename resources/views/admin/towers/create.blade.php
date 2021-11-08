@@ -23,15 +23,15 @@
                     <label for="units">Unidades en venta</label>
                     <input class="form-control mb-3" type="number" min="0" step="1" name="units" id="units" required>
 
-                    <label for="floors">Pisos</label>
-                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" required>
+                    {{-- <label for="floors">Pisos</label>
+                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" required> --}}
 
                     <div class="mb-4">
                         <label for="imgfile" class="form-label">Render de la Torre</label>
                         <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg" required>
                     </div>
 
-                    <button class="btn btn-success w-100" type="submit">Registrar Torre</button>
+                    <button class="btn btn-success w-100" type="submit" onclick="this.disabled=true;this.form.submit();">Registrar Torre</button>
                 </form>
             </div>
 

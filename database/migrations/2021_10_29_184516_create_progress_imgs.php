@@ -16,8 +16,9 @@ class CreateProgressImgs extends Migration
         Schema::create('progress_imgs', function (Blueprint $table) {
             $table->id();
             $table->integer('progress_post_id')->index();
-            $table->string('image_title')->nullable();
-            $table->string('image_url')->nullable();
+            //$table->string('title')->nullable();
+            $table->string('url')->nullable();
+            $table->string('size')->nullable();
             $table->timestamps();
         });
     }

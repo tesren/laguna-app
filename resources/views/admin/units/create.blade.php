@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="col-12">
-                            <button id="store" type="submit" class="btn btn-success w-100">Registrar Unidad</button>
+                            <button id="store" type="submit" class="btn btn-success w-100" onclick="this.disabled=true;this.form.submit();">Registrar Unidad</button>
                         </div>
 
                     </form>

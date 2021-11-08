@@ -40,7 +40,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link link-light">
+                <a href="{{route('all.progress');}}" class="nav-link link-light">
                     <i class="fas fa-hammer"></i>
                     Progreso
                 </a>

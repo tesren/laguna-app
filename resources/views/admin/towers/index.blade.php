@@ -22,7 +22,7 @@
                       <tr>
                         <th>Nombre</th>
                         <th>Unidades</th>
-                        <th>Pisos</th>
+                        <th>Visible</th>
                         <th class="text-center">Acciones</th>
                       </tr>
                     </thead>
@@ -33,7 +33,13 @@
                             <tr>
                                 <td>{{ $tower->name; }}</td>
                                 <td>{{ $tower->units; }}</td>
-                                <td>{{ $tower->floors; }}</td>
+                                <td>
+                                    @if ($tower->visible == 0)
+                                        No
+                                    @else
+                                        Si   
+                                    @endif
+                                </td>
                                 <td class="d-flex justify-content-center">
                                     <a href="{{route('edit.tower',['id'=>$tower->id]);}}" class="btn btn-primary me-1">Editar</a>
 

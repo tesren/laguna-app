@@ -12,10 +12,7 @@ class TowerImg extends Model
     protected $table = "tower_imgs";
 
     public function tower(){
-        return $this->hasOne( TowerImg::class, 'tower_id');
+        return $this->belongsTo( TowerImg::class, 'tower_id');
     }
 
-    public function getMediaUrl($tower, $size){
-        return TowerImg::where('tower_id', $tower)->orWhere('size', $size)->first();
-    }
 }

@@ -11,4 +11,9 @@ class ProgressPost extends Model
 
     protected $table = "progress_posts";
 
+    public function images()
+    {
+        return $this->hasMany( ProgressImg::class, 'progress_post_id');
+    }
+
 }

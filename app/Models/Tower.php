@@ -19,8 +19,8 @@ class Tower extends Model
         return $this->hasMany( Shape::class, 'tower_id');
     }
 
-    public function images($tower, $size)
+    public function images()
     {
-        return TowerImg::where('tower_id', $tower)->orWhere('size', $size)->first();
+        return $this->hasMany( TowerImg::class, 'tower_id');
     }
 }

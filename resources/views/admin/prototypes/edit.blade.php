@@ -5,8 +5,8 @@
 
 <div class="col">
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-12 col-md-10 col-lg-8 card shadow-8 px-0">
+    <div class="row justify-content-center my-4">
+        <div class="col-12 col-md-10 col-lg-7 card shadow-8 px-0">
 
             <div class="card-header">
                 <i class="fas fa-home"></i>
@@ -16,7 +16,7 @@
 
             <div class="card-body">
 
-                <form class="row" action="{{route('update.type', ['id'=>$prototype->id]);}}" method="post">
+                <form class="row" action="{{route('update.type', ['id'=>$prototype->id]);}}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="col-12 mb-3">
@@ -59,8 +59,65 @@
                         <textarea class="form-control" name="description" id="description" rows="4" maxlength="500" onchange="enableBtn();">{{$prototype->description}}</textarea>
                     </div>
 
+                    @php
+                        $mainImg = $imgs->where('unit_type_id', $prototype->id)->where('type', 'main')->where('size', 'large')->first();
+                    @endphp
+
+                    @if (!empty($mainImg->url))
+                        <div class="col-12 mb-3 text-center">
+                            <label class="d-block text-start" for="description">Render actual</label>
+                            <img class="w-75" src="{{asset($mainImg->url);}}" alt="Render actual">
+                        </div>
+                    @endif
+
+                    <div class="col-12 mb-3">
+                        <label for="mainfile" class="form-label d-block">Elige un nuevo render</label>
+                        <input class="form-control" type="file" id="mainfile" name="mainfile" accept=".jpg, .jpeg, .png, .webp, .svg" onchange="enableBtn();">
+                    </div>
+
+                    @php
+                        $galleryImgs = $imgs->where('unit_type_id', $prototype->id)->where('type', 'gallery')->where('size', 'large');
+                    @endphp
+
+                    @if (!empty($galleryImgs))
+                        <div class="col-12 mb-3">
+                            <label for="description">Galería actual</label>
+                            
+                            <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    @php $i=0; @endphp
+                                    @foreach ($galleryImgs as $img)
+
+                                        <div class="carousel-item @if($i==0) active @endif">
+                                            <img src="{{asset($img->url);}}" class="d-block w-100" alt="...">
+                                        </div>
+                                        @php $i++; @endphp
+                                    @endforeach
+                    
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+
+                              </div>
+
+                        </div>
+                    @endif
+
+                    <div class="col-12 mb-3">
+                        <label for="imgfiles" class="form-label d-block">Elige imágenes para la galería</label>
+                        <input class="form-control" type="file" id="imgfiles" name="imgfiles[]" accept=".jpg, .jpeg, .png, .webp, .svg" multiple onchange="enableBtn();">
+                    </div>
+
                     <div class="col-12">
-                        <button id="update" type="submit" class="btn btn-primary w-100 disabled">Guardar Cambios</button>
+                        <button id="update" type="submit" class="btn btn-primary w-100 disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                     </div>
                     
                 </form>

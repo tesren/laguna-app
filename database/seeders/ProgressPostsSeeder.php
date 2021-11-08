@@ -22,10 +22,10 @@ class ProgressPostsSeeder extends Seeder
 
             DB::table('progress_posts')->insert([
                 [
-                    'titulo' => $faker->sentence(4,true),
+                    'title' => $faker->sentence(4,true),
                     'date' => $faker->date(),
                     'description' => $faker->paragraph(3,true),
-                    'visible' =>'1',
+                    //'visible' =>'1',
                     'created_at' => now(),
                 ],
            ]);

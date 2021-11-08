@@ -18,20 +18,20 @@ class ProgressImgsSeeder extends Seeder
         DB::table('progress_imgs')->insert([
             [
                 'progress_post_id' => '1',
-                'image_title' => 'Inicio de Obra',
-                'image_url' => '/assets/img/construction/inicio-obra.jpeg',
+                //'image_title' => 'Inicio de Obra',
+                'url' => '/assets/img/construction/inicio-obra.jpeg',
                 'created_at' => now(),
             ],
             [
                 'progress_post_id' => '2',
-                'image_title' => 'Obra Negra',
-                'image_url' => '/assets/img/construction/obra-negra.jpeg',
+                //'image_title' => 'Obra Negra',
+                'url' => '/assets/img/construction/obra-negra.jpeg',
                 'created_at' => now(),
             ],
             [
                 'progress_post_id' => '3',
-                'image_title' => 'Albañileria',
-                'image_url' => '/assets/img/construction/albañiles.jpeg',
+                //'image_title' => 'Albañileria',
+                'url' => '/assets/img/construction/albañiles.jpeg',
                 'created_at' => now(),
             ],
        ]);

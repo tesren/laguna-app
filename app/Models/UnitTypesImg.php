@@ -13,7 +13,7 @@ class UnitTypesImg extends Model
 
     public function unitType()
     {
-        return $this->hasOne( UnitType::class );
+        return $this->belongsTo( UnitType::class );
     }
 
 }

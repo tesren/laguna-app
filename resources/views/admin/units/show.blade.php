@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="col-12">
-                            <button id="update" type="submit" class="btn btn-primary w-100 disabled">Guardar Cambios</button>
+                            <button id="update" type="submit" class="btn btn-primary w-100 disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                         </div>
 
                     </form>

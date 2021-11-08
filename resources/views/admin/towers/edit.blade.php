@@ -24,17 +24,25 @@
                     <label for="units">Unidades en venta</label>
                     <input class="form-control mb-3" type="number" min="0" step="1" name="units" id="units" value="{{$tower->units}}" required onchange="enableBtn();">
 
-                    <label for="floors">Pisos</label>
-                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" value="{{$tower->floors}}" required onchange="enableBtn();">
+                    {{-- <label for="floors">Pisos</label>
+                    <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" value="{{$tower->floors}}" required onchange="enableBtn();"> --}}
 
                     <div class="mb-4">
-                        <label class="form-label">Render Actual de la Torre</label>
-                        <img class="w-100 mb-2" src="{{asset($tower->images($tower->id, 'large')->url);}}" alt="Imagen">
-                        <label for="imgfile" class="form-label">Elige un nuevo render</label>
+                        
+                        @php
+                            $img = $imgs->where('tower_id', $tower->id)->where('size', 'large')->first();
+                        @endphp
+
+                        @if (!empty($img->url))
+                            <label class="form-label">Render Actual de la Torre</label>
+                            <img class="w-100 mb-3" src="{{asset($img->url);}}" alt="Imagen">
+                        @endif
+                        
+                        <label for="imgfile" class="form-label d-block">Elige un nuevo render</label>
                         <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg" onchange="enableBtn();">
                     </div>
 
-                    <button id="update" class="btn btn-primary w-100 disabled" type="submit">Guardar Cambios</button>
+                    <button id="update" class="btn btn-primary w-100 disabled" type="submit" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                 </form>
             </div>
 

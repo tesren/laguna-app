@@ -11,4 +11,9 @@ class ProgressImg extends Model
 
     protected $table = "progress_imgs";
 
+    public function post()
+    {
+        return $this->belongsTo( ProgressPost::class, 'progress_post_id');
+    }
+
 }

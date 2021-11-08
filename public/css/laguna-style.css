@@ -1,4 +1,4 @@
-/*Estilos genereales*/
+/*Estilos generales*/
 html, body{
     font-family: 'Helvetica', sans-serif !important;
 }
@@ -51,7 +51,7 @@ tr:hover{
     transition: 0.2s;
 }
 
-/*sidebar*/
+/*admin sidebar*/
 #sidebar{
     position: relative;
     z-index: 2;
@@ -64,7 +64,7 @@ tr:hover{
     transition: 0.2s;
     animation: ease-in-out;
 }
-/*footer*/
+/*admin footer*/
 footer{
     position: absolute;
     z-index: 1;
@@ -109,7 +109,7 @@ footer{
     object-fit: cover;
     border-radius: 5px;
 }
-/*Units*/
+/*admin Units*/
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #0d6efd;
@@ -132,6 +132,24 @@ footer{
     background-color: #ffc107;
     box-shadow: 0 5px 5px -3px #0003,0 8px 10px 1px #00000024,0 3px 14px 2px #0000001f;
 }
+
+/*Admin progress*/
+.chrome input {
+    background: linear-gradient(to right, #e9ecef 0%, #e9ecef 50%, #e9ecef 50%, #e9ecef 100%);
+    border: solid 1px #dee2e6;
+    border-radius: 8px;
+    height: 10px;
+    width: 100%;
+    outline: none; 
+    transition: 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.form-check-input:checked {
+    background-color: #1E4748;
+    border-color: #1E4748;
+}
+
 
 @media (max-width: 767px) {
 }

@@ -7,7 +7,7 @@ use App\Http\Controllers\UnitsController;
 use App\Http\Controllers\UnitTypesController;
 use App\Http\Controllers\UnitTypesImgController;
 use App\Http\Controllers\TowersController;
-
+use App\Http\Controllers\ProgressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,8 +74,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/tower/{id}', [TowersController::class, 'edit'])->name('edit.tower');
     Route::post('/tower/{id}/update',[TowersController::class, 'update'])->name('update.tower');
 
-    Route::get('/unit-type/{id}/upload', [UnitTypesImgController::class, 'upload'])->name('upload.type.imgs');
-
+    Route::get('/progress', [ProgressController::class, 'index'])->name('all.progress');
+    Route::get('/progress/create', [ProgressController::class, 'create'])->name('create.progress');
+    Route::post('/progress/update/{id}',[ProgressController::class, 'updateProgress'])->name('update.progress');
 });
 
 
