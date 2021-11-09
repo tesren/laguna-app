@@ -53,10 +53,12 @@ tr:hover{
 
 /*admin sidebar*/
 #sidebar{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 2;
     min-height: 100vh;
-    width: 320px;
+    width: 300px;
 }
 
 #sidebar .nav-item:hover{
@@ -64,13 +66,18 @@ tr:hover{
     transition: 0.2s;
     animation: ease-in-out;
 }
+
+.c-main{
+    margin-left: 300px;
+    min-height: 100vh;
+    width: 100% !important;
+}
+
+
 /*admin footer*/
 footer{
-    position: absolute;
+    position: relative;
     z-index: 1;
-    bottom: 0;
-    right: 0;
-    left: 0;
     border-top: 1px solid rgb(194, 195, 197);
     height: 46px;
 }

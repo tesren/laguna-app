@@ -3,9 +3,9 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
     <div class="row justify-content-center mt-5">
-        <div class="col-12">
+        <div class="col-12 col-lg-11">
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">

@@ -3,7 +3,7 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
 
     <div class="row justify-content-center my-5">
 
@@ -17,7 +17,7 @@
             </div>
 
             <div class="card-body">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{route('store.progress');}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <label for="title">Título</label>
                     <input class="form-control mb-3" type="text" name="title" id="title" required>
@@ -31,7 +31,7 @@
                     <label for="imgfiles">Seleccione imágenes del Avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
 
-                    <button type="submit" class="btn btn-success w-100">Publicar Avance</button>
+                    <button type="submit" class="btn btn-success w-100" onclick="this.disabled=true;this.form.submit();">Publicar Avance</button>
                 </form>
             </div>
 

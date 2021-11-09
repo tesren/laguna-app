@@ -76,7 +76,12 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/progress', [ProgressController::class, 'index'])->name('all.progress');
     Route::get('/progress/create', [ProgressController::class, 'create'])->name('create.progress');
+    Route::post('/progress/store', [ProgressController::class, 'store'])->name('store.progress');
     Route::post('/progress/update/{id}',[ProgressController::class, 'updateProgress'])->name('update.progress');
+    Route::get('/progress/{id}', [ProgressController::class, 'edit'])->name('edit.progress');
+    Route::post('/progress/update-post/{id}',[ProgressController::class, 'update'])->name('update.post');
+
+
 });
 
 

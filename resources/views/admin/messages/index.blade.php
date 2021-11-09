@@ -3,7 +3,7 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
 
     <div class="row justify-content-center mt-5">
 

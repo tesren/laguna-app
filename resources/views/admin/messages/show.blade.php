@@ -3,7 +3,7 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-    <div class="col">
+    <div class="c-main">
         
         <div class="row justify-content-center mt-5">
 
@@ -87,7 +87,7 @@
             <form action="{{ route('delete.message', $message->id ) }}" method="POST">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger ms-auto">Borrar</button>
+                <button type="submit" class="btn btn-danger ms-auto" onclick="this.disabled=true;this.form.submit();">Borrar</button>
             </form>
         </div>
 

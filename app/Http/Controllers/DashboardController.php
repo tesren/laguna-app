@@ -19,7 +19,7 @@ class DashboardController extends Controller
         return view('admin.dashboard', [
             'messages' => Message::all(), 
             'progress' => Progress::find(1),
-            'progPosts'=> ProgressPost::first(),
+            'progPosts'=> ProgressPost::all(),
             'progImgs' => ProgressImg::first(),
             'units'    => Unit::all(),  
             'towers'   => Tower::all(),

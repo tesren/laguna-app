@@ -4,7 +4,7 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col" id="dashboard">
+<div class="c-main" id="dashboard">
 
     <div class="d-flex text-center justify-content-center my-4">
         <img src="{{asset('assets/img/logo-laguna-solo.png')}}" alt="Logo" style="width:80px;">
@@ -27,7 +27,7 @@
         <div class="col-12 col-lg-5 card shadow-7 p-0 bg-green">
 
             <span class="d-flex">
-                <img id="prog-thumbnail" class="mt-3 ms-4" src="{{$progImgs->image_url}}" alt="Thumbnail progreso">
+                <img id="prog-thumbnail" class="mt-3 ms-4" src="{{asset($progImgs->url)}}" alt="Thumbnail progreso">
 
                 <div>
                     <span class="d-block mt-3 mb-2 ms-4 fs-1 fw-bold">

@@ -3,9 +3,9 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
 
-    <div class="row justify-content-center my-4">
+    <div class="row justify-content-center my-5">
 
         <div class="col-12 col-lg-11 card shadow-7 px-0">
 
@@ -17,7 +17,7 @@
                     <i class="fas fa-hammer"></i>
                     Progreso General
                     </span>
-                    <button id="update" type="submit" class="btn btn-primary disabled">Guardar Cambios</a>
+                    <button id="update" type="submit" class="btn btn-primary disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</a>
                 </div>
 
                 <div class="card-body">
@@ -101,7 +101,7 @@
                                 <td>{{ $post->title; }}</td>
                                 <td>{{ $post->date; }}</td>
                                 <td class="d-flex justify-content-evenly">
-                                    <a href="" class="btn btn-primary">Editar</a>
+                                    <a href="{{route('edit.progress',['id'=> $post->id]);}}" class="btn btn-primary">Editar</a>
                                 </td>
                             </tr>
                       @endforeach

@@ -3,9 +3,9 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
 
-    <div class="row justify-content-center my-4">
+    <div class="row justify-content-center my-5">
 
         <div class="col-12 col-md-10 col-lg-6 card px-0 shadow-8">
 

@@ -3,7 +3,7 @@
 @section('content')
 @include('admin.shared.sidebar')
 
-<div class="col">
+<div class="c-main">
 
     <div class="row justify-content-center mt-5">
         <div class="col-12 col-md-11 col-lg-10 card px-0 shadow-8">
@@ -47,13 +47,13 @@
                                         <form action="{{route('tower.visible',['id'=>$tower->id]);}}" method="post">
                                             @csrf
                                             <input type="hidden" name="visibility" id="visibility" value="0">
-                                            <button type="submit" class="btn btn-success"><i class="far fa-eye"></i></button>
+                                            <button type="submit" class="btn btn-success" onclick="this.disabled=true;this.form.submit();"><i class="far fa-eye"></i></button>
                                         </form>
                                     @else
                                         <form action="{{route('tower.visible',['id'=>$tower->id]);}}" method="post">
                                             @csrf
                                             <input type="hidden" name="visibility" id="visibility" value="1">
-                                            <button type="submit" class="btn btn-danger"><i class="far fa-eye-slash"></i></button>
+                                            <button type="submit" class="btn btn-danger" onclick="this.disabled=true;this.form.submit();"><i class="far fa-eye-slash"></i></button>
                                         </form>
                                     @endif
                                     
