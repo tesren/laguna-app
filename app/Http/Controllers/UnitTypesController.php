@@ -33,7 +33,7 @@ class UnitTypesController extends Controller
     {
         return view('admin.prototypes.edit', [
             'prototype'  => UnitType::find($id),
-            'imgs'       => UnitTypesImg::all(),
+            'imgs'       => UnitTypesImg::all()->where('unit_type_id',$id),
         ]);
     }
 

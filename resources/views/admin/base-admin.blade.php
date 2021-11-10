@@ -28,7 +28,7 @@
 
     <body>
         
-        <div class="d-flex justify-content-center" style="background-color:#EBEDEF; min-height: 100vh;">
+        <div class="d-flex justify-content-center bg-light">
             @yield('content') 
         </div>
 

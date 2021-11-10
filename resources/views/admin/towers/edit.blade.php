@@ -30,7 +30,7 @@
                     <div class="mb-4">
                         
                         @php
-                            $img = $imgs->where('tower_id', $tower->id)->where('size', 'large')->first();
+                            $img = $imgs->where('size', 'large')->first();
                         @endphp
 
                         @if (!empty($img->url))

@@ -17,7 +17,7 @@
             </div>
 
             <div class="card-body">
-                <table class="table table-responsive-sm table-striped table-bordered" id="all_types_table" data-page-length='10'>
+                <table class="table table-sm table-striped table-bordered" id="all_types_table" data-page-length='10'>
                     <thead>
                       <tr>
                         <th>Tipo</th>

@@ -22,18 +22,19 @@
                     <label for="title">Título</label>
                     <input class="form-control mb-3" type="text" name="title" id="title" value="{{$post->title}}" required>
 
-                    <label for="date">Fecha del Avance</label>
+                    <label for="date">Fecha del avance</label>
                     <input class="form-control mb-3" type="date" name="date" id="date" value="{{$post->date}}" required>
 
                     <label for="description">Descripción</label>
                     <textarea class="form-control mb-3" name="description" id="description" maxlength="500" rows="4" required>{{$post->description}}</textarea>
 
                     @php
-                        $progImgs = $imgs->where('progress_post_id', $post->id)->where('size', 'large');
+                        $progImgs = $imgs->where('size', 'large');
+                        $arrayImgs = (array)$progImgs;                    
                         $i=0;
                     @endphp
 
-                    @if (!empty($progImgs))
+                    @if (!$arrayImgs)
 
                         <label>Imágenes actuales</label>
                         <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
@@ -58,7 +59,7 @@
                         </div>
                     @endif
 
-                    <label for="imgfiles">Seleccione nuevas imágenes del Avance</label>
+                    <label for="imgfiles">Seleccione nuevas imágenes del avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
 
                     <button type="submit" class="btn btn-primary w-100" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>

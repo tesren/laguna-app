@@ -16,11 +16,14 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $lastPost = ProgressPost::all()->last();
+        $lastImg = ProgressImg::all()->where('size','small')->last();
+
         return view('admin.dashboard', [
             'messages' => Message::all(), 
             'progress' => Progress::find(1),
-            'progPosts'=> ProgressPost::all(),
-            'progImgs' => ProgressImg::first(),
+            'lastPost'=> $lastPost,
+            'img' => $lastImg,
             'units'    => Unit::all(),  
             'towers'   => Tower::all(),
         ]);

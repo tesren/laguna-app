@@ -6,7 +6,7 @@
 <div class="c-main">
 
     <div class="row justify-content-center my-5">
-        <div class="col-12 col-md-10 col-lg-7 card shadow-8 px-0">
+        <div class="col-12 col-md-11 col-lg-7 card shadow-8 px-0">
 
             <div class="card-header">
                 <i class="fas fa-home"></i>
@@ -60,7 +60,7 @@
                     </div>
 
                     @php
-                        $mainImg = $imgs->where('unit_type_id', $prototype->id)->where('type', 'main')->where('size', 'large')->first();
+                        $mainImg = $imgs->where('type', 'main')->where('size', 'large')->first();
                     @endphp
 
                     @if (!empty($mainImg->url))
@@ -76,10 +76,11 @@
                     </div>
 
                     @php
-                        $galleryImgs = $imgs->where('unit_type_id', $prototype->id)->where('type', 'gallery')->where('size', 'large');
+                        $galleryImgs = $imgs->where('type', 'gallery')->where('size', 'large');
+                        $arrayGal = (array)$galleryImgs;
                     @endphp
 
-                    @if (!empty($galleryImgs))
+                    @if (!$arrayGal)
                         <div class="col-12 mb-3">
                             <label for="description">Galería actual</label>
                             

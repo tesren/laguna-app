@@ -110,7 +110,7 @@ class TowersController extends Controller
     public function edit($id){
         return view('admin.towers.edit', [
             'tower' => Tower::find($id),
-            'imgs'  => TowerImg::all(),
+            'imgs'  => TowerImg::all()->where('tower_id', $id),
         ]);
     }
 

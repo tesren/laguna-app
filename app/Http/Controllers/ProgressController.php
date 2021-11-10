@@ -162,7 +162,7 @@ class ProgressController extends Controller
     public function edit($id){
         return view('admin.progress.edit', [
             'post'  => ProgressPost::find($id),
-            'imgs'  => ProgressImg::all(),
+            'imgs'  => ProgressImg::all()->where('progress_post_id', $id),
         ]);
     }
 

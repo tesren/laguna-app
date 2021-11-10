@@ -14,7 +14,7 @@
     <div class="row justify-content-evenly">
         
         {{-- Mensajes Recibidos --}}
-        <div class="col-12 col-lg-5 card shadow-7 p-0 bg-blue">
+        <div class="col-11 col-md-10 col-lg-5 card shadow-7 p-0 bg-blue mb-4 mb-lg-0">
             <strong class="d-block mt-3 mb-2 ms-4">
                 <i class="fas fa-envelope-open-text"></i>
                 {{ count($messages); }}
@@ -24,10 +24,10 @@
         </div>
 
         {{-- Progreso de la construcción --}}
-        <div class="col-12 col-lg-5 card shadow-7 p-0 bg-green">
+        <div class="col-11 col-md-10 col-lg-5 card shadow-7 p-0 bg-green">
 
             <span class="d-flex">
-                <img id="prog-thumbnail" class="mt-3 ms-4" src="{{asset($progImgs->url)}}" alt="Thumbnail progreso">
+                <img id="prog-thumbnail" class="mt-3 ms-4" src="{{asset($img->url)}}" alt="Thumbnail progreso">
 
                 <div>
                     <span class="d-block mt-3 mb-2 ms-4 fs-1 fw-bold">
@@ -38,7 +38,10 @@
                 
             </span>
 
-            <?php $date = date_create($progPosts->date); ?>
+            @php
+                $date = date_create($lastPost->date);
+            @endphp
+
             <span class="d-block mt-3 ms-4 fs-5 fw-light">
                 Ultima actualización: 
                 <span class="fw-bold">{{date_format($date, 'd/m/Y');}} </span>
@@ -49,23 +52,23 @@
         
     </div>
 
-    <div class="row justify-content-evenly my-5 units">
+    <div class="row justify-content-evenly my-4 my-lg-5 units">
 
-        <div class="col-12 col-lg-3 card shadow-7 p-0">
+        <div class="col-11 col-md-5 col-lg-3 card shadow-7 p-0 mb-4 mb-lg-0">
             <strong class="d-block mt-3 mb-0 ms-4">
                 {{ $units->where('status', 'Disponible')->count(); }}
             </strong>
             <span class="d-block ms-4 fs-5 fw-light">Unidades Disponibles</span>
         </div>
 
-        <div class="col-12 col-lg-3 mx-0 mx-lg-3 card shadow-7 p-0">
+        <div class="col-11 col-md-4 col-lg-3 mx-0 mx-lg-3 card shadow-7 p-0 mb-4 mb-lg-0">
             <strong class="d-block mt-3 mb-0 ms-4">
                 {{ $units->where('status', 'Apartada')->count(); }}
             </strong>
             <span class="d-block ms-4 fs-5 fw-light">Unidades Apartadas</span>
         </div>
 
-        <div class="col-12 col-lg-3 card shadow-7 p-0">
+        <div class="col-11 col-md-10 col-lg-3 card shadow-7 p-0">
             <strong class="d-block mt-3 mb-0 ms-4">
                 {{ $units->where('status', 'Vendida')->count(); }}
             </strong>
@@ -77,7 +80,7 @@
     <div class="row justify-content-evenly">
         
         {{-- Torres --}}
-        <div class="col-12 col-lg-5 card shadow-7 p-0 bg-blue">
+        <div class="col-11 col-md-10 col-lg-5 card shadow-7 p-0 bg-blue mb-4 mb-lg-0">
             <strong class="d-block mt-3 mb-2 ms-4">
                 <i class="far fa-building"></i>
                 {{ count($towers); }}
@@ -88,7 +91,7 @@
         </div>
 
         {{-- Unidades totales --}}
-        <div class="col-12 col-lg-5 card shadow-7 p-0 bg-green">
+        <div class="col-11 col-md-10 col-lg-5 card shadow-7 p-0 bg-green mb-5 mb-lg-0">
             <strong class="d-block mt-3 mb-2 ms-4">
                 <i class="fas fa-home"></i>
                 {{ count($units); }}

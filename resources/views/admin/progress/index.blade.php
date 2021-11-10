@@ -7,7 +7,7 @@
 
     <div class="row justify-content-center my-5">
 
-        <div class="col-12 col-lg-11 card shadow-7 px-0">
+        <div class="col-12 col-md-11 col-lg-11 card shadow-7 px-0">
 
             <form action="{{route('update.progress',['id'=>$progress->id]);}}" method="post">
                 @csrf
@@ -31,36 +31,36 @@
                             <span class="ms-3" id="progress-value">{{$progress->percent}}</span>%
                         </div>
 
-                        <div class="col-12 d-flex mt-2">
-                            <label class="form-label fs-6">Etapas terminadas: </label>
+                        <div class="col-12 d-block d-lg-flex mt-2">
+                            <label class="form-label fs-6 d-block d-lg-flex">Etapas terminadas: </label>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage1" name="stage1" @if($progress->st1_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage1" name="stage1" @if($progress->st1_done == 1) checked @endif onchange="enableBtn();" >
                                 <label class="form-check-label" for="flexCheckDefault">{{$progress->stage_1}}</label>
                             </div>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage2" name="stage2" @if($progress->st2_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage2" name="stage2" @if($progress->st2_done == 1) checked @endif onchange="enableBtn();">
                                 <label class="form-check-label" for="flexCheckChecked">{{$progress->stage_2}}</label>
                             </div>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage3" name="stage3" @if($progress->st3_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage3" name="stage3" @if($progress->st3_done == 1) checked @endif onchange="enableBtn();">
                                 <label class="form-check-label" for="flexCheckChecked">{{$progress->stage_3}}</label>
                             </div>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage4" name="stage4" @if($progress->st4_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage4" name="stage4" @if($progress->st4_done == 1) checked @endif onchange="enableBtn();">
                                 <label class="form-check-label" for="flexCheckChecked">{{$progress->stage_4}}</label>
                             </div>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage5" name="stage5" @if($progress->st5_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage5" name="stage5" @if($progress->st5_done == 1) checked @endif onchange="enableBtn();">
                                 <label class="form-check-label" for="flexCheckChecked">{{$progress->stage_5}}</label>
                             </div>
 
                             <div class="form-check ms-2">
-                                <input class="form-check-input mx-0" type="checkbox" id="stage6" name="stage6" @if($progress->st6_done == 1) checked @endif>
+                                <input class="form-check-input mx-0" type="checkbox" id="stage6" name="stage6" @if($progress->st6_done == 1) checked @endif onchange="enableBtn();">
                                 <label class="form-check-label" for="flexCheckChecked">{{$progress->stage_6}}</label>
                             </div>
 
@@ -75,7 +75,7 @@
 
         </div>
 
-        <div class="col-12 col-lg-11 card shadow-7 px-0 my-4">
+        <div class="col-12 col-md-11 col-lg-11 card shadow-7 px-0 my-4">
             <div class="card-header d-flex justify-content-between">
                 <span class="fs-5 d-block" style="align-self: center">
                     <i class="fas fa-list-ol"></i> 

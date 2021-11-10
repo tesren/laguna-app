@@ -6,7 +6,7 @@
     <div class="c-main">
 
         <div class="row justify-content-center mt-5">
-            <div class="col-12 col-md-10 col-lg-8 px-0 card">
+            <div class="col-12 col-md-10 col-lg-8 px-0 card shadow-8">
 
                 <div class="card-header">
                     <i class="fas fa-home"></i>
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form class="row" action="{{route('edit.unit', $unit->id)}}" method="post">
+                    <form class="row" action="{{route('update.unit', $unit->id)}}" method="post">
                         @csrf
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="unit">Unidad</label>

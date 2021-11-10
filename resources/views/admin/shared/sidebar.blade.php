@@ -1,5 +1,5 @@
 
-    <div class="d-flex flex-column flex-shrink-0  bg-green shadow-8 p-0" id="sidebar">
+    <div class="d-none d-lg-flex flex-column flex-shrink-0  bg-green shadow-8 p-0" id="sidebar">
 
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 bg-darkgreen">
             <img class="w-100" src="{{ asset('/assets/img/logo-dorado.png'); }}" alt="Laguna logo">
@@ -58,3 +58,58 @@
         </a>
         
     </div>
+
+    <div class="d-flex d-lg-none flex-column flex-shrink-0 bg-green shadow-7" id="sidebarMobile">
+
+        <a href="/" class="text-center mb-3 mb-md-0 bg-darkgreen">
+            <img class="w-100 p-3" src="{{ asset('/assets/icons/logo-laguna-icono.svg'); }}" alt="Laguna logo">
+        </a>
+
+
+        <ul class="nav nav-pills flex-column mb-auto text-center">
+
+            <li class="nav-item">
+                <a href="{{route('dashboard');}}" class="nav-link link-light border-bottom">
+                    <i class="fas fa-tachometer-alt"></i>
+                </a>
+            </li>
+
+            {{-- <li class="nav-item">
+                <a href="#" class="nav-link link-light">
+                    <i class="far fa-user"></i>
+                    Usuarios
+                </a>
+            </li> --}}
+
+            <li class="nav-item">
+                <a href="{{route('all.units');}}" class="nav-link link-light border-bottom">
+                    <i class="far fa-list-alt"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('all.prototypes')}}" class="nav-link link-light border-bottom">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('all.towers')}}" class="nav-link link-light border-bottom">
+                    <i class="far fa-building"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('all.progress');}}" class="nav-link link-light border-bottom">
+                    <i class="fas fa-hammer"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('all.messages');}}" class="nav-link link-light border-bottom">
+                    <i class="fas fa-envelope-open-text"></i>
+                </a>
+            </li>
+        </ul>
+
+        <a href="#" class="nav-link text-center link-light text-decoration-none bg-darkgreen">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+
+      </div>

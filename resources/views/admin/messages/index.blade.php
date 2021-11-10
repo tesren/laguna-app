@@ -5,7 +5,7 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center my-5">
 
         <div class="col-12 col-md-11 card px-0 shadow-8">
 
@@ -15,34 +15,35 @@
             </div>
 
             <div class="card-body">
-                <table class="table table-responsive-sm table-striped table-bordered" id="messages_table" data-page-length='10'>
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Asunto</th>
-                        <th>Correo</th>
-                        <th>Tipo de contacto</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </thead>
-    
-                    <tbody>
-                    
-                      @foreach($messages->all() as $message)
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-bordered w-100" id="messages_table" data-page-length='10'>
+                        <thead>
                             <tr>
-                                <td>{{ $message->name; }}</td>
-                                <td>{{ $message->subject; }} </td>
-                                <td>{{ $message->email; }}</td>
-                                <td>{{ $message->type}}</td>
-                                <td class="d-flex justify-content-center">
-                                    <a href="{{ route('show.message', ['id' => $message->id] ) }}" class="btn btn-primary">Ver</a>
-                                    {{-- <a href="" class="btn btn-danger ms-1"><i class="fas fa-trash-alt"></i></a> --}}
-                                </td>
+                                <th>Nombre</th>
+                                <th>Asunto</th>
+                                <th>Correo</th>
+                                <th>Tipo de contacto</th>
+                                <th class="text-center">Acciones</th>
                             </tr>
-                      @endforeach
-    
-                    </tbody>
-                  </table>
+                        </thead>
+        
+                        <tbody>
+                        
+                        @foreach($messages->all() as $message)
+                                <tr>
+                                    <td>{{ $message->name; }}</td>
+                                    <td>{{ $message->subject; }} </td>
+                                    <td>{{ $message->email; }}</td>
+                                    <td>{{ $message->type}}</td>
+                                    <td class="text-center">
+                                        <a href="{{ route('show.message', ['id' => $message->id] ) }}" class="btn btn-primary mt-1 mt-lg-0">Ver</a>
+                                    </td>
+                                </tr>
+                        @endforeach
+        
+                        </tbody>
+                    </table>
+                  </div>  
             </div>
             
 

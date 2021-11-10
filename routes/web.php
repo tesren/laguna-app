@@ -55,7 +55,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/unit/store', [UnitsController::class, 'store'])->name('store.unit');
     Route::get('/units', [UnitsController::class, 'index'])->name('all.units');
     Route::get('/unit/{id}', [UnitsController::class, 'show'])->name('show.unit');
-    Route::post('/unit/{id}/update',[UnitsController::class, 'update'])->name('edit.unit');
+    Route::post('/unit/{id}/update',[UnitsController::class, 'update'])->name('update.unit');
 
     Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
@@ -64,8 +64,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/prototypes', [UnitTypesController::class, 'index'])->name('all.prototypes');
     Route::get('/prototype/{id}', [UnitTypesController::class, 'edit'])->name('edit.prototypes');
 
-    Route::post('/unit/types',[UnitTypesController::class, 'all'])->name('all.unit.types');
-    Route::post('/unit/{id}/update',[UnitTypesController::class, 'update'])->name('update.type');
+    //Route::post('/unit/types',[UnitTypesController::class, 'all'])->name('all.unit.types');
+    Route::post('/prototype/{id}/update',[UnitTypesController::class, 'update'])->name('update.type');
 
     Route::get('/tower/create', [TowersController::class, 'create'])->name('create.tower');
     Route::post('/tower/store', [TowersController::class, 'store'])->name('store.tower');

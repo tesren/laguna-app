@@ -7,7 +7,7 @@
 
         <div class="row justify-content-center mt-5">
 
-            <div class="col-12 col-md-10 col-lg-8 px-0 card">
+            <div class="col-12 col-md-10 col-lg-8 px-0 card shadow-8">
 
                 <div class="card-header">
                     <i class="fas fa-home"></i>

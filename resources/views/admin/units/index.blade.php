@@ -38,15 +38,16 @@
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped table-bordered" id="all_units_table" data-page-length='10'>
+                          <div class="table-responsive">
+                            <table class="table table-sm table-striped table-bordered" id="all_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th>BA</th>
+                                    <th class="d-none d-lg-block">BA</th>
                                     <th>Torre</th>
-                                    <th>Nivel</th>
+                                    <th class="d-none d-lg-block">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -60,9 +61,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td>{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -73,6 +74,7 @@
                 
                                 </tbody>
                               </table>
+                            </div>
                         </div>
                     </div>
                     
@@ -91,15 +93,16 @@
                       </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped table-bordered" id="avaliable_units_table" data-page-length='10'>
+                          <div class="table-responsive">
+                            <table class="table table-sm table-striped table-bordered w-100" id="avaliable_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th>BA</th>
+                                    <th class="d-none d-lg-block">BA</th>
                                     <th>Torre</th>
-                                    <th>Nivel</th>
+                                    <th class="d-none d-lg-block">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -113,9 +116,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td>{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -126,6 +129,7 @@
                 
                                 </tbody>
                               </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,15 +147,16 @@
                         </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped table-bordered" id="onHold_units_table" data-page-length='10'>
+                          <div class="table-responsive">
+                            <table class="table table-sm table-striped table-bordered w-100" id="onHold_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th>BA</th>
+                                    <th class="d-none d-lg-block">BA</th>
                                     <th>Torre</th>
-                                    <th>Nivel</th>
+                                    <th class="d-none d-lg-block">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -165,9 +170,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td>{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -178,6 +183,7 @@
                 
                                 </tbody>
                               </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,15 +201,16 @@
                       </div>
             
                         <div class="card-body">
-                            <table class="table table-responsive-sm table-striped table-bordered" id="sold_units_table" data-page-length='10'>
+                          <div class="table-responsive">
+                            <table class="table table-sm table-striped table-bordered w-100" id="sold_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th>BA</th>
+                                    <th class="d-none d-lg-block">BA</th>
                                     <th>Torre</th>
-                                    <th>Nivel</th>
+                                    <th class="d-none d-lg-block">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -217,9 +224,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td>{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td>{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -230,6 +237,7 @@
                 
                                 </tbody>
                               </table>
+                            </div>
                         </div>
                     </div>
                 </div>
