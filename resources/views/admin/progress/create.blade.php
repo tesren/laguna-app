@@ -31,6 +31,12 @@
                     <label for="imgfiles">Seleccione imágenes del Avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
 
+                    @if (session('errors'))
+                        <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                            <i class="fas fa-exclamation-circle"></i> La imagen debe pesar menos de 2 MB.
+                        </span>
+                    @endif
+
                     <button type="submit" class="btn btn-success w-100" onclick="this.disabled=true;this.form.submit();">Publicar Avance</button>
                 </form>
             </div>

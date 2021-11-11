@@ -29,12 +29,11 @@
                     <textarea class="form-control mb-3" name="description" id="description" maxlength="500" rows="4" required>{{$post->description}}</textarea>
 
                     @php
-                        $progImgs = $imgs->where('size', 'large');
-                        $arrayImgs = (array)$progImgs;                    
+                        $progImgs = $imgs->where('size', 'large');                   
                         $i=0;
                     @endphp
 
-                    @if (!$arrayImgs)
+                    @if ($progImgs->isNotEmpty())
 
                         <label>Imágenes actuales</label>
                         <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
@@ -61,6 +60,12 @@
 
                     <label for="imgfiles">Seleccione nuevas imágenes del avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
+
+                    @if (session('errors'))
+                        <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                            <i class="fas fa-exclamation-circle"></i> La imagen debe pesar menos de 2 MB.
+                        </span>
+                    @endif
 
                     <button type="submit" class="btn btn-primary w-100" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                 </form>

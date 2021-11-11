@@ -42,6 +42,12 @@
                         <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg" onchange="enableBtn();">
                     </div>
 
+                    @if (session('errors'))
+                        <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                            <i class="fas fa-exclamation-circle"></i> La imagen debe pesar menos de 2 MB.
+                        </span>
+                    @endif
+
                     <button id="update" class="btn btn-primary w-100 disabled" type="submit" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                 </form>
             </div>

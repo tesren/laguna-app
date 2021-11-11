@@ -31,6 +31,12 @@
                         <input class="form-control" type="file" id="imgfile" name="imgfile" accept=".jpg, .jpeg, .png, .webp, .svg" required>
                     </div>
 
+                    @if (session('errors'))
+                        <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                            <i class="fas fa-exclamation-circle"></i> La imagen debe pesar menos de 2 MB.
+                        </span>
+                    @endif
+
                     <button class="btn btn-success w-100" type="submit" onclick="this.disabled=true;this.form.submit();">Registrar Torre</button>
                 </form>
             </div>

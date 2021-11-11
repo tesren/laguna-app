@@ -41,12 +41,12 @@ class UnitTypesController extends Controller
 
         $fileArray = array(
             'image'=> $request->file('mainfile'),
-            'gallery'=> $request->file('imgfiles')
+            'images'=>$request->file('imgfiles'),
         );
 
         $rules = array(
-            'image'=>'max:2000',
-            'gallery'=>'max:2000',
+            'image'=>'max:2048',
+            'images.*'=>'max:2048',
         );
 
         $validator = Validator::make( $fileArray, $rules);
@@ -185,12 +185,12 @@ class UnitTypesController extends Controller
         
         $fileArray = array(
             'image'=> $request->file('mainfile'),
-            'gallery'=> $request->file('imgfiles')
+            'images'=>$request->file('imgfiles'),
         );
 
         $rules = array(
-            'image'=>'max:2000',
-            'gallery'=>'max:2000',
+            'image'   =>'max:2048',
+            'images.*'=>'max:2048'
         );
 
         $validator = Validator::make( $fileArray, $rules);

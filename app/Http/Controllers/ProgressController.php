@@ -75,11 +75,11 @@ class ProgressController extends Controller
     public function store(Request $request){
 
         $fileArray = array(
-            'gallery'=> $request->file('imgfiles')
+            'image'=> $request->file('imgfiles')
         );
 
         $rules = array(
-            'gallery'=>'max:2000',
+            'image.*'=>'max:2048',
         );
 
         $validator = Validator::make( $fileArray, $rules);
@@ -168,11 +168,11 @@ class ProgressController extends Controller
 
     public function update(Request $request, $id){
         $fileArray = array(
-            'gallery'=> $request->file('imgfiles')
+            'image'=> $request->file('imgfiles'),
         );
 
         $rules = array(
-            'gallery'=>'max:2000',
+            'image.*'=>'max:2048',
         );
 
         $validator = Validator::make( $fileArray, $rules);
@@ -217,14 +217,14 @@ class ProgressController extends Controller
                     $galImgMed->progress_post_id = $post->id;
                     $galImgMed->size = 'medium';
             
-                    $nameGalImg = 'img-gallery-medium-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
-                    $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImg;
+                    $nameGalImgMed = 'img-gallery-medium-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
+                    $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImgMed;
                     
                     Image::make($imageFile)->resize(1000, null, function ($constraint) {
                         $constraint->aspectRatio();
                     })->save($galImgPath, 90, 'webp');
                     //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-                    $galImgMed->url = '/storage/img/progress/'.$nameGalImg;
+                    $galImgMed->url = '/storage/img/progress/'.$nameGalImgMed;
                     $galImgMed->save();
 
 

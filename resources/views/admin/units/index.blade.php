@@ -4,8 +4,8 @@
 @include('admin.shared.sidebar')
 
 <div class="c-main">
-    <div class="row justify-content-center mt-5">
-        <div class="col-12 col-lg-11">
+    <div class="row justify-content-start justify-content-md-center mt-5">
+        <div class="col-12 col-md-12 col-lg-11">
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -39,15 +39,15 @@
             
                         <div class="card-body">
                           <div class="table-responsive">
-                            <table class="table table-sm table-striped table-bordered" id="all_units_table" data-page-length='10'>
+                            <table class="table table-sm table-striped table-bordered w-100" id="all_units_table" data-page-length='10'>
                                 <thead>
                                   <tr>
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th class="d-none d-lg-block">BA</th>
-                                    <th>Torre</th>
-                                    <th class="d-none d-lg-block">Nivel</th>
+                                    <th class="d-none d-lg-table-cell">BA</th>
+                                    <th class="d-none d-md-table-cell">Torre</th>
+                                    <th class="d-none d-lg-table-cell">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -61,9 +61,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
-                                            <td>{{$unit->tower->name}}</td>
-                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-table-cell">{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-md-table-cell">{{$unit->tower->name}}</td>
+                                            <td class="d-none d-lg-table-cell">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -100,9 +100,9 @@
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th class="d-none d-lg-block">BA</th>
+                                    <th class="d-none d-lg-table-cell">BA</th>
                                     <th>Torre</th>
-                                    <th class="d-none d-lg-block">Nivel</th>
+                                    <th class="d-none d-lg-table-cell">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -116,9 +116,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-table-cell">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-table-cell">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -154,9 +154,9 @@
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th class="d-none d-lg-block">BA</th>
+                                    <th class="d-none d-lg-table-cell">BA</th>
                                     <th>Torre</th>
-                                    <th class="d-none d-lg-block">Nivel</th>
+                                    <th class="d-none d-lg-table-cell">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -170,9 +170,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-table-cell">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-table-cell">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">
@@ -208,9 +208,9 @@
                                     <th>Unidad</th>
                                     <th>Tipo</th>
                                     <th>BR</th>
-                                    <th class="d-none d-lg-block">BA</th>
+                                    <th class="d-none d-lg-table-cell">BA</th>
                                     <th>Torre</th>
-                                    <th class="d-none d-lg-block">Nivel</th>
+                                    <th class="d-none d-lg-table-cell">Nivel</th>
                                     <th>Estado</th>
                                     <th>Precio</th>
                                     <th class="text-center">Acciones</th>
@@ -224,9 +224,9 @@
                                             <td>{{ $unit->name; }}</td>
                                             <td>{{ $unit->unitType->name; }}</td>
                                             <td>{{ $unit->unitType->bedrooms; }}</td>
-                                            <td class="d-none d-lg-block">{{ $unit->unitType->bathrooms; }}</td>
+                                            <td class="d-none d-lg-table-cell">{{ $unit->unitType->bathrooms; }}</td>
                                             <td>{{$unit->tower->name}}</td>
-                                            <td class="d-none d-lg-block">{{$unit->floor}}</td>
+                                            <td class="d-none d-lg-table-cell">{{$unit->floor}}</td>
                                             <td>{{$unit->status}}</td>
                                             <td>${{number_format($unit->price);}}</td>
                                             <td class="d-flex justify-content-center">

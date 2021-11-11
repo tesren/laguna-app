@@ -77,10 +77,9 @@
 
                     @php
                         $galleryImgs = $imgs->where('type', 'gallery')->where('size', 'large');
-                        $arrayGal = (array)$galleryImgs;
                     @endphp
 
-                    @if (!$arrayGal)
+                    @if ($galleryImgs->isNotEmpty())
                         <div class="col-12 mb-3">
                             <label for="description">Galería actual</label>
                             
@@ -118,6 +117,12 @@
                     </div>
 
                     <div class="col-12">
+                        @if (session('errors'))
+                            <span class="d-block fs-6 mb-3" style="color:#dc3545;">
+                                <i class="fas fa-exclamation-circle"></i> La imagen debe pesar menos de 2 MB.
+                            </span>
+                        @endif
+                        
                         <button id="update" type="submit" class="btn btn-primary w-100 disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                     </div>
                     
