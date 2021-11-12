@@ -1,6 +1,36 @@
+/*Fuentes*/
+@font-face {
+    font-family: "Sackers Gothic Regular";
+    src: url("/fonts/sackers-gothic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Medium";
+    src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Light";
+    src: url("/fonts/ZenKakuGothicNew-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Bold";
+    src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 /*Estilos generales*/
+
 html, body{
-    font-family: 'Helvetica', sans-serif !important;
+    font-family: 'Zen Kaku Light', sans-serif !important;
 }
 
 .row{
@@ -164,6 +194,11 @@ footer{
 
 
 @media (max-width: 767px) {
+    /*Estilos generales admin*/
+    .dataTables_filter input[type="search"]{
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
     
     /*Admin Navbar mobile*/
     #admin-navbarMobile .nav-item:hover{
@@ -228,6 +263,10 @@ footer{
     #dash-logo{
         width: 60px;
         height: auto;
+    }
+    /*admin Units*/
+    #pills-tab .nav-link{
+        padding: 0.5rem 0.6rem;
     }
 }
 

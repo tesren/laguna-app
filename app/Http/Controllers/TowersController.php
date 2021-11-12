@@ -106,8 +106,7 @@ class TowersController extends Controller
             $mainImgSm->save();
             
 
-            $request->session()->flash('message', 'Torre Registrada Existosamente');
-            return redirect()->route('all.towers');
+            return redirect()->route('create.tower')->with('message', 'Torre registrada exitosamente');
         }
     }
 
@@ -218,8 +217,7 @@ class TowersController extends Controller
             $tower->updated_at = now();
             $tower->save();
 
-            $request->session()->flash('message', 'Cambios Guardados');
-            return redirect()->route('all.towers');
+            return redirect()->route('edit.tower',['id'=> $id])->with('message', 'Torre actualizada exitosamente');
         }
     }
 }

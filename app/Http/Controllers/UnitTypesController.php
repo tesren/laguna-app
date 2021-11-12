@@ -175,8 +175,7 @@ class UnitTypesController extends Controller
             }
     
     
-            $request->session()->flash('message', 'Prototipo registrado exitosamente');
-            return redirect()->route('all.prototypes');
+            return redirect()->route('create.type')->with('message', 'Prototipo registrado exitosamente');
 
         }
     }
@@ -328,8 +327,7 @@ class UnitTypesController extends Controller
             }
             
     
-            $request->session()->flash('message', 'Cambios Guardados');
-            return redirect()->route('all.prototypes');
+            return redirect()->route('edit.prototypes',['id'=> $id])->with('message', 'Prototipo actualizado exitosamente');
            
         }
     }

@@ -5,9 +5,16 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center mt-5">
+    <div class="row justify-content-center mt-4 mt-md-5">
 
-        <div class="col-12 col-md-10 col-lg-8 card px-0 shadow-8">
+        @if (session('message'))
+            <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                <i class="far fa-check-circle"></i>
+                {{ session('message'); }}
+            </div>
+        @endif
+
+        <div class="col-11 col-md-10 col-lg-8 card px-0 shadow-8">
 
             <div class="card-header">
                 <i class="far fa-building"></i>
@@ -15,7 +22,7 @@
             </div>
 
             <div class="card-body">
-                <form method="POST" action="{{route('store.tower');}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('store.tower');}}" enctype="multipart/form-data" onsubmit="disableButton();">
                     @csrf
                     <label for="name">Nombre de la Torre</label>
                     <input class="form-control mb-3" type="text" name="name" id="name" required>
@@ -37,7 +44,7 @@
                         </span>
                     @endif
 
-                    <button class="btn btn-success w-100" type="submit" onclick="this.disabled=true;this.form.submit();">Registrar Torre</button>
+                    <button id="submitBtn" class="btn btn-success w-100" type="submit">Registrar Torre</button>
                 </form>
             </div>
 
@@ -46,4 +53,14 @@
 
 </div>
 
+@endsection
+
+@section('javascript')
+    <script>
+        function disableButton() {
+            var btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = 'Cargando...'
+        }
+    </script>
 @endsection

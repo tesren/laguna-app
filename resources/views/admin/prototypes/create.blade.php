@@ -5,9 +5,16 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4 my-md-5">
 
-        <div class="col-12 col-md-11 col-lg-8 card px-0 shadow-8">
+        @if (session('message'))
+            <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                <i class="far fa-check-circle"></i>
+                {{ session('message'); }}
+            </div>
+        @endif
+
+        <div class="col-11 col-md-11 col-lg-8 card px-0 shadow-8">
 
             <div class="card-header">
                 <i class="fas fa-home"></i>
@@ -16,7 +23,7 @@
 
             <div class="card-body">
 
-                <form class="row" action="{{route('store.type');}}" method="post" enctype="multipart/form-data">
+                <form class="row" action="{{route('store.type');}}" method="post" enctype="multipart/form-data" onsubmit="disableButton();">
                     @csrf
 
                     <div class="col-12 mb-3">
@@ -76,7 +83,7 @@
                     @endif
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-success w-100" onclick="this.disabled=true;this.form.submit();">Registrar Prototipo</button>
+                        <button id="submitBtn" type="submit" class="btn btn-success w-100">Registrar Prototipo</button>
                     </div>
                     
                 </form>
@@ -89,4 +96,14 @@
 
 </div>
 
+@endsection
+
+@section('javascript')
+    <script>
+        function disableButton() {
+            var btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = 'Cargando...'
+        }
+    </script>
 @endsection

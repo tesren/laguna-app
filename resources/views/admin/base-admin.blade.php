@@ -19,7 +19,7 @@
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>
         <!--Font-->
-        <link href="https://www.dafontfree.net/embed/c2Fja2Vycy1nb3RoaWMtbGlnaHQtYXQtcmVndWxhciZkYXRhLzQ2L3MvNjMyODYvU2Fja2VycyBHb3RoaWMgTGlnaHQgQVQub3Rm" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('/css/sackers-gothic.ttf')}}" rel="stylesheet"/>
         <!--Styles-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-style.css') }}"/>
         {{--Data tables--}}

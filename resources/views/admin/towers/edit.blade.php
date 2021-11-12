@@ -5,9 +5,16 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4 my-md-5">
 
-        <div class="col-12 col-md-10 col-lg-6 card px-0 shadow-8">
+        @if (session('message'))
+            <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                <i class="far fa-check-circle"></i>
+                {{ session('message'); }}
+            </div>
+        @endif
+
+        <div class="col-11 col-md-10 col-lg-6 card px-0 shadow-8">
 
             <div class="card-header">
                 <i class="fas fa-home"></i>
@@ -16,7 +23,7 @@
             </div>
 
             <div class="card-body">
-                <form method="POST" action="{{route('update.tower',['id'=>$tower->id]);}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('update.tower',['id'=>$tower->id]);}}" enctype="multipart/form-data" onsubmit="disableButton();">
                     @csrf
                     <label for="name">Nombre de la Torre</label>
                     <input class="form-control mb-3" type="text" name="name" id="name" value="{{$tower->name}}" required onchange="enableBtn();">
@@ -48,7 +55,7 @@
                         </span>
                     @endif
 
-                    <button id="update" class="btn btn-primary w-100 disabled" type="submit" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
+                    <button id="update" class="btn btn-primary w-100 disabled" type="submit">Guardar Cambios</button>
                 </form>
             </div>
 
@@ -65,6 +72,12 @@
 
         function enableBtn(){
             $('#update').removeClass('disabled');
+        }
+
+        function disableButton() {
+            var btn = document.getElementById('update');
+            btn.disabled = true;
+            btn.innerText = 'Cargando...'
         }
         
     </script>

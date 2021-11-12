@@ -5,9 +5,9 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4 my-md-5">
 
-        <div class="col-12 col-md-11 card px-0 shadow-8">
+        <div class="col-11 card px-0 shadow-8">
 
             <div class="card-header">
                 <i class="fas fa-envelope-open-text"></i>
@@ -63,6 +63,23 @@
           fixedHeader: {
                 header: true,
                 footer:false,
+            },
+            "language": {
+                "emptyTable":     "La tabla está vacía",
+                "info":           "Mostrando de _START_ a _END_ mensajes, de un total de _TOTAL_",
+                "infoEmpty":      "Tabla vacía",
+                "infoFiltered":   "(filtrado de _MAX_ mensajes)",
+                "lengthMenu":     "Mostrar _MENU_ mensajes",
+                "loadingRecords": "Cargando...",
+                "processing":     "Cargando...",
+                "search":         "Buscar:",
+                "zeroRecords":    "No se encontró nada",
+                "paginate": {
+                    "first":      "Primera",
+                    "last":       "Ultima",
+                    "next":       "Siguiente",
+                    "previous":   "Anterior"
+                }
             },
            columnDefs: [
               { orderable: false, targets: 4 }

@@ -64,8 +64,7 @@ class ProgressController extends Controller
         $progress->updated_at = now();
         $progress->save();
 
-        $request->session()->flash('message', 'Cambios Guardados');
-        return redirect()->route('all.progress');
+        return redirect()->route('all.progress')->with('message', 'Progreso actualizado');
     }
 
     public function create(){
@@ -152,9 +151,7 @@ class ProgressController extends Controller
                 $i++;
             }
     
-    
-            $request->session()->flash('message', 'Progreso registrado exitosamente');
-            return redirect()->route('all.progress');
+            return redirect()->route('create.progress')->with('message', 'Progreso registrado exitosamente');
 
         }
     }
@@ -248,8 +245,7 @@ class ProgressController extends Controller
 
             }
             
-            $request->session()->flash('message', 'Cambios guardados exitosamente');
-            return redirect()->route('all.progress');
+            return redirect()->route('edit.progress',['id'=> $id])->with('message', 'Cambios guardados exitosamente');
         }
     }
 }

@@ -5,9 +5,16 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4 my-md-5">
 
-        <div class="col-12 col-md-11 col-lg-11 card shadow-7 px-0">
+        @if (session('message'))
+            <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                <i class="far fa-check-circle"></i>
+                {{ session('message'); }}
+            </div>
+        @endif
+
+        <div class="col-11 card shadow-7 px-0">
 
             <form action="{{route('update.progress',['id'=>$progress->id]);}}" method="post">
                 @csrf
@@ -17,17 +24,19 @@
                     <i class="fas fa-hammer"></i>
                     Progreso General
                     </span>
-                    <button id="update" type="submit" class="btn btn-primary disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</a>
+                    {{--Un botón distinto para movil para que se vea mejor--}}
+                    <button id="update" type="submit" class="btn btn-primary disabled d-none d-md-block" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
+                    <button id="update" type="submit" class="btn btn-primary disabled d-block d-md-none" onclick="this.disabled=true;this.form.submit();">Guardar</button>
                 </div>
 
                 <div class="card-body">
 
                     <div class="row">
-                        <div class="col-10 chrome">
+                        <div class="col-8 col-md-10 chrome">
                             <label for="percent" class="form-label fs-6">Porcentaje del Progreso:</label>
                             <input type="range" class="d-block mb-4" min="0" max="100" step="1" value="{{$progress->percent}}" id="percent" name="percent" required oninput="updateValue();" onchange="updateValue();" >
                         </div>
-                        <div class="col-2 fs-2" style="align-self: center;">
+                        <div class="col-4 col-md-2 fs-2" style="align-self: center;">
                             <span class="ms-3" id="progress-value">{{$progress->percent}}</span>%
                         </div>
 
@@ -75,39 +84,49 @@
 
         </div>
 
-        <div class="col-12 col-md-11 col-lg-11 card shadow-7 px-0 my-4">
+        <div class="col-11 card shadow-7 px-0 my-4">
             <div class="card-header d-flex justify-content-between">
-                <span class="fs-5 d-block" style="align-self: center">
+
+                {{--Etiquetas y botones distintas para que sea vea mejor en móvil--}}
+                <span class="fs-5 d-none d-md-block" style="align-self: center">
                     <i class="fas fa-list-ol"></i> 
                      Actualizaciones del progreso
                 </span>
-                <a class="btn btn-success" href="{{route('create.progress');}}">Registrar Avances</a>
+                <span class="fs-5 d-block d-md-none" style="align-self: center">
+                    <i class="fas fa-list-ol"></i> 
+                     Actualizaciones
+                </span>
+
+                <a class="btn btn-success d-none d-md-block" href="{{route('create.progress');}}">Registrar Avances</a>
+                <a class="btn btn-success d-block d-md-none" href="{{route('create.progress');}}">Registrar</a>
             </div>
 
             <div class="card-body">
-                <table class="table table-responsive-sm table-striped table-bordered" id="all_posts_table" data-page-length='10'>
-                    <thead>
-                      <tr>
-                        <th>Título</th>
-                        <th>Fecha</th>
-                        <th class="text-center">Acciones</th>
-                      </tr>
-                    </thead>
-    
-                    <tbody>
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-bordered" id="all_posts_table" data-page-length='10'>
+                        <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Fecha</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                        </thead>
+        
+                        <tbody>
 
-                      @foreach($posts->all() as $post)
-                            <tr>
-                                <td>{{ $post->title; }}</td>
-                                <td>{{ $post->date; }}</td>
-                                <td class="d-flex justify-content-evenly">
-                                    <a href="{{route('edit.progress',['id'=> $post->id]);}}" class="btn btn-primary">Editar</a>
-                                </td>
-                            </tr>
-                      @endforeach
-    
-                    </tbody>
-                  </table>
+                        @foreach($posts->all() as $post)
+                                <tr>
+                                    <td>{{ $post->title; }}</td>
+                                    <td>{{ $post->date; }}</td>
+                                    <td class="text-center">
+                                        <a href="{{route('edit.progress',['id'=> $post->id]);}}" class="btn btn-primary">Editar</a>
+                                    </td>
+                                </tr>
+                        @endforeach
+        
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </div>
@@ -129,6 +148,23 @@
                 fixedHeader: {
                         header: true,
                         footer:false,
+                    },
+                    "language": {
+                        "emptyTable":     "La tabla está vacía",
+                        "info":           "Mostrando de _START_ a _END_ entradas, de un total de _TOTAL_",
+                        "infoEmpty":      "Tabla vacía",
+                        "infoFiltered":   "(filtrado de _MAX_ entradas)",
+                        "lengthMenu":     "Mostrar _MENU_ entradas",
+                        "loadingRecords": "Cargando...",
+                        "processing":     "Cargando...",
+                        "search":         "Buscar:",
+                        "zeroRecords":    "No se encontró nada",
+                        "paginate": {
+                            "first":      "Primera",
+                            "last":       "Ultima",
+                            "next":       "Siguiente",
+                            "previous":   "Anterior"
+                        }
                     },
                 columnDefs: [
                     { orderable: false, targets: 2 }

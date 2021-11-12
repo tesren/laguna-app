@@ -64,7 +64,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/prototypes', [UnitTypesController::class, 'index'])->name('all.prototypes');
     Route::get('/prototype/{id}', [UnitTypesController::class, 'edit'])->name('edit.prototypes');
 
-    //Route::post('/unit/types',[UnitTypesController::class, 'all'])->name('all.unit.types');
+    Route::post('/unit/types',[UnitTypesController::class, 'all'])->name('all.unit.types');
     Route::post('/prototype/{id}/update',[UnitTypesController::class, 'update'])->name('update.type');
 
     Route::get('/tower/create', [TowersController::class, 'create'])->name('create.tower');

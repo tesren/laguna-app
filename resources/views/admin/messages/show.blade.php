@@ -5,9 +5,9 @@
 
     <div class="c-main">
         
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-4 mt-md-5">
 
-            <div class="col-12 col-md-11 col-lg-10 card px-0 shadow-8">
+            <div class="col-11 col-md-11 col-lg-10 card px-0 shadow-8">
 
                 <div class="card-header d-flex justify-content-between">
                     <span class="fs-4 d-block" style="align-self: center">
@@ -22,12 +22,12 @@
 
                 <div class="row card-body fs-5">
 
-                    <div class="col-6">
+                    <div class="col-12 col-md-6 mb-3 mb-md-0">
                         De: 
                         <strong>{{$message->name}}</strong>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         Correo: 
                         <a title="Responder" href="mailto:{{$message->email}}" class="link-dark fw-bold" target="_blank" rel="noopener">{{$message->email}}</a>
                     </div>
@@ -38,14 +38,14 @@
                     </div>
 
                     @if (!empty($message->phone))
-                        <div class="col-6">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
                             Teléfono: 
                             <a href="tel:{{$message->phone}}" class="link-dark fw-bold">{{$message->phone}}</a>
                         </div>
                     @endif
 
                     @if (!empty($message->unit))
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             Interesado en la unidad: 
                             <strong>{{$message->unit}}</strong>
                         </div>

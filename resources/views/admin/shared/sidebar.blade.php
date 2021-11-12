@@ -59,6 +59,7 @@
     
 </div>
 
+{{--Navbar distinto para móvil--}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-green d-flex fixed-top d-lg-none" id="admin-navbarMobile">
     <div class="container-fluid">
 
@@ -111,6 +112,12 @@
                     <a href="{{route('all.messages');}}" class="nav-link">
                         <i class="fas fa-envelope-open-text"></i>
                         Mensajes
+                    </a>
+                </li>
+                <li class="nav-item bg-darkgreen" style="position: absolute; bottom: 0; left: 0; width: 100%;">
+                    <a href="" class="nav-link">
+                        <i class="fas fa-sign-out-alt ms-3"></i> 
+                        Cerrar Sesión
                     </a>
                 </li>
             </ul>

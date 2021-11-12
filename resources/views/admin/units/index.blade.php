@@ -34,7 +34,9 @@
                             <i class="far fa-list-alt"></i>
                             Todas las Unidades
                           </span>
-                          <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                          {{--Boton diferente para móvil para que se vea mejor--}}
+                          <a class="btn btn-success d-none d-md-block" href="{{route('create.unit');}}">Registrar Unidad</a>
+                          <a class="btn btn-success d-block d-md-none" href="{{route('create.unit');}}">Registrar</a>
                         </div>
             
                         <div class="card-body">
@@ -89,7 +91,9 @@
                           <i class="far fa-list-alt"></i>
                           Unidades Disponibles
                         </span>
-                        <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                        {{--Boton diferente para móvil para que se vea mejor--}}
+                        <a class="btn btn-success d-none d-md-block" href="{{route('create.unit');}}">Registrar Unidad</a>
+                        <a class="btn btn-success d-block d-md-none" href="{{route('create.unit');}}">Registrar</a>
                       </div>
             
                         <div class="card-body">
@@ -143,7 +147,9 @@
                             <i class="far fa-list-alt"></i>
                             Unidades Apartadas
                           </span>
-                          <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                          {{--Boton diferente para móvil para que se vea mejor--}}
+                          <a class="btn btn-success d-none d-md-block" href="{{route('create.unit');}}">Registrar Unidad</a>
+                          <a class="btn btn-success d-block d-md-none" href="{{route('create.unit');}}">Registrar</a>
                         </div>
             
                         <div class="card-body">
@@ -197,7 +203,9 @@
                           <i class="far fa-list-alt"></i>
                           Unidades Vendidas
                         </span>
-                        <a class="btn btn-success" href="{{route('create.unit');}}">Registrar Unidad</a>
+                        {{--Boton diferente para móvil para que se vea mejor--}}
+                        <a class="btn btn-success d-none d-md-block" href="{{route('create.unit');}}">Registrar Unidad</a>
+                        <a class="btn btn-success d-block d-md-none" href="{{route('create.unit');}}">Registrar</a>
                       </div>
             
                         <div class="card-body">
@@ -255,11 +263,28 @@
     <script>
         $(document).ready( function () {
             $('#all_units_table').DataTable({
-          fixedHeader: {
-                header: true,
-                footer:false,
+            fixedHeader: {
+              header: true,
+              footer:false,
             },
-           columnDefs: [
+            "language": {
+              "emptyTable":     "La tabla está vacía",
+              "info":           "Mostrando de _START_ a _END_ unidades, de un total de _TOTAL_",
+              "infoEmpty":      "Tabla vacía",
+              "infoFiltered":   "(filtrado de _MAX_ unidades)",
+              "lengthMenu":     "Mostrar _MENU_ unidades",
+              "loadingRecords": "Cargando...",
+              "processing":     "Cargando...",
+              "search":         "Buscar:",
+              "zeroRecords":    "No se encontró nada",
+              "paginate": {
+                  "first":      "Primera",
+                  "last":       "Ultima",
+                  "next":       "Siguiente",
+                  "previous":   "Anterior"
+              }
+            },
+            columnDefs: [
               { orderable: false, targets: 8 }
             ]
         });
@@ -268,6 +293,23 @@
           fixedHeader: {
                 header: true,
                 footer:false,
+            },
+            "language": {
+              "emptyTable":     "La tabla está vacía",
+              "info":           "Mostrando de _START_ a _END_ unidades, de un total de _TOTAL_",
+              "infoEmpty":      "Tabla vacía",
+              "infoFiltered":   "(filtrado de _MAX_ unidades)",
+              "lengthMenu":     "Mostrar _MENU_ unidades",
+              "loadingRecords": "Cargando...",
+              "processing":     "Cargando...",
+              "search":         "Buscar:",
+              "zeroRecords":    "No se encontró nada",
+              "paginate": {
+                  "first":      "Primera",
+                  "last":       "Ultima",
+                  "next":       "Siguiente",
+                  "previous":   "Anterior"
+              }
             },
            columnDefs: [
               { orderable: false, targets: 8 }
@@ -279,6 +321,23 @@
                 header: true,
                 footer:false,
             },
+            "language": {
+              "emptyTable":     "La tabla está vacía",
+              "info":           "Mostrando de _START_ a _END_ unidades, de un total de _TOTAL_",
+              "infoEmpty":      "Tabla vacía",
+              "infoFiltered":   "(filtrado de _MAX_ unidades)",
+              "lengthMenu":     "Mostrar _MENU_ unidades",
+              "loadingRecords": "Cargando...",
+              "processing":     "Cargando...",
+              "search":         "Buscar:",
+              "zeroRecords":    "No se encontró nada",
+              "paginate": {
+                  "first":      "Primera",
+                  "last":       "Ultima",
+                  "next":       "Siguiente",
+                  "previous":   "Anterior"
+              }
+            },
            columnDefs: [
               { orderable: false, targets: 8 }
             ]
@@ -288,6 +347,23 @@
           fixedHeader: {
                 header: true,
                 footer:false,
+            },
+            "language": {
+              "emptyTable":     "La tabla está vacía",
+              "info":           "Mostrando de _START_ a _END_ unidades, de un total de _TOTAL_",
+              "infoEmpty":      "Tabla vacía",
+              "infoFiltered":   "(filtrado de _MAX_ unidades)",
+              "lengthMenu":     "Mostrar _MENU_ unidades",
+              "loadingRecords": "Cargando...",
+              "processing":     "Cargando...",
+              "search":         "Buscar:",
+              "zeroRecords":    "No se encontró nada",
+              "paginate": {
+                  "first":      "Primera",
+                  "last":       "Ultima",
+                  "next":       "Siguiente",
+                  "previous":   "Anterior"
+              }
             },
            columnDefs: [
               { orderable: false, targets: 8 }

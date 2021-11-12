@@ -5,8 +5,16 @@
 
     <div class="c-main">
 
-        <div class="row justify-content-center mt-5">
-            <div class="col-12 col-md-10 col-lg-8 px-0 card shadow-8">
+        <div class="row justify-content-center mt-4 mt-md-5">
+
+            @if (session('message'))
+                <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                    <i class="far fa-check-circle"></i>
+                    {{ session('message'); }}
+                </div>
+            @endif
+
+            <div class="col-11 col-md-10 col-lg-8 px-0 card shadow-8">
 
                 <div class="card-header">
                     <i class="fas fa-home"></i>
@@ -14,7 +22,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form class="row" action="{{route('update.unit', $unit->id)}}" method="post">
+                    <form class="row" action="{{route('update.unit', $unit->id)}}" method="post" onsubmit="disableButton();">
                         @csrf
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="unit">Unidad</label>
@@ -95,7 +103,7 @@
                         </div>
 
                         <div class="col-12">
-                            <button id="update" type="submit" class="btn btn-primary w-100 disabled" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
+                            <button id="update" type="submit" class="btn btn-primary w-100 disabled">Guardar Cambios</button>
                         </div>
 
                     </form>
@@ -140,6 +148,12 @@
 
         function enableBtn(){
             $('#update').removeClass('disabled');
+        }
+
+        function disableButton() {
+            var btn = document.getElementById('update');
+            btn.disabled = true;
+            btn.innerText = 'Cargando...'
         }
         
     </script>

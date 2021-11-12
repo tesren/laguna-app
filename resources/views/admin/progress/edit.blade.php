@@ -5,9 +5,16 @@
 
 <div class="c-main">
 
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-4 my-md-5">
 
-        <div class="col-12 col-md-10 col-lg-7 card shadow-7 px-0">
+        @if (session('message'))
+            <div class="col-11 fs-5 my-4 text-center" style="color: #198754;">
+                <i class="far fa-check-circle"></i>
+                {{ session('message'); }}
+            </div>
+        @endif
+
+        <div class="col-11 col-md-10 col-lg-7 card shadow-7 px-0">
 
             <div class="card-header d-flex justify-content-between">
                 <span class="fs-5 d-block" style="align-self: center">
@@ -17,7 +24,7 @@
             </div>
 
             <div class="card-body">
-                <form action="{{route('update.post',['id'=>$post->id]);}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('update.post',['id'=>$post->id]);}}" method="post" enctype="multipart/form-data" onsubmit="disableButton();">
                     @csrf
                     <label for="title">Título</label>
                     <input class="form-control mb-3" type="text" name="title" id="title" value="{{$post->title}}" required>
@@ -67,7 +74,7 @@
                         </span>
                     @endif
 
-                    <button type="submit" class="btn btn-primary w-100" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
+                    <button id="submitBtn" type="submit" class="btn btn-primary w-100">Guardar Cambios</button>
                 </form>
             </div>
 
@@ -76,4 +83,14 @@
     </div>
 </div>
 
+@endsection
+
+@section('javascript')
+    <script>
+        function disableButton() {
+            var btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = 'Cargando...'
+        }
+    </script>
 @endsection

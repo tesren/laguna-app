@@ -43,8 +43,7 @@ class UnitsController extends Controller
         $unit->created_at = now();
         $unit->save();
 
-        $request->session()->flash('message', 'Unidad registrada exitosamente');
-        return redirect()->route('all.units');
+        return redirect()->route('create.unit')->with('message', 'Unidad registrada exitosamente');
     }
 
     public function update(Request $request, $id)
@@ -60,6 +59,6 @@ class UnitsController extends Controller
         $unit->save();
         //$request->session()->flash('message', 'Cambios Guardados');
         
-        return redirect()->route('all.units');
+        return redirect()->route('show.unit',['id'=> $id])->with('message', 'Unidad actualizada exitosamente');
     }
 }

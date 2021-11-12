@@ -20,7 +20,7 @@
                 {{ count($messages); }}
             </strong>
             <span class="d-block mb-5 fs-5 ms-4 fw-light">Mensajes Recibidos</span>
-            <a class="link-light bg-darkblue text-decoration-none text-center py-1 card-btn" href="{{route('all.messages');}}">Ver Mensajes</a>
+            <a class="link-light bg-darkblue text-decoration-none text-center py-1 card-btn btn" href="{{route('all.messages');}}">Ver Mensajes</a>
         </div>
 
         {{-- Progreso de la construcción --}}
@@ -28,28 +28,43 @@
 
             <div class="row">
                 
-                <div class="col-6">
-                    <img id="prog-thumbnail" class="mt-3 ms-1 ms-lg-4" src="{{asset($img->url)}}" alt="Thumbnail progreso">
-                </div>
-                
-                <div class="col-6">
-                    <span class="d-block mb-0 mt-1 mt-lg-3 ms-1 ms-lg-4 fs-1 fw-bold">
-                        {{$progress->percent}}%
-                    </span>
-                    <span class="d-block ms-1 ms-lg-4 fs-5 fw-light">Progreso de la construcción</span>
-                </div>
-    
-                @php
-                    $date = date_create($lastPost->date);
-                @endphp
-    
-                <div class="col-12 mb-1 mt-2 mt-lg-3 ms-1 ms-lg-4 fs-5 fw-light">
-                    Ultima actualización: 
-                    <span class="fw-bold">{{date_format($date, 'd/m/Y');}} </span>
-                </div>
+                @if (!empty($img->url))
+                    <div class="col-6">
+                        <img id="prog-thumbnail" class="mt-3 ms-1 ms-lg-4" src="{{asset($img->url)}}" alt="Thumbnail progreso">
+                    </div>
+                    
+                    <div class="col-6">
+                        <span class="d-block mb-0 mt-1 mt-lg-3 ms-1 ms-lg-4 fs-1 fw-bold">
+                            {{$progress->percent}}%
+                        </span>
+                        <span class="d-block ms-1 ms-lg-4 fs-5 fw-light">Progreso de la construcción</span>
+                    </div>
+        
+                    @php
+                        $date = date_create($lastPost->date);
+                    @endphp
+        
+                    <div class="col-12 mb-1 mt-2 ms-1 ms-lg-4 fs-5 fw-light">
+                        Ultima actualización: 
+                        <span class="fw-bold">{{date_format($date, 'd/m/Y');}} </span>
+                    </div>
+                @else
+                    <div class="col-12">
+                        <span class="d-block mb-0 mt-1 mt-lg-3 ms-1 ms-lg-4 fs-1 fw-bold">
+                            {{$progress->percent}}%
+                        </span>
+                        <span class="d-block ms-1 ms-lg-4 fs-5 fw-light">Progreso de la construcción</span>
+                    </div>
+        
+                    <div class="col-12 mb-1 mt-2 mt-lg-3 ms-1 ms-lg-4 fs-5 fw-light">
+                        Ultima actualización: 
+                        <span class="fw-bold">Aún no hay actualizaciones</span>
+                    </div>
+                @endif
+             
             </div>
          
-            <a class="link-light bg-darkgreen text-decoration-none text-center py-1 card-btn" href="{{route('all.progress');}}">Actualizar Progreso</a>
+            <a class="link-light bg-darkgreen text-decoration-none text-center py-1 card-btn btn" href="{{route('all.progress');}}">Actualizar Progreso</a>
         </div>
         
     </div>
@@ -95,7 +110,7 @@
             </strong>
             <span class="d-block mb-5 fs-5 ms-4 fw-light">Torres Registradas</span>
 
-            <a class="link-light bg-darkblue text-decoration-none text-center py-1 card-btn" href="{{route('all.towers');}}">Ver Torres</a>
+            <a class="link-light bg-darkblue text-decoration-none text-center py-1 card-btn btn" href="{{route('all.towers');}}">Ver Torres</a>
         </div>
 
         {{-- Unidades totales --}}
@@ -106,7 +121,7 @@
             </strong>
             <span class="d-block mb-5 fs-5 ms-4 fw-light">Unidades en Total</span>
 
-            <a class="link-light bg-darkgreen text-decoration-none text-center py-1 card-btn" href="{{route('create.unit');}}">Registrar unidad</a>
+            <a class="link-light bg-darkgreen text-decoration-none text-center py-1 card-btn btn" href="{{route('create.unit');}}">Registrar unidad</a>
         </div>
         
     </div>
