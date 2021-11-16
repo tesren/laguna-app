@@ -20,13 +20,12 @@ use App\Http\Controllers\ProgressController;
 |
 */
 
-//public routes
 Route::get('/', function () {
     return view('pages.home');
 });
 
 Route::get('/admin', function () {
-    return view('admin.login');
+    return view('auth.login');
 });
 
 Route::get('/contact', function () {
@@ -45,8 +44,14 @@ Route::get('/inventory', function () {
     return view('pages.inventory');
 });
 
+/* Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard'); */
+
+
 //admin routes
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group( function () {
+
     Route::get('/messages', [MessagesController::class, 'index'])->name('all.messages');
     Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('show.message');
     Route::delete('/messages/{id}/delete', [MessagesController::class, 'destroy'])->name('delete.message');
@@ -84,4 +89,4 @@ Route::prefix('admin')->group(function () {
 
 });
 
-
+require __DIR__.'/auth.php';

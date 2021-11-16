@@ -53,9 +53,15 @@
         </li>
     </ul>
     
-    <a href="#" class="d-flex p-2 link-light text-decoration-none bg-darkgreen">
-        <span class="fs-5"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</span>
-    </a>
+    <div class="d-flex p-2 bg-darkgreen">
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn p-0 fs-5 link-light">
+                <i class="fas fa-sign-out-alt"></i> 
+                Cerrar Sesión
+            </button>
+        </form>
+    </div>
     
 </div>
 
@@ -115,10 +121,14 @@
                     </a>
                 </li>
                 <li class="nav-item bg-darkgreen" style="position: absolute; bottom: 0; left: 0; width: 100%;">
-                    <a href="" class="nav-link">
-                        <i class="fas fa-sign-out-alt ms-3"></i> 
-                        Cerrar Sesión
-                    </a>
+                    
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn p-0 fs-5 link-light ms-3 mb-1">
+                            <i class="fas fa-sign-out-alt"></i> 
+                            Cerrar Sesión
+                        </button>
+                    </form>
                 </li>
             </ul>
         </div>
