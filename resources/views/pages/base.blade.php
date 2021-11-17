@@ -18,10 +18,9 @@
 
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>
-        <!--Font-->
-        <link href="https://www.dafontfree.net/embed/c2Fja2Vycy1nb3RoaWMtbGlnaHQtYXQtcmVndWxhciZkYXRhLzQ2L3MvNjMyODYvU2Fja2VycyBHb3RoaWMgTGlnaHQgQVQub3Rm" rel="stylesheet" type="text/css"/>
+        
         <!--Styles-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-style.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-front.css') }}"/>
 
     </head>
 
@@ -29,6 +28,7 @@
         
         @yield('content') 
 
+        <script type="text/javascript" src="{{ asset('/js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('/css/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
     </body>

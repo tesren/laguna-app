@@ -18,10 +18,8 @@
 
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>
-        <!--Font-->
-        <link href="{{asset('/css/sackers-gothic.ttf')}}" rel="stylesheet"/>
         <!--Styles-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-style.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-back.css') }}"/>
         {{--Data tables--}}
         <link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}"/>
     </head>

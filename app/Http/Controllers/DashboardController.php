@@ -19,7 +19,12 @@ class DashboardController extends Controller
     {
         $lastPost = ProgressPost::orderBy('date','desc')->take(1)->first();
 
-        $lastImg = ProgressImg::all()->where('progress_post_id', $lastPost->id)->where('size','small')->first();
+        if(!empty($lastPost)){
+            $lastImg = ProgressImg::all()->where('progress_post_id', $lastPost->id)->where('size','small')->first();
+        }else{
+            $lastImg = array('url'=>'') ;
+        }
+        
 
         return view('admin.dashboard', [
             'messages' => Message::all(), 

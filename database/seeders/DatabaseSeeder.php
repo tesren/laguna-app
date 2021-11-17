@@ -29,12 +29,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UnitTypesSeeder::class,
-            TowerSeeder::class,
-            UnitSeeder::class,
-            MessagesSeeder::class,
+            //TowerSeeder::class,
+            //UnitSeeder::class,
+            //MessagesSeeder::class,
             ProgressSeeder::class,
-            ProgressPostsSeeder::class,
-            ProgressImgsSeeder::class,
+            //ProgressPostsSeeder::class,
+            //ProgressImgsSeeder::class,
         ]);
     }
 }

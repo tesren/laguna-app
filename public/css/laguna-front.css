@@ -1,0 +1,123 @@
+/*Fuentes*/
+@font-face {
+    font-family: "Sackers Gothic Regular";
+    src: url("/fonts/sackers-gothic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Medium";
+    src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Light";
+    src: url("/fonts/ZenKakuGothicNew-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Zen Kaku Bold";
+    src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Estilos generales*/
+h2{
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    letter-spacing: 7px;
+    width: 100%;
+    z-index: 3;
+    font-weight: 300 !important;
+    opacity: 1 !important;
+    color: #c7ae63 !important;
+    font-family: 'sackers-gothic-light-at-regular', sans-serif !important;
+}
+
+.container-fluid{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-agua{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fondo-verde{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: darkgreen;
+    opacity: 0.25;
+}
+
+#logo{
+    position: absolute;
+    width: 60%;
+    top: 15%;
+    left: 20%;
+    right: 20%;
+    z-index: 3;
+    fill: white !important;
+}
+
+#logo-century{
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+    right: 15px;
+    width: 250px;
+}
+
+@media (max-width: 767px) {
+    #logo{
+        top: 25%;
+        width: 100%;
+        left: 0;
+    }
+
+    h2{
+        top:53%;
+    }
+
+    #logo-century{
+        position: absolute;
+        z-index: 3;
+        bottom: 5px;
+        right: 0px;
+        width: 150px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #logo{
+        width: 70%;
+        left: 15%;
+        right: 15%;
+        top: 25%;
+    }
+    h2{
+        top:55%;
+    }
+}
+
+@media (min-width: 1500px) {
+    h2{
+        top:70%;
+    }
+}

@@ -11,13 +11,13 @@ class Shape extends Model
 
     public function unit()
     {
-        return $this->hasOne( Unit::class,'unit_id' );
+        return $this->belongsTo( Unit::class,'unit_id' );
     }
 
 
     public function tower()
     {
-        return $this->hasOne(Tower::class, 'tower_id');
+        return $this->belongsTo(Tower::class, 'tower_id');
     }
 
 }
