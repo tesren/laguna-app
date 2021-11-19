@@ -9,9 +9,11 @@ class Shape extends Model
 {
     use HasFactory;
 
+    protected $table = 'shapes';
+
     public function unit()
     {
-        return $this->belongsTo( Unit::class,'unit_id' );
+        return $this->hasOne( Unit::class);
     }
 
 

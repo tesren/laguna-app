@@ -55,7 +55,7 @@ class TowersController extends Controller
 
             $imgFile = $request->file('imgfile');
 
-            Image::make($imgFile)->resize(1920, null, function ($constraint) {
+            Image::make($imgFile)->resize(1280, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($imgPath, 100, 'webp');
 
@@ -163,7 +163,7 @@ class TowersController extends Controller
 
             $imgFile = $request->file('imgfile');
 
-            Image::make($imgFile)->resize(1920, null, function ($constraint) {
+            Image::make($imgFile)->resize(1280, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($imgPath, 100, 'webp');
 

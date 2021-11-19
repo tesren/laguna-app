@@ -40,7 +40,7 @@
 
     </div>
 
-    <div class="container-fluid px-0 py-5" style="background:#E5E5E5;" id="info-section">
+    <div class="container-fluid px-0 py-5 bg-beige" id="info-section">
         <div class="row w-100">
 
             <div class="col-4"></div>

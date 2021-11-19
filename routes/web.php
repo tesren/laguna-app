@@ -39,11 +39,11 @@ Route::get('/progress', function () {
     return view('pages.about');
 });
 
-Route::get('/inventory/{id}', [FrontController::class, 'inventory']);
+Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
 
-Route::get('/unit/{id}', [FrontController::class, 'unit']);
+Route::get('/unit/{id}', [FrontController::class, 'unit'])->name('view.unit');
 
-Route::get('/towers',[FrontController::class, 'towers']);
+Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
 
 Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
 

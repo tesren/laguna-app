@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-      <a class="navbar-brand py-2 ms-4 logo-yellow" href="/">
+      <a class="navbar-brand py-2 ms-2 ms-lg-4 logo-yellow" href="/">
         <img class="w-100" src="{{asset('assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
       </a>
 
@@ -15,7 +15,7 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5 fw-normal-zen">
 
           <li class="nav-item me-5">
-            <a class="nav-link link-light" href="#">Inventario</a>
+            <a class="nav-link link-light" href="{{route('view.towers');}}">Inventario</a>
           </li>
 
           <li class="nav-item me-5">
