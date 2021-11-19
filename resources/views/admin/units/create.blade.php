@@ -47,19 +47,29 @@
                             <input class="form-control" type="text" name="bedrooms" id="bedrooms" readonly>
                         </div>
 
-                        <div class="col-6 col-lg-2 mb-3">
+                        <div class="col-6 col-lg-4 mb-3">
                             <label for="bathrooms">Baños</label>
                             <input class="form-control" type="text" name="bathrooms" id="bathrooms" readonly>
                         </div>
 
-                        <div class="col-6 col-lg-2 mb-3">
+                        <div class="col-6 col-lg-4 mb-3">
                             <label for="half_baths">Medios baños</label>
                             <input class="form-control" type="text" name="half_baths" id="half_baths" readonly >
                         </div>
 
-                        <div class="col-6 col-lg-4 mb-3">
-                            <label for="const">Metros cuadrados</label>
-                            <input class="form-control" type="text" name="const" id="const" readonly>
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="const">Total de Metros cuadrados</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="const" id="const" required>
+                        </div>
+    
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="interior">Metros cuadrados del interior</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="interior" id="interior" required>
+                        </div>
+    
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="exterior">Metros cuadrados del exterior</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="exterior" id="exterior" required>
                         </div>
 
                         <div class="col-6 col-lg-4 mb-3">
@@ -139,7 +149,7 @@
                             $('#bedrooms').val(arrayTypes[j].bedrooms);
                             $('#bathrooms').val(arrayTypes[j].bathrooms);
                             $('#half_baths').val(arrayTypes[j].half_baths);
-                            $('#const').val(arrayTypes[j].meters_total);
+                            //$('#const').val(arrayTypes[j].meters_total);
                         }
                     }
 

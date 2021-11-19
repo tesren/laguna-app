@@ -4,20 +4,60 @@
 
 <div class="container-fluid p-0" style="position:relative">
 
-    <h1 class="d-none">Laguna Living</h1>
+    <div id="video-container">
+        <video autoplay muted loop id="video-home">
+            <source src="{{asset('/assets/videos/video-ligero.m4v');}}" type="video/mp4">
+        </video>
 
-    <video id="video-agua" src="{{asset('/assets/videos/video-ligero.m4v');}}" autoplay loop muted>
-        Your browser does not support the video tag.
-    </video>
+        <div class="overlay"></div>
 
-    <div class="fondo-verde"></div>
+        <div id="landing" class="text-center" style="color: white;">
+            <h1 class="d-none">Laguna Living</h1>
+            <h2 class="fw-normal-sackers fs-1">Diseñado para un</h2>
 
-    <img id="logo" src="{{asset('/assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
+            <div class="d-flex justify-content-center">
+                <img width="45px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <h2 class="mx-4 fw-normal-sackers fs-1">Estilo de vida Saludable</h2>
+                <img width="45px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            </div>
 
-    <h2>COMING SOON</h2>
+            <div class="row justify-content-center text-center w-100 mt-6">
+                <div class="col-3">
+                    <img class="mt-2 mb-3" src="{{asset('/assets/icons/graphic.svg');}}" alt="">
+                    <h3 class="fw-light-zen fs-4">Gran Retorno de Inversion</h3>
+                </div>
+                <div class="col-3">
+                    <span class="fs-1 fw-bold-zen">{{count($units);}}</span>
+                    <h3 class="fw-light-zen fs-4">Avaliable Units</h3>
+                </div>
+                <div class="col-3">
+                    <img class="mt-2 mb-3" src="{{asset('/assets/icons/leaf.svg');}}" alt="">
+                    <h3 class="fw-light-zen fs-4">Desarrollo Verde</h3>
+                </div>
+            </div>
 
-    <img id="logo-century" src="{{asset('/assets/img/logo-century.png');}}" alt="Logo Century 21">
+        </div>
 
+    </div>
+
+    <div class="container-fluid px-0 py-5" style="background:#E5E5E5;" id="info-section">
+        <div class="row w-100">
+
+            <div class="col-4"></div>
+
+            <div class="col-4">
+                <h3 class="text-center text-uppercase mb-0">Conéctate con la naturaleza por medio de nuestro 
+                    <span>diseño ecológico</span>
+                </h3>
+            </div>
+
+            <div class="col-4"></div>
+
+        </div>
+        
+    </div>
+
+    @include('pages.shared.contact')
 </div>
     
 @endsection

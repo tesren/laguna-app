@@ -19,9 +19,9 @@ class CreateUnitTypesTable extends Migration
             $table->string('bedrooms');
             $table->integer('bathrooms');
             $table->integer('half_baths');
-            $table->string('meters_total');
+            /* $table->string('meters_total');
             $table->string('meters_int');
-            $table->string('meters_ext');
+            $table->string('meters_ext'); */
             $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();

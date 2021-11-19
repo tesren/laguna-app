@@ -26,7 +26,7 @@ class TowerSeeder extends Seeder
             [
                 'name' => 'Cedro',
                 'units' => '36',
-                'floors'=> 7,
+                'floors'=> 6,
                 'created_at' => now(),
             ],
        ]);

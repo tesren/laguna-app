@@ -29,8 +29,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UnitTypesSeeder::class,
-            //TowerSeeder::class,
-            //UnitSeeder::class,
+            TowerSeeder::class,
+            UnitSeeder::class,
             //MessagesSeeder::class,
             ProgressSeeder::class,
             //ProgressPostsSeeder::class,

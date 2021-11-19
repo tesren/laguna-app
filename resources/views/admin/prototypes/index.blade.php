@@ -22,11 +22,11 @@
                         <thead>
                         <tr>
                             <th>Tipo</th>
-                            <th>BR</th>
-                            <th>BA</th>
-                            <th>m² Total</th>
+                            <th>Recámaras</th>
+                            <th>Baños</th>
+                            {{-- <th>m² Total</th>
                             <th>m² Interior</th>
-                            <th>m² Exterior</th>
+                            <th>m² Exterior</th> --}}
                             <th class="text-center">Acciones</th>
                         </tr>
                         </thead>
@@ -38,9 +38,9 @@
                                     <td>{{ $type->name; }}</td>
                                     <td>{{ $type->bedrooms; }}</td>
                                     <td>{{ $type->bathrooms; }}</td>
-                                    <td>{{$type->meters_total}} m²</td>
+                                    {{-- <td>{{$type->meters_total}} m²</td>
                                     <td>{{$type->meters_int}} m²</td>
-                                    <td>{{$type->meters_ext}} m²</td>
+                                    <td>{{$type->meters_ext}} m²</td> --}}
                                     <td class="d-flex justify-content-evenly">
                                         <a href="{{route('edit.prototypes', ['id' => $type->id])}}" class="btn btn-primary">Editar</a>
                                     </td>

@@ -8,6 +8,7 @@ use App\Http\Controllers\UnitTypesController;
 use App\Http\Controllers\UnitTypesImgController;
 use App\Http\Controllers\TowersController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,7 @@ use App\Http\Controllers\ProgressController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', [FrontController::class, 'home'])->name('home.page');
 
 Route::get('/admin', function () {
     return view('auth.login');
@@ -40,13 +39,13 @@ Route::get('/progress', function () {
     return view('pages.about');
 });
 
-Route::get('/inventory', function () {
-    return view('pages.inventory');
-});
+Route::get('/inventory/{id}', [FrontController::class, 'inventory']);
 
-/* Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard'); */
+Route::get('/unit/{id}', [FrontController::class, 'unit']);
+
+Route::get('/towers',[FrontController::class, 'towers']);
+
+Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
 
 
 //admin routes

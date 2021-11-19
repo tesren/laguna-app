@@ -25,9 +25,10 @@
     </head>
 
     <body>
-        
+        @include('pages.shared.header')
         @yield('content') 
-
+        @include('pages.shared.footer')
+        
         <script type="text/javascript" src="{{ asset('/js/jquery-3.3.1.min.js') }}"></script>
         <script src="{{ asset('/css/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>

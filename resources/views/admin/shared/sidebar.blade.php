@@ -2,7 +2,7 @@
 <div class="d-none d-lg-flex flex-column flex-shrink-0  bg-green shadow-8 p-0" id="sidebar">
 
     <a href="{{route('dashboard');}}" class="d-flex align-items-center mb-0 bg-darkgreen">
-        <img class="w-100" src="{{ asset('/assets/img/logo-dorado.png'); }}" alt="Laguna logo">
+        <img class="w-100 py-4" src="{{ asset('/assets/img/logo-dorado.png'); }}" alt="Laguna logo">
     </a>
 
     <ul class="nav nav-pills flex-column mb-auto fs-4 fw-light">

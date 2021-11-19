@@ -47,19 +47,29 @@
                             <input class="form-control" type="text" name="bedrooms" id="bedrooms" readonly value="{{$unit->unitType->bedrooms}}" onchange="enableBtn();">
                         </div>
 
-                        <div class="col-6 col-lg-2 mb-3">
+                        <div class="col-6 col-lg-4 mb-3">
                             <label for="bathrooms">Baños</label>
                             <input class="form-control" type="text" name="bathrooms" id="bathrooms" readonly value="{{$unit->unitType->bathrooms}}"  onchange="enableBtn();">
                         </div>
 
-                        <div class="col-6 col-lg-2 mb-3">
+                        <div class="col-6 col-lg-4 mb-3">
                             <label for="half_baths">Medios baños</label>
                             <input class="form-control" type="text" name="half_baths" id="half_baths" readonly value="{{$unit->unitType->half_baths}}"  onchange="enableBtn();">
                         </div>
 
-                        <div class="col-6 col-lg-4 mb-3">
-                            <label for="const">Metros cuadrados</label>
-                            <input class="form-control" type="text" name="const" id="const" readonly value="{{$unit->unitType->meters_total}}"  onchange="enableBtn();">
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="const">Total de Metros cuadrados</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="const" id="const" value="{{$unit->meters_total}}" required onchange="enableBtn();">
+                        </div>
+    
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="interior">Metros cuadrados del interior</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="interior" id="interior" value="{{$unit->meters_int}}" required onchange="enableBtn();">
+                        </div>
+    
+                        <div class="col-12 col-lg-4 mb-3">
+                            <label for="exterior">Metros cuadrados del exterior</label>
+                            <input class="form-control" type="number" min="0" step="0.01" name="exterior" id="exterior" value="{{$unit->meters_ext}}" required onchange="enableBtn();">
                         </div>
 
                         <div class="col-6 col-lg-4 mb-3">
@@ -137,7 +147,7 @@
                             $('#bedrooms').val(arrayTypes[j].bedrooms);
                             $('#bathrooms').val(arrayTypes[j].bathrooms);
                             $('#half_baths').val(arrayTypes[j].half_baths);
-                            $('#const').val(arrayTypes[j].meters_total);
+                            //$('#const').val(arrayTypes[j].meters_total);
                         }
                     }
                     $('#update').removeClass('disabled');

@@ -46,7 +46,7 @@
                         <input class="form-control" type="number" min="0" name="half_baths" id="half_baths" required>
                     </div>
 
-                    <div class="col-12 col-lg-4 mb-3">
+                    {{-- <div class="col-12 col-lg-4 mb-3">
                         <label for="const">Total de Metros cuadrados</label>
                         <input class="form-control" type="number" min="0" step="0.01" name="const" id="const" required>
                     </div>
@@ -59,7 +59,7 @@
                     <div class="col-12 col-lg-4 mb-3">
                         <label for="exterior">Metros cuadrados del exterior</label>
                         <input class="form-control" type="number" min="0" step="0.01" name="exterior" id="exterior" required>
-                    </div>
+                    </div> --}}
 
                     <div class="col-12 mb-3">
                         <label for="description">Descripción</label>

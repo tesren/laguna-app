@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Zen Kaku Medium";
-    src: url("/fonts/ZenKakuGothicNew-Medium.ttf") format("truetype");
+    src: url("/fonts/ZenKakuGothicNew-Regular.ttf") format("truetype");
     font-weight: medium;
     font-style: normal;
 }
@@ -28,96 +28,116 @@
 }
 
 /*Estilos generales*/
-h2{
-    text-align: center;
-    position: absolute;
-    top: 65%;
-    letter-spacing: 7px;
+.bg-green{
+    background-color: #1E4748;
+}
+
+.bg-darkgreen{
+    background-color: #193C3D;
+}
+
+.btn-yellow {
+    color: #1E4748;
+    background-color: #ECD259;
+    border-color: #ECD259;
+    border-radius: 10px;
+}
+
+.fw-light-zen{
+    font-family:"Zen Kaku Light";
+}
+
+.fw-normal-zen{
+    font-family:"Zen Kaku Medium";
+}
+
+.fw-bold-zen{
+    font-family:"Zen Kaku Bold";
+}
+
+.fw-normal-sackers{
+    font-family: "Sackers Gothic Regular";
+}
+
+.shadow-7 {
+    box-shadow: 0 4px 5px -2px #0003,0 7px 10px 1px #00000024,0 2px 16px 1px #0000001f;
+}
+
+.mt-6{
+    margin-top: 5rem !important;
+}
+
+/*navbar*/
+.logo-yellow{
+    width: 200px;
+}
+
+.link-light{
+    color:#f8f9fa !important;
+}
+
+/*form de contacto*/
+.form-contact{
+    background-color: transparent;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ECD259;
+    color: white !important;
+    display: block;
     width: 100%;
-    z-index: 3;
-    font-weight: 300 !important;
-    opacity: 1 !important;
-    color: #c7ae63 !important;
-    font-family: 'sackers-gothic-light-at-regular', sans-serif !important;
+    font-family: "Zen Kaku Light";
+    padding: 5px;
 }
 
-.container-fluid{
-    height: 100vh;
-    overflow: hidden;
-}
+.form-contact::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
 
-#video-agua{
+/*front page*/
+
+#video-container{
     position: relative;
-    z-index: 1;
-    width: 100%;
     height: 100vh;
-    object-fit: cover;
+    width: 100%;
 }
-
-.fondo-verde{
+#video-home{
     position: absolute;
-    z-index: 2;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: darkgreen;
-    opacity: 0.25;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+    z-index: -99;
 }
 
-#logo{
+.overlay{
     position: absolute;
-    width: 60%;
-    top: 15%;
-    left: 20%;
-    right: 20%;
-    z-index: 3;
-    fill: white !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    background-color: black;
+    opacity: 0.2;
 }
 
-#logo-century{
+#landing{
     position: absolute;
-    z-index: 3;
-    bottom: 5px;
-    right: 15px;
-    width: 250px;
+    top: 40%;
+    width: 100%;
+    z-index: 5;
 }
 
 @media (max-width: 767px) {
-    #logo{
-        top: 25%;
-        width: 100%;
-        left: 0;
-    }
-
-    h2{
-        top:53%;
-    }
-
-    #logo-century{
-        position: absolute;
-        z-index: 3;
-        bottom: 5px;
-        right: 0px;
-        width: 150px;
-    }
+   /*navbar celular*/
     
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-    #logo{
-        width: 70%;
-        left: 15%;
-        right: 15%;
-        top: 25%;
-    }
-    h2{
-        top:55%;
-    }
-}
-
-@media (min-width: 1500px) {
-    h2{
-        top:70%;
-    }
+    /*navbar ipad*/
+   
 }

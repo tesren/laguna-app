@@ -59,9 +59,9 @@ class UnitTypesController extends Controller
             $type->bedrooms = $request->input('bedrooms');
             $type->bathrooms = $request->input('bathrooms');
             $type->half_baths = $request->input('half_baths');
-            $type->meters_total = $request->input('const');
+            /* $type->meters_total = $request->input('const');
             $type->meters_int = $request->input('interior');
-            $type->meters_ext = $request->input('exterior');
+            $type->meters_ext = $request->input('exterior'); */
             $type->description = $request->input('description');
             $type->created_at = now();
             $type->save();
@@ -202,9 +202,9 @@ class UnitTypesController extends Controller
             $type->bedrooms = $request->input('bedrooms');
             $type->bathrooms = $request->input('bathrooms');
             $type->half_baths = $request->input('half_baths');
-            $type->meters_total = $request->input('const');
+            /* $type->meters_total = $request->input('const');
             $type->meters_int = $request->input('interior');
-            $type->meters_ext = $request->input('exterior');
+            $type->meters_ext = $request->input('exterior'); */
             $type->description = $request->input('description');
             $type->updated_at = now();
             $type->save();

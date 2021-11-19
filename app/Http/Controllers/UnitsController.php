@@ -38,6 +38,9 @@ class UnitsController extends Controller
         $unit->tower_id = $request->input('tower');
         $unit->type_id = $request->input('type');
         $unit->floor = $request->input('floor');
+        $unit->meters_total = $request->input('const');
+        $unit->meters_int = $request->input('interior');
+        $unit->meters_ext = $request->input('exterior');
         $unit->price = $request->input('price');
         $unit->status = $request->input('status');
         $unit->created_at = now();
@@ -53,6 +56,9 @@ class UnitsController extends Controller
         $unit->tower_id = $request->input('tower');
         $unit->type_id = $request->input('type');
         $unit->floor = $request->input('floor');
+        $unit->meters_total = $request->input('const');
+        $unit->meters_int = $request->input('interior');
+        $unit->meters_ext = $request->input('exterior');
         $unit->price = $request->input('price');
         $unit->status = $request->input('status');
         $unit->updated_at = now();
