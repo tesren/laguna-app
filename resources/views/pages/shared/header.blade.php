@@ -18,7 +18,7 @@
             <a class="nav-link link-light" href="{{route('view.towers');}}">Inventario</a>
           </li>
 
-          <li class="nav-item me-5">
+          <li class="nav-item me-5 d-none">
             <a class="nav-link link-light" href="#">Construcción</a>
           </li>
           

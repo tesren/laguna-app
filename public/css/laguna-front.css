@@ -136,6 +136,12 @@
     z-index: 5;
 }
 
+.rounded-img{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
 /*navbar*/
 .logo-yellow{
     width: 200px;
@@ -180,7 +186,7 @@
     height: 100%;
     padding: 0;
     object-fit: cover;
-    z-index: -99;
+    z-index: 1;
 }
 
 .overlay{
@@ -191,14 +197,39 @@
     height: 100%;
     z-index:2;
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 #landing{
     position: absolute;
-    top: 40%;
+    top: 35%;
     width: 100%;
     z-index: 5;
+}
+
+.btn-amenities {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #193C3D;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.btn-amenities:focus{
+    border-bottom: 2px solid #AEA06C;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 0px;
 }
 
 /*Inventory*/

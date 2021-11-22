@@ -22,7 +22,7 @@ class Unit extends Model
 
     public function shape()
     {
-        return $this->belongsTo( Shape::class, 'unit_id' );
+        return $this->hasMany( Shape::class, 'unit_id' );
     }
 
 

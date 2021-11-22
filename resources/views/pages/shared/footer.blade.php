@@ -27,7 +27,7 @@
 
             <div class="col-4 col-lg-2">
                 <img width="40px" src="{{asset('assets/icons/phone.svg');}}" alt="">
-                <h6 class="fs-6 fw-light-zen mt-3">322 123 4567</h6>
+                <h6 class="fs-6 fw-light-zen mt-3">322 265 4686</h6>
             </div>
 
             <div class="col-4 col-lg-2">

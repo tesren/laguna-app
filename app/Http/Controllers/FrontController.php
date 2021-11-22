@@ -20,8 +20,8 @@ class FrontController extends Controller
     {
         return view('pages.home', [
             'units' => Unit::all()->where('status','Disponible'),
-            'unitType'=>UnitType::all(),
-            'unitTypeImg'=>UnitTypesImg::all(),
+            'unitTypes'=>UnitType::all(),
+            'unitTypeImgs'=>UnitTypesImg::all()->where('type','main'),
         ]);
     }
 
@@ -35,7 +35,7 @@ class FrontController extends Controller
         return view('pages.inventory', [
             'tower'=>Tower::find($id),
             'units'=>Unit::all()->where('tower_id',$id),
-            'shapes'=>Shape::all()->where('tower_id',$id),
+            //'shapes'=>Shape::all()->where('tower_id',$id),
             'img'=>TowerImg::all()->where('tower_id',$id)->where('size','large')->first(),
         ]);
     }

@@ -38,7 +38,7 @@
 
     </div>
 
-    <div class="row justify-content-center w-100 mb-6">
+    <div class="row justify-content-center w-100 pb-5">
         <div class="col-12 col-md-11 col-lg-8">
 
             <div class="container-darkbeige p-4" style="position: relative;">
@@ -59,10 +59,11 @@
                         
                         @foreach ($units as $unit )
                             <a href="{{route('view.unit',['id'=>$unit->id]);}}" class="text-decoration-none">
-                                <polygon class="building" points="{{ ($shapes->where('unit_id',$unit->id)->first())['points'] }}"></polygon>
+                        
+                                <polygon class="building" points="{{ $unit->shape[0]['points']; }}"></polygon>
 
-                                <text x="{{($shapes->where('unit_id',$unit->id)->first())['text_x']}}" 
-                                      y="{{($shapes->where('unit_id',$unit->id)->first())['text_y']}}" 
+                                <text x="{{$unit->shape[0]['text_x']}}" 
+                                      y="{{$unit->shape[0]['text_y']}}" 
                                       font-size="44" font-weight="bold" fill="#fff" class="fw-normal-zen">
                                       {{$unit->name}}
                                 </text>
