@@ -42,9 +42,9 @@
 
 .container-darkbeige{
     background-color: #E8E7D5;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .bg-darkbeige{
@@ -137,9 +137,9 @@
 }
 
 .rounded-img{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
 }
 
 /*navbar*/
@@ -198,6 +198,16 @@
     z-index:2;
     background-color: black;
     opacity: 0.3;
+}
+
+.overlay-green{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    background-image: linear-gradient(to bottom, transparent, transparent 80%, #193C3D 95%);
 }
 
 #landing{
@@ -278,7 +288,12 @@
     .logo-yellow{
         width: 115px;
     }
-}
+
+    /*home page mobile*/
+
+    #landing{
+        top: 15%;
+    }}
 
 @media (min-width: 768px) and (max-width: 992px) {
     /*estilos generales ipad*/

@@ -31,7 +31,7 @@
           </li>
 
           <li class="nav-item me-5">
-            <a class="nav-link link-light">Contacto</a>
+            <a href="{{route('view.contact');}}" class="nav-link link-light">Contacto</a>
           </li>
 
           <li class="nav-item">

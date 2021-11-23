@@ -29,7 +29,7 @@ Route::get('/admin', function () {
 
 Route::get('/contact', function () {
     return view('pages.contact');
-});
+})->name('view.contact');
 
 Route::get('/about', function () {
     return view('pages.about');

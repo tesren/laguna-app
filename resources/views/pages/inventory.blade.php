@@ -10,7 +10,7 @@
         <div class="gradient-overlay"></div>
 
         <div class="title">
-            <h1 class="fw-normal-sackers">Inventory</h1>
+            <h1 class="fw-normal-sackers">Inventario</h1>
             <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
         </div>
     </div>
