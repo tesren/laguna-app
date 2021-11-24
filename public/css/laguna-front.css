@@ -120,7 +120,7 @@
 .landing-container .title{
     position: absolute;
     width: 100%;
-    top: 75%;
+    top: 70%;
     color: white;
     font-size: 54px;
     z-index: 10;
@@ -140,6 +140,31 @@
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
     border-bottom-left-radius: 18px;
+}
+
+.tall-img{
+    height: 60vh;
+    object-fit: cover;
+}
+
+.btn-arrow{
+    border-radius: 50%;
+    box-shadow: 0 4px 5px -2px #0003,0 7px 10px 1px #00000024,0 2px 16px 1px #0000001f;
+    color: #193C3D;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-arrow:hover{
+    color: #1E4748;
+    background-color: #e9ecef;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-arrow i{
+    font-size: 24px;
+    line-height: 1.6;
 }
 
 /*navbar*/
@@ -242,6 +267,12 @@
     margin-bottom: 0px;
 }
 
+.carousel-tall-img{
+    height: 50vh;
+    object-fit: cover;
+    width: 100%;
+}
+
 /*Inventory*/
 .svg-container { 
     display: inline-block;
@@ -278,10 +309,47 @@
     transition: 0.3s;
 }
 
+.btn-more-towers{
+    position: absolute; 
+    left:10px; 
+    top:30px;
+}
+
+/*About us*/
+.container-darkgreen{
+    background-color: #1E4748;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/*Lifestyle*/
+
+.info-life{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 75%;
+    z-index: 10;
+    color: #fff;
+}
+
+.info-life hr{
+    opacity: 1;
+    color: #fff;
+    height: 2px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 767px) {
     /*estilos generales movil*/
     #main-content{
         margin-top: 4rem;
+    }
+
+    .tall-img{
+        height: 40vh;
     }
 
     /*navbar movil*/
@@ -293,16 +361,38 @@
 
     #landing{
         top: 15%;
-    }}
+    }
+
+    .carousel-tall-img{
+        height: 25vh;
+    }
+
+    /*Inventory mobile*/
+    .btn-more-towers{
+        position: absolute; 
+        left:5px; 
+        top:5px;
+    }
+}
+
+    
 
 @media (min-width: 768px) and (max-width: 992px) {
     /*estilos generales ipad*/
     #main-content{
         margin-top: 4.5rem;
     }
+    .tall-img{
+        height: 45vh;
+    }
 
     /*navbar ipad*/
     .logo-yellow{
         width: 150px;
+    }
+
+    /*home page ipad*/
+    .carousel-tall-img{
+        height: 30vh;
     }
 }

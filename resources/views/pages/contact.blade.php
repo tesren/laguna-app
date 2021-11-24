@@ -23,10 +23,10 @@
                 <a href="tel:322 265 4686" class="link-dark">322 265 4686.</a>
             </p>
             <img class="d-block mb-5" width="20px" src="{{asset('assets/icons/green-leaf.svg')}}" alt="">
-            <a class="btn btn-yellow shadow-7" href="#contact-form">Ir al Formulario</a>
+            <a class="btn btn-yellow shadow-7 mb-5 mb-lg-0" href="#contact-form">Ir al Formulario</a>
         </div>
         <div class="col-12 col-lg-4">
-            <img class="w-100 rounded-img" src="{{asset('assets/img/pool-render.jpg')}}" alt="Pool" style="height: 65vh; object-fit:cover; object-position: left;">
+            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/pool-render.jpg')}}" alt="Pool" style="object-position: left;">
         </div>
     </div>
 

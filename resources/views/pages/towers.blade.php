@@ -19,19 +19,19 @@
             <span class="beige-text">Unidades Disponibles</span>
         </h2>
 
-        <div class="row justify-content-evenly w-100">
+        <div class="row justify-content-evenly w-100 mx-auto">
 
             <div class="col-12 col-lg-3 green-text">
-                <h3 class="fw-normal-sackers mt-6">Fase 
+                <h3 class="fw-normal-sackers mt-0 mt-lg-5 text-center text-lg-start">Fase 
                     <span class="beige-text">01</span>
                 </h3>
                 <p class="fw-light-zen">Haz clic en una torre para ver las unidades disponibles</p>
-                <img width="20px" src="{{asset('/assets/icons/green-leaf.svg');}}" alt="">
+                <img class="mb-5 mb-lg-0" width="20px" src="{{asset('/assets/icons/green-leaf.svg');}}" alt="">
             </div>
 
             <div class="col-12 col-lg-5 mb-6">
                 <div class="container-darkbeige p-4" style="position: relative;">
-                    <img width="100px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; top:65%; left:-75px;">
+                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; top:65%; left:-75px;">
 
                     <div class="svg-container">
                         <img class="w-100" src="{{asset('assets/img/render-edificios-phase1.jpg')}}" alt="">

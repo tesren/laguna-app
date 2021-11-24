@@ -11,11 +11,11 @@
     
             <div class="title">
                 <h1 class="fw-normal-sackers">Unidad {{$unit->name}}</h1>
-                <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <img class="d-none d-lg-block" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             </div>
         </div>
 
-        <div class="row justify-content-evenly w-100">
+        <div class="row mx-auto justify-content-evenly w-100">
 
             <div class="col-12 col-lg-4 green-text">
                 <h3 class="fw-normal-sackers mt-6 fs-2">Modelo 
@@ -24,7 +24,7 @@
 
                 <hr class="w-75" style="opacity:1; color:#1E4748;">
 
-                <h4 class="fw-normal-sackers fs-5 mb-4">Construcción: {{$unit->meters_total}}</h4>
+                <h4 class="fw-normal-sackers fs-5 mb-4">Construcción: {{$unit->meters_total}} m²</h4>
                 <p class="fw-light-zen fs-6 mb-4">{{$unit->unitType->description}}</p>
 
                 <img width="20px" class="mb-5" src="{{asset('/assets/icons/green-leaf.svg');}}" alt="">
@@ -33,8 +33,8 @@
             </div>
 
             <div class="col-12 col-lg-3 mb-6">
-                <div class="container-darkbeige p-4" style="position: relative;">
-                    <img width="100px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; top:55%; left:-65px;">
+                <div class="container-darkbeige p-4 shadow-7" style="position: relative;">
+                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; top:55%; left:-65px;">
 
                     @php
                         $mainImg = $img->where('type','main')->first();
@@ -46,40 +46,40 @@
 
         </div>
 
-        <div class="row justify-content-center w-100 green-text text-center">
+        <div class="row mx-auto justify-content-center w-100 green-text text-center">
 
             <h4 class="fw-normal-sackers fs-2 mb-5">Detalles</h4>
 
             <div class="col-12 col-lg-2 mb-3">
-                <div class="container-darkbeige p-4 fw-normal-zen">
+                <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="55px" src="{{asset('assets/icons/bedroom.svg');}}" alt="">
                     <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bedrooms}} Recámaras</div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-3">
-                <div class="container-darkbeige p-4 fw-normal-zen">
+                <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="50px" src="{{asset('assets/icons/bath.svg');}}" alt="">
                     <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bathrooms}} Baños</div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-3">
-                <div class="container-darkbeige p-4 fw-normal-zen">
+                <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="45px" src="{{asset('assets/icons/meters.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">{{$unit->meters_total}} m<sup>2</sup></div>
+                    <div class="mt-3 mb-5 fs-4">{{$unit->meters_total}} m²</sup></div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-3">
-                <div class="container-darkbeige p-4 fw-normal-zen">
+                <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="40px" src="{{asset('assets/icons/terrace.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">Terraza {{$unit->meters_ext}} m<sup>2</sup></div>
+                    <div class="mt-3 mb-5 fs-4">Terraza {{$unit->meters_ext}} m²</sup></div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-6">
-                <div class="container-darkbeige p-4 fw-normal-zen">
+                <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="40px" src="{{asset('assets/icons/building.svg');}}" alt="">
                     <div class="mt-3 mb-5 fs-4">Piso {{$unit->floor}}</div>
                 </div>
@@ -89,13 +89,13 @@
 
         <h4 class="text-center fw-normal-sackers fs-2 green-text">Galería</h4>
 
-        <div class="row w-100 justify-content-center mb-6">
+        <div class="row mx-auto w-100 justify-content-center mb-6">
 
             @php
                 $galleryImgs = $img->where('type','gallery');
             @endphp
 
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-8 px-0">
 
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         
@@ -127,7 +127,7 @@
         </div>
 
         <h4 class="text-center fw-normal-sackers fs-2 green-text">Ubicada en la torre <span class="beige-text">{{$unit->tower->name}}</span></h4>
-        <div class="row justify-content-center w-100 mb-6">
+        <div class="row mx-auto justify-content-center w-100 mb-6">
             <div class="col-12 col-lg-8 container-darkbeige">
                 
                 <div class="svg-container">
@@ -146,13 +146,13 @@
         </div>
         
         <h4 class="text-center fw-normal-sackers fs-2 green-text">Plan de <span class="beige-text">Pago</span></h4>
-        <div class="row justify-content-center w-100">
+        <div class="row mx-auto justify-content-center w-100">
 
-            <div class="col-12 col-lg-4 container-darkbeige mb-6" style="position: relative">
+            <div class="col-11 col-lg-4 container-darkbeige mb-6 shadow-7" style="position: relative">
                 <h5 class="text-center fw-normal-sackers fs-2 green-text mt-4">De <span class="beige-text">Contado</span></h5>
                 <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
 
-                <div class="row text-center green-text">
+                <div class="row mx-auto text-center green-text">
 
                     <div class="col-6 mb-5">
                         <div class="fs-2 fw-bold-zen">40%</div>
@@ -164,7 +164,7 @@
                     </div>
 
                 </div>
-                <img width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;">
+                <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;">
             </div>
 
         </div>

@@ -1,6 +1,6 @@
-<div class="container-fluid px-0 bg-green" style="padding: 8rem 0">
+<div class="container-fluid px-0 bg-green" style="padding: 6.5rem 0">
 
-    <div class="row justify-content-evenly w-100">
+    <div class="row justify-content-evenly w-100 mx-auto">
 
         <div class="col-12 col-lg-4" style="color:#fff; 
         background-image: url({{asset('assets/icons/logo-dorado-icono.svg');}}); 
@@ -14,7 +14,7 @@
             <p class="fs-6 fw-light-zen text-start mx-5">Póngase en contacto con un agente para obtener más información sobre este desarrollo, estaremos listos para responder cualquier pregunta.</p>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="col-11 col-lg-4 mt-5 mt-lg-0">
 
             <form action="{{route('store.message');}}" method="post">
                 @csrf

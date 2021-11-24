@@ -33,11 +33,16 @@ Route::get('/contact', function () {
 
 Route::get('/about', function () {
     return view('pages.about');
-});
+})->name('view.about');
 
 Route::get('/progress', function () {
     return view('pages.about');
 });
+
+Route::get('/lifestyle', function () {
+    return view('pages.lifestyle');
+})->name('view.lifestyle');
+
 
 Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
 

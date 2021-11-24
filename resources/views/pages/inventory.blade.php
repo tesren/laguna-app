@@ -19,7 +19,7 @@
         <span class="beige-text">Unidades Disponibles</span>
     </h2>
 
-    <div class="row w-100 justify-content-center fw-normal-zen text-center fs-3 mb-4">
+    <div class="row w-100 justify-content-center fw-normal-zen text-center fs-3 mb-4 mx-auto">
 
         <div class="col-4 col-lg-2">
             <i class="fas fa-square" style="color: #235631;"></i>
@@ -38,15 +38,15 @@
 
     </div>
 
-    <div class="row justify-content-center w-100 pb-5">
+    <div class="row justify-content-center w-100 pb-5 mx-auto">
         <div class="col-12 col-md-11 col-lg-8">
 
             <div class="container-darkbeige p-4" style="position: relative;">
-                <a class="btn btn-yellow" href="{{route('view.towers');}}" style="position: absolute; left:10px; top:30px;">
+                <a class="btn btn-yellow btn-more-towers" href="{{route('view.towers');}}">
                     <i class="fas fa-arrow-left"></i> Más torres
                 </a>
 
-                <p class="fw-light-zen green-text fs-3 text-center mb-3">Haz clic en una unidad para ver mas información</p>
+                <p class="fw-light-zen green-text fs-3 text-center mb-3 mt-4 mt-lg-0">Haz clic en una unidad para ver mas información</p>
 
                 <h2 class="fs-2 fw-normal-sackers green-text text-center mb-0">Torre 
                     <span class="beige-text">{{$tower->name}}</span>

@@ -23,11 +23,11 @@
           </li>
           
           <li class="nav-item me-5">
-            <a class="nav-link link-light">Estilo de Vida</a>
+            <a href="{{route('view.lifestyle');}}" class="nav-link link-light">Estilo de Vida</a>
           </li>
 
           <li class="nav-item me-5">
-            <a class="nav-link link-light">Nosotros</a>
+            <a href="{{route('view.about');}}" class="nav-link link-light">Nosotros</a>
           </li>
 
           <li class="nav-item me-5">

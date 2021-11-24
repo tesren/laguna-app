@@ -27,11 +27,11 @@
                     <h3 class="fw-light-zen fs-4">Gran Retorno de Inversion</h3>
                 </div>
                 <div class="col-11 col-lg-3 mb-4 mb-lg-0">
-                    <span class="fs-1 fw-bold-zen">{{count($units);}}</span>
-                    <h3 class="fw-light-zen fs-4">Avaliable Units</h3>
+                    <span class="fs-1 mb-1 d-block fw-bold-zen">{{count($units);}}</span>
+                    <h3 class="fw-light-zen fs-4">Unidades Disponibles</h3>
                 </div>
                 <div class="col-11 col-lg-3">
-                    <img class="mt-2 mb-3" src="{{asset('/assets/icons/leaf.svg');}}" alt="">
+                    <img class="mt-2 mb-4" src="{{asset('/assets/icons/leaf.svg');}}" alt="">
                     <h3 class="fw-light-zen fs-4">Desarrollo Verde</h3>
                 </div>
             </div>
@@ -67,8 +67,9 @@
                     ofrecer, como tiendas boutique, restaurantes gourmet y centros comerciales donde podrás disfrutar de
                     un estilo de vida moderno y tranquilo al nivel del mar.
                 </p>
-
-                <a class="btn btn-yellow shadow-7 mt-4" href="{{route('view.towers')}}">Ver Inventario</a>
+                <div class="container-fluid text-center text-lg-start">
+                    <a class="btn btn-yellow shadow-7 mt-4" href="{{route('view.towers')}}">Ver Inventario</a>
+                </div>
             </div>
         </div>
         
@@ -77,7 +78,7 @@
     {{-- Carrusel de amenidades --}}
     <h3 class="fw-normal-sackers mt-6 mb-4 text-center green-text">Amenidades</h3>
 
-    <div class="row w-100 justify-content-center mb-4 fw-normal-zen">
+    <div class="row w-100 justify-content-center mb-4 fw-normal-zen mx-auto">
         <div class="col-6 col-lg-2">
             <button type="button" data-bs-target="#carouselAmenities" data-bs-slide-to="0" class="w-100 btn-amenities" aria-label="Slide 1">Edificio</button>
         </div>
@@ -96,34 +97,34 @@
                 <div class="col-11 col-lg-10 container-darkbeige py-4">
                     <div class="row w-100 text-center green-text mx-auto">
 
-                        <div class="col-6 col-lg-2">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="66px" src="{{asset('assets/icons/pool.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Albercas</span>
                         </div>
 
-                        <div class="col-6 col-lg-2">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="45px" src="{{asset('assets/icons/bbq-area.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Area BBQ</span>
                         </div>
 
-                        <div class="col-6 col-lg-2">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="60px" src="{{asset('assets/icons/kids-area.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Area para Niños</span>
                         </div>
 
-                        <div class="col-6 col-lg-2">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="60px" src="{{asset('assets/icons/shopping.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Centro comercial</span>
                         </div>
 
                         <div class="col-6 col-lg-2">
                             <img width="63px" src="{{asset('assets/icons/pets-area.svg')}}" alt="">
-                            <span class="fw-bold-zen d-block mt-2 fs-5">Centro comercial</span>
+                            <span class="fw-bold-zen d-block mt-2 fs-5">Área de Mascotas</span>
                         </div>
 
                         <div class="col-6 col-lg-2">
                             <img width="60px" src="{{asset('assets/icons/24-security.svg')}}" alt="">
-                            <span class="fw-bold-zen d-block mt-2 fs-5">Centro comercial</span>
+                            <span class="fw-bold-zen d-block mt-2 fs-5">Seguridad 24/7</span>
                         </div>
                        
                     </div>
@@ -135,29 +136,29 @@
           <div class="carousel-item">
             <div class="row w-100 justify-content-center mx-auto">
                 <div class="col-11 col-lg-8 container-darkbeige py-4">
-                    <div class="row w-100 text-center green-text mx-auto">
+                    <div class="row justify-content-evenly w-100 text-center green-text mx-auto">
 
-                        <div class="col">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="76px" src="{{asset('assets/icons/gym.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Gimnasio</span>
                         </div>
 
-                        <div class="col">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="64px" src="{{asset('assets/icons/running.svg')}}" alt="">
-                            <span class="fw-bold-zen d-block mt-2 fs-5">Pista para correr</span>
+                            <span class="fw-bold-zen d-block mt-2 fs-5">Jogging</span>
                         </div>
 
-                        <div class="col">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="60px" src="{{asset('assets/icons/futbol.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Fútbol</span>
                         </div>
 
-                        <div class="col">
+                        <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                             <img width="46px" src="{{asset('assets/icons/pickle.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Pickleball</span>
                         </div>
 
-                        <div class="col">
+                        <div class="col-6 col-lg-2">
                             <img width="60px" src="{{asset('assets/icons/tennis.svg')}}" alt="">
                             <span class="fw-bold-zen d-block mt-2 fs-5">Tennis</span>
                         </div>
@@ -171,29 +172,31 @@
 
     </div>
 
-    <div class="row w-100 justify-content-center mb-6" style="position: relative;">
+    <div class="row w-100 justify-content-center mb-6 mx-auto" style="position: relative;">
         <div class="col-11 col-lg-4 align-self-center" >
-            <h4 class="fs-2 fw-normal-sackers green-text">Mercados <br><span class="beige-text">Saludables</span></h4>
-            <p class="fs-6 fw-normal-sackers green-text"></p>
-            <img width="25px" src="{{asset('assets/icons/laguna-icono-verde.svg')}}" alt="" loading="lazy">
-            <img width="150px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; left:0; top:65%;">
+            <h4 class="fs-2 fw-normal-sackers green-text">Un lugar para <br><span class="beige-text">Redescubrirse</span></h4>
+            <p class="fs-6 fw-normal-zen green-text">Vive y disfruta de un ambiente con espacios pensados para diferentes estilos de vida, creando un entorno
+                donde la tranquilidad, convivencia, y comodidad se mezclan para crear una comunidad en armonía para ti.
+            </p>
+            <img width="25px" class="mb-4 mb-lg-0" src="{{asset('assets/icons/laguna-icono-verde.svg')}}" alt="" loading="lazy">
+            <img class="d-none d-lg-block" width="150px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; left:0; top:65%;">
         </div>
 
         <div class="col-11 col-lg-4">
-            <img class="w-100 rounded-img" src="{{asset('assets/img/mercado.jpeg')}}" alt="Healthy market" loading="lazy">
+            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/relaxing.jpg')}}" alt="Healthy market" loading="lazy">
         </div>
     </div>
 
-    <div class="row w-100 justify-content-evenly mb-6" style="position: relative;">
-        <div class="col-11 col-lg-4">
-            <img class="w-100 rounded-img" src="{{asset('assets/img/inventory-landing.jpg')}}" alt="Healthy market" loading="lazy" style="height:620px; object-fit:cover;">
+    <div class="row w-100 justify-content-evenly mb-6 mx-auto" style="position: relative;">
+        <div class="col-11 col-lg-4 order-1 order-lg-12">
+            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/inventory-landing.jpg')}}" alt="Healthy market" loading="lazy">
         </div>
 
-        <div class="col-11 col-lg-4 align-self-center">
+        <div class="col-11 col-lg-4 align-self-center order-12 order-lg-1">
             <h4 class="fs-2 fw-normal-sackers green-text">Nos importa <br><span class="beige-text">tu seguridad</span></h4>
-            <p class="fs-6 fw-normal-sackers green-text"></p>
-            <img width="25px" src="{{asset('assets/icons/laguna-icono-verde.svg')}}" alt="" loading="lazy">
-            <img width="150px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; right:-10px; top:65%;">
+            <p class="fs-6 fw-normal-zen green-text">Contamos con acceso controlado y seguridad 24/7 para que disfrutes de las instalaciones sin ninguna preocupación.</p>
+            <img class="mb-4 mb-lg-0" width="25px" src="{{asset('assets/icons/laguna-icono-verde.svg')}}" alt="" loading="lazy">
+            <img class="d-none d-lg-block" width="150px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position:absolute; right:0; top:65%;">
         </div>
         
     </div>
@@ -216,21 +219,21 @@
 
                 <div class="carousel-item @if($j==0) active @endif text-center">
                     <div class="container-darkbeige mx-auto" style="width: fit-content">
-                        <img src="{{asset($largeImg['url']);}}" class="d-block" alt="..." style="max-height: 60vh;">
+                        <img src="{{asset($largeImg['url']);}}" class="d-block tall-img" alt="..." style="max-height: 60vh;">
                     </div>
 
-                    <h5 class="fw-normal-sackers fs-3 mt-5 mb-4 green-text">{{$type->name}}</h5>
+                    <h5 class="fw-normal-sackers fs-3 mt-3 mt-lg-5 mb-4 green-text">{{$type->name}}</h5>
 
                     <div class="row justify-content-center green-text">
-                        <div class="col-12 col-lg-2">
+                        <div class="col-6 col-lg-2">
                             Bedrooms:
                             <div class="fw-bold-zen fs-4">{{$type->bedrooms}}</div>
                         </div>
-                        <div class="col-12 col-lg-2">
+                        <div class="col-6 col-lg-2">
                             Bathrooms:
                             <div class="fw-bold-zen fs-4">{{$type->bathrooms}}</div>
                         </div>
-                        <div class="col-12 col-lg-2">
+                        <div class="col-12 col-lg-2 mt-3 mt-lg-0">
                             Precios desde:
                             <div class="fw-bold-zen fs-4">
                                 @if ($lowestPrice==null)
@@ -259,7 +262,7 @@
     </div>
 
     <div class="w-100 text-center mb-6">
-        <a href="" class="btn btn-yellow shadow-7 my-5">Más información</a>
+        <a href="{{route('view.towers')}}" class="btn btn-yellow shadow-7 my-5">Ver unidades disponibles</a>
     </div>
     
 
@@ -281,10 +284,10 @@
         <div class="row mx-auto w-100 justify-content-evenly">
 
             <div class="col-12 col-lg-5">
-                <h3 class="fs-2 fw-normal-sackers mb-5">Ubicación</h3>
-                <div class="row w-100">
-                    <div class="col-6">
-                        <ul class="list-unstyled fw-normal-zen fs-5 mb-5">
+                <h3 class="fs-2 fw-normal-sackers mb-5 text-center text-lg-start">Ubicación</h3>
+                <div class="row w-100 mx-auto">
+                    <div class="col-12 col-lg-6">
+                        <ul class="list-unstyled fw-normal-zen fs-5 mb-4 mb-lg-5">
                             <li class="mb-4">
                                 <img width="34px" src="{{asset('assets/icons/mall-yellow.svg');}}" alt="">
                                 <span class="ms-2">Centro comercial a 10 min.</span>
@@ -298,17 +301,17 @@
                                 <span class="ms-2">Hospital a 5 min.</span>
                             </li>                            
                         </ul>
-                        <a class="btn btn-yellow w-75 shadow-7 mb-6" href="https://goo.gl/maps/bdkmAGYNxwHciZ8c6" target="_blank" rel="noopener">Como llegar</a>
+                        <a class="btn btn-yellow w-75 shadow-7 mb-6 d-none d-lg-block" href="https://goo.gl/maps/bdkmAGYNxwHciZ8c6" target="_blank" rel="noopener">Como llegar</a>
                     </div>
-                    <div class="col-6">
-                        <ul class="list-unstyled fw-normal-zen fs-5">
+                    <div class="col-12 col-lg-6">
+                        <ul class="list-unstyled fw-normal-zen fs-5 mb-5 mb-lg-4">
                             <li class="mb-4">
                                 <img width="34px" src="{{asset('assets/icons/golf-course.svg');}}" alt="">
                                 <span class="ms-2">Golf a 2 min.</span>
                             </li>
                             <li class="mb-4">
                                 <img width="30px" src="{{asset('assets/icons/beach.svg');}}" alt="">
-                                <span class="ms-3">Playa a 3 min.</span>
+                                <span class="ms-3">Playa a 5 min.</span>
                             </li>
                             <li class="mb-4">
                                 <img width="35px" src="{{asset('assets/icons/graph-yellow.svg');}}" alt="">
@@ -316,11 +319,12 @@
                             </li>
                         </ul>
                     </div>
+                    <a class="btn btn-yellow w-100 shadow-7 mb-5 d-block d-lg-none" href="https://goo.gl/maps/bdkmAGYNxwHciZ8c6" target="_blank" rel="noopener">Como llegar</a>
                 </div>
             </div>
 
             <div class="col-12 col-lg-5">
-                <h3 class="fs-2 fw-normal-sackers mb-5">Encuentra todo <span style="color: #ECD259;">Cerca</span></h3>
+                <h3 class="fs-2 fw-normal-sackers mb-5 text-center text-lg-start">Encuentra todo <span style="color: #ECD259;">Cerca</span></h3>
                 <p class="fw-normal-zen fs-5 mb-5">Ubicado en una de las zonas más lujosas de Bahía de Banderas, Nuevo Vallarta.</p>
                 <ul class="list-unstyled fw-normal-zen fs-5">
                     <li class="mb-3">
@@ -331,7 +335,7 @@
                         <i class="fas fa-check-square" style="color: #ECD259;"></i>
                         <span class="ms-2">Clima tropical los 365 días el año.</span>                   
                     </li>
-                    <li class="mb-3">
+                    <li class="mb-5 mb-lg-3">
                         <i class="fas fa-check-square" style="color: #ECD259;"></i>
                         <span class="ms-2">Caminar y andar en bicicleta como modos de transporte</span>
                     </li>
@@ -344,153 +348,104 @@
     </div>
 
 
-    <h4 class="fw-normal-sackers green-text fs-2 mb-6 text-center">Estilo de <span class="beige-text">Vida</span></h4>
+    <h4 class="fw-normal-sackers green-text fs-2 mb-6 text-center">Descubre un Nuevo<span class="beige-text"><br> Estilo de Vida</span></h4>
 
-    <div id="carouselExampleControls" class="carousel slide carousel-dark mb-5" data-bs-ride="carousel" style="position: relative">
+    <div id="carouselExampleControls" class="carousel slide carousel-dark mb-5" data-bs-ride="carousel" style="position: relative" data-bs-interval="false">
 
         <div class="carousel-inner">
 
-          <div class="carousel-item active">
-            <div class="row justify-content-center mx-auto">
-
-                <div class="col-12 col-lg-8 container-darkbeige py-5">
-                    <div class="row justify-content-evenly mx-auto w-100">
-                        <div class="col-12 col-lg-4">
-                            <img src="{{asset('assets/img/fresh-air.jpg');}}" class="d-block" alt="Beach" style="width:100%; height: 50vh; object-fit:cover;">
-                        </div>
-                        <div class="col-12 col-lg-6 text-center green-text">
-                            <img class="mt-5 mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="">
-                            <h6 class="fw-normal-sackers fs-2 mb-4">Respira Aire Fresco</h6>
-                            <p class="fw-normal-zen fs-5 mb-5">El aire limpio genera una sensación de revitalización devolviéndonos la energía física y la claridad mental</p>
-
-                            <div class="row w-100 mx-auto justify-content-center pt-5">
-                                <div class="col-8">
-                                    <span class="fw-normal-sackers fs-5 text-start d-block">01</span>
-                                    <hr>
-                                    <span class="fw-normal-sackers fs-5 text-end d-block">05</span>
+            <div class="carousel-item active">
+                        <div class="row justify-content-center mx-auto">
+            
+                            <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
+                                <div class="row justify-content-evenly mx-auto w-100">
+                                    <div class="col-12 col-lg-4">
+                                        <img src="{{asset('assets/img/beach.jpg');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
+                                    </div>
+                                    <div class="col-12 col-lg-6 text-center green-text">
+                                        <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
+                                        <h6 class="fw-normal-sackers fs-2 mb-4 mt-4 mt-lg-0">Playa Cerca de ti</h6>
+            
+                                        <p class="fw-normal-zen fs-5 mb-4 text-start">Nuevo Vallarta se vive intensamente en sus playas doradas, mar turquesa y fina arena, donde 
+                                            podrás disfrutar de diversas actividades en un inmejorable clima.
+                                        </p>
+            
+                                        <div class="row w-100 mx-auto justify-content-center pt-5">
+                                            <div class="col-8">
+                                                <span class="fw-normal-sackers fs-5 text-start d-block">01</span>
+                                                <hr>
+                                                <span class="fw-normal-sackers fs-5 text-end d-block">03</span>
+                                            </div>
+                                        </div>
+                                        
+            
+                                    </div>
                                 </div>
                             </div>
-                            
-
+            
                         </div>
-                    </div>
-                </div>
-
             </div>
-          </div>
 
-          <div class="carousel-item">
-            <div class="row justify-content-center mx-auto">
+            <div class="carousel-item">
+                <div class="row justify-content-center mx-auto">
 
-                <div class="col-12 col-lg-8 container-darkbeige py-5">
-                    <div class="row justify-content-evenly mx-auto w-100">
-                        <div class="col-12 col-lg-4">
-                            <img src="{{asset('assets/img/beach.jpg');}}" class="d-block" alt="Beach" style="width:100%; height: 50vh; object-fit:cover;">
-                        </div>
-                        <div class="col-12 col-lg-6 text-center green-text">
-                            <img class="mt-5 mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="">
-                            <h6 class="fw-normal-sackers fs-2 mb-4">Playa Cerca de ti</h6>
-                            <p class="fw-normal-zen fs-5 mb-5"></p>
-
-                            <div class="row w-100 mx-auto justify-content-center pt-5">
-                                <div class="col-8">
-                                    <span class="fw-normal-sackers fs-5 text-start d-block">02</span>
-                                    <hr>
-                                    <span class="fw-normal-sackers fs-5 text-end d-block">05</span>
-                                </div>
+                    <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
+                        <div class="row justify-content-evenly mx-auto w-100">
+                            <div class="col-12 col-lg-4">
+                                <img src="{{asset('assets/img/golf.jpg');}}" class="d-block carousel-tall-img" alt="Golf field" loading="lazy">
                             </div>
-                            
+                            <div class="col-12 col-lg-6 text-center green-text">
+                                <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
+                                <h6 class="fw-normal-sackers fs-2 mb-4 mt-4 mt-lg-0">Campo de Golf</h6>
+                                <p class="fw-normal-zen fs-5 mb-3 text-start">Los campos de golf en Nuevo Vallarta, 
+                                    han probado ser un gran reto ante golfistas profesionales. Con lagunas y trampas de arena tipo playa y distintos retos, estos campos
+                                    han sido considerados como de los mejores en México.
+                                </p>
 
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row justify-content-center mx-auto">
-
-                <div class="col-12 col-lg-8 container-darkbeige py-5">
-                    <div class="row justify-content-evenly mx-auto w-100">
-                        <div class="col-12 col-lg-4">
-                            <img src="{{asset('assets/img/golf.jpg');}}" class="d-block" alt="Golf field" style="width:100%; height: 50vh; object-fit:cover;">
-                        </div>
-                        <div class="col-12 col-lg-6 text-center green-text">
-                            <img class="mt-5 mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="">
-                            <h6 class="fw-normal-sackers fs-2 mb-4">Campo de Golf</h6>
-                            <p class="fw-normal-zen fs-5 mb-5"></p>
-
-                            <div class="row w-100 mx-auto justify-content-center pt-5">
-                                <div class="col-8">
-                                    <span class="fw-normal-sackers fs-5 text-start d-block">03</span>
-                                    <hr>
-                                    <span class="fw-normal-sackers fs-5 text-end d-block">05</span>
+                                <div class="row w-100 mx-auto justify-content-center">
+                                    <div class="col-8">
+                                        <span class="fw-normal-sackers fs-5 text-start d-block">02</span>
+                                        <hr>
+                                        <span class="fw-normal-sackers fs-5 text-end d-block">03</span>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
             </div>
-          </div>
 
-          <div class="carousel-item">
-            <div class="row justify-content-center mx-auto">
+            <div class="carousel-item">
+                <div class="row justify-content-center mx-auto">
 
-                <div class="col-12 col-lg-8 container-darkbeige py-5">
-                    <div class="row justify-content-evenly mx-auto w-100">
-                        <div class="col-12 col-lg-4">
-                            <img src="{{asset('assets/img/laguna.jpg');}}" class="d-block" alt="Laguna" style="width:100%; height: 50vh; object-fit:cover;">
-                        </div>
-                        <div class="col-12 col-lg-6 text-center green-text">
-                            <img class="mt-5 mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="">
-                            <h6 class="fw-normal-sackers fs-2 mb-4">Laguna</h6>
-                            <p class="fw-normal-zen fs-5 mb-5"></p>
+                    <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
+                        <div class="row justify-content-evenly mx-auto w-100">
+                            <div class="col-12 col-lg-4">
+                                <img src="{{asset('assets/img/mountains.jpg');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
+                            </div>
+                            <div class="col-12 col-lg-6 text-center green-text">
+                                <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
+                                <h6 class="fw-normal-sackers fs-2 mb-4 mt-4 mt-lg-0">Hermosas vistas</h6>
+                                <p class="fw-normal-zen fs-5 mb-3 text-start">
+                                    Nuevo Vallarta ofrece intensos cielos azules, montañas color esmeralda, playas doradas, abundante vegetación y un sinfín de vistas inolvidables.
+                                </p>
 
-                            <div class="row w-100 mx-auto justify-content-center pt-5">
-                                <div class="col-8">
-                                    <span class="fw-normal-sackers fs-5 text-start d-block">04</span>
-                                    <hr>
-                                    <span class="fw-normal-sackers fs-5 text-end d-block">05</span>
+                                <div class="row w-100 mx-auto justify-content-center pt-5">
+                                    <div class="col-8">
+                                        <span class="fw-normal-sackers fs-5 text-start d-block">03</span>
+                                        <hr>
+                                        <span class="fw-normal-sackers fs-5 text-end d-block">03</span>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
             </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="row justify-content-center mx-auto">
-
-                <div class="col-12 col-lg-8 container-darkbeige py-5">
-                    <div class="row justify-content-evenly mx-auto w-100">
-                        <div class="col-12 col-lg-4">
-                            <img src="{{asset('assets/img/mountains.jpg');}}" class="d-block" alt="Beach" style="width:100%; height: 50vh; object-fit:cover;">
-                        </div>
-                        <div class="col-12 col-lg-6 text-center green-text">
-                            <img class="mt-5 mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="">
-                            <h6 class="fw-normal-sackers fs-2 mb-4">Montañas</h6>
-                            <p class="fw-normal-zen fs-5 mb-5"></p>
-
-                            <div class="row w-100 mx-auto justify-content-center pt-5">
-                                <div class="col-8">
-                                    <span class="fw-normal-sackers fs-5 text-start d-block">05</span>
-                                    <hr>
-                                    <span class="fw-normal-sackers fs-5 text-end d-block">05</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-          </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -503,11 +458,11 @@
           <span class="visually-hidden">Next</span>
         </button>
 
-        <img width="150px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position: absolute; right:0; top:60%;">
+        <img class="d-none d-lg-block" width="150px" src="{{asset('assets/img/leaves-right.png');}}" alt="" style="position: absolute; right:0; top:60%;" loading="lazy">
     </div>
 
     <div class="text-center w-100">
-        <a class="btn btn-yellow shadow-7 mb-6" href="">Conocer más de la zona</a>
+        <a class="btn btn-yellow shadow-7 mb-6" href="{{route('view.lifestyle')}}">Conocer más de la zona</a>
     </div>
     
    
