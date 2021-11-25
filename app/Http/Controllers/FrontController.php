@@ -55,4 +55,53 @@ class FrontController extends Controller
             'shape'=> Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first(),
         ]);
     }
+
+    public function allTowers(Request $request)
+    {
+        $towers =  Tower::all();
+
+        return response(json_encode($towers),200)->header('Content-type','text/plain');
+    }
+
+    public function search(Request $request){
+
+        $minPrice = $request->input('minprice');
+        if(!$minPrice){
+            $minPrice = 0;
+        } 
+
+        $maxPrice = $request->input('maxprice');
+        if(!$maxPrice){
+            $maxPrice = 999999999;
+        } 
+
+        $type = $request->input('search-bedrooms');
+        $tower = $request->input('search-towers');
+
+        if($type=="" and !empty($tower) ){
+            return view('pages.search', [
+                'units' => Unit::all()->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('tower_id', $tower),
+                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
+            ]);
+        }
+        elseif($tower=="" and !empty($type)){
+            return view('pages.search', [
+                'units' => Unit::all()->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type),
+                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
+            ]);
+
+        }
+        elseif($tower=="" and $type==""){
+            return view('pages.search', [
+                'units' => Unit::all()->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice),
+                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
+            ]);
+        }
+        else{
+            return view('pages.search', [
+                'units' => Unit::all()->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->where('tower_id', $tower),
+                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
+            ]);
+        }
+    }
 }

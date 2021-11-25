@@ -42,7 +42,7 @@
         <div class="col-12 col-md-11 col-lg-8">
 
             <div class="container-darkbeige p-4" style="position: relative;">
-                <a class="btn btn-yellow btn-more-towers" href="{{route('view.towers');}}">
+                <a class="btn btn-yellow btn-more-towers shadow-7" href="{{route('view.towers');}}">
                     <i class="fas fa-arrow-left"></i> Más torres
                 </a>
 
@@ -58,15 +58,17 @@
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1280 720">     
                         
                         @foreach ($units as $unit )
-                            <a href="{{route('view.unit',['id'=>$unit->id]);}}" class="text-decoration-none">
-                        
-                                <polygon class="building" points="{{ $unit->shape[0]['points']; }}"></polygon>
+                            <a href="{{route('view.unit',['id'=>$unit->id]);}}" class="text-decoration-none" style="position: relative">
+                    
+                                
+                                <polygon class="building" points="{{ $unit->shape[0]['points'] ?? 0,0; }}"></polygon>
 
-                                <text x="{{$unit->shape[0]['text_x']}}" 
-                                      y="{{$unit->shape[0]['text_y']}}" 
-                                      font-size="44" font-weight="bold" fill="#fff" class="fw-normal-zen">
-                                      {{$unit->name}}
+                                <text x="{{$unit->shape[0]['text_x'] ?? 0;}}" 
+                                      y="{{$unit->shape[0]['text_y'] ?? 0; }}" 
+                                     font-size="44" font-weight="bold" fill="#fff" class="fw-normal-zen" style="position: absolute; left:0; top:0; width:100%;">
+                                    {{$unit->name}}
                                 </text>
+                                
                             </a>
                         @endforeach
         

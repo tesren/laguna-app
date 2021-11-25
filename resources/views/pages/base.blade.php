@@ -18,9 +18,10 @@
 
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>
-        
         <!--Styles-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-front.css') }}"/>
+        <!--JQuery-Ui-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/jquery-ui.min.css') }}"/>
 
     </head>
 
@@ -31,9 +32,11 @@
         </div>
         @include('pages.shared.footer')
         
-        <script type="text/javascript" src="{{ asset('/js/jquery-3.3.1.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/jquery-3.6.0.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/jquery-ui.min.js') }}"></script>
         <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{{ asset('/js/laguna.js') }}"></script>
     </body>
 
 </html>

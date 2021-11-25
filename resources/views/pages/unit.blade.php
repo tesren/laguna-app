@@ -11,7 +11,7 @@
     
             <div class="title">
                 <h1 class="fw-normal-sackers">Unidad {{$unit->name}}</h1>
-                <img class="d-none d-lg-block" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             </div>
         </div>
 
@@ -133,7 +133,7 @@
                 <div class="svg-container">
                     <img class="w-100" src="{{$towerImg->url}}" alt="Torre {{$unit->tower->name}}">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1000 780"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1280 720"> 
 
                         <polygon class="building" points="{{$shape->points}}"></polygon>
                         <text x="{{$shape->text_x}}" y="{{$shape->text_y}}" font-size="44" font-weight="bold" fill="#fff" class="fw-normal-zen">{{$unit->name}}</text>

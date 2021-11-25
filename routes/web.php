@@ -52,6 +52,11 @@ Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
 
 Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
 
+Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');
+
+Route::post('/search/',[FrontController::class, 'search'])->name('view.search');
+
+
 
 //admin routes
 Route::prefix('admin')->middleware('auth')->group( function () {
