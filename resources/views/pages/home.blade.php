@@ -28,14 +28,14 @@
                 </div>
                 <div class="col-11 col-lg-3 mb-4 mb-lg-0">
                     <span class="fs-1 mb-1 d-block fw-bold-zen">{{count($units);}}</span>
-                    <h3 class="fw-light-zen fs-4">Unidades Disponibles</h3>
+                    <h3 class="fw-light-zen fs-4">Unidades en Venta</h3>
                 </div>
                 <div class="col-11 col-lg-3">
-                    <img class="mt-2 mb-4" src="{{asset('/assets/icons/leaf.svg');}}" alt="">
-                    <h3 class="fw-light-zen fs-4">Desarrollo Verde</h3>
+                    <i class="fas fa-dollar-sign mt-2 mb-4 fs-1"></i>
+                    <h3 class="fw-light-zen fs-4">Desde: 2,450,000 MXN</h3>
                 </div>
             </div>
-
+            <a class="btn btn-arrow mt-5" href="#info-section"><i class="fas fa-chevron-down"></i></a>
         </div>
 
     </div>

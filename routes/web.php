@@ -54,7 +54,7 @@ Route::post('/messages/store', [MessagesController::class, 'store'])->name('stor
 
 Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');
 
-Route::post('/search/',[FrontController::class, 'search'])->name('view.search');
+Route::get('/search/',[FrontController::class, 'search'])->name('view.search');
 
 
 

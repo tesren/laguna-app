@@ -22,12 +22,16 @@
 
             <div class="col-8 col-lg-2">
                 <img width="50px" src="{{asset('assets/icons/sobre.svg');}}" alt="">
-                <h6 class="fs-6 fw-light-zen mt-3">info@lagunalivingvallarta.com</h6>
+                <a href="mailto:info@lagunalivingvallarta.com" class="link-light">
+                    <h6 class="fs-6 fw-light-zen mt-3">info@lagunalivingvallarta.com</h6>
+                </a>
             </div>
 
             <div class="col-4 col-lg-2">
                 <img width="40px" src="{{asset('assets/icons/phone.svg');}}" alt="">
-                <h6 class="fs-6 fw-light-zen mt-3">322 265 4686</h6>
+                <a href="tel:+523222654686" class="link-light">
+                    <h6 class="fs-6 fw-light-zen mt-3">322 265 4686</h6>
+                </a>
             </div>
 
             <div class="col-11 col-lg-2 mt-4 mt-lg-0">
@@ -38,6 +42,14 @@
             </div>
 
         </div>
+
+        <!-- Messenger plugin de chat Code -->
+        <div id="fb-root"></div>
+
+        <!-- Your plugin de chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+        </div>
+
     </div>
 
     <div class="container-fluid px-0 py-3 bg-darkgreen fs-6 fw-light-zen">

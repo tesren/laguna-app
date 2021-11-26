@@ -42,6 +42,9 @@
         @endforeach
 
     </div>
-
+    <div class="container-fluid px-0 text-center">
+        {{$units->links();}}
+    </div>
 </div>
+
 @endsection

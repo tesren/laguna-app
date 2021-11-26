@@ -11,11 +11,12 @@
 
         <div class="title">
             <h1 class="fw-normal-sackers">Nosotros</h1>
-            <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <a class="btn btn-arrow mt-5" href="#arrow-about"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <h1 class="green-text fw-normal-sackers fs-1 mt-6 mb-5">Información sobre <br><span class="beige-text">el desarrollador</span></h1>
+    <h1 class="green-text fw-normal-sackers fs-1 mt-6 mb-5" id="arrow-about">Información sobre <br><span class="beige-text">el desarrollador</span></h1>
 
     <div class="row mx-auto w-100 justify-content-center mb-6">
 

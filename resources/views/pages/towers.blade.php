@@ -11,11 +11,12 @@
 
             <div class="title">
                 <h1 class="fw-normal-sackers">Inventory</h1>
-                <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <a class="btn btn-arrow mt-5" href="#arrow-towers"><i class="fas fa-chevron-down"></i></a>
             </div>
         </div>
 
-        <h2 class="green-text fw-normal-sackers text-center my-6">Echa un vistazo a nuestras <br> 
+        <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-towers">Echa un vistazo a nuestras <br> 
             <span class="beige-text">Unidades Disponibles</span>
         </h2>
 

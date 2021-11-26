@@ -60,7 +60,7 @@
 
       <div class="modal-body fw-normal-zen">
 
-        <form action="{{route('view.search');}}" method="post">
+        <form action="{{route('view.search');}}" method="get">
           @csrf
           <div class="row justify-content-center mb-4">
             <label class="text-center mb-2">Precio</label>

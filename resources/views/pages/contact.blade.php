@@ -11,13 +11,14 @@
 
         <div class="title">
             <h1 class="fw-normal-sackers">Contacto</h1>
-            <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <a class="btn btn-arrow mt-5" href="#arrow-contact"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <div class="row w-100 mx-auto bg-beige justify-content-evenly py-5">
+    <div class="row w-100 mx-auto bg-beige justify-content-evenly py-5" id="arrow-contact">
         <div class="col-12 col-lg-4">
-            <h1 class="fs-1 fw-normal-sackers green-text mt-5">Contacta un <span class="beige-text">Agente</span></h1>
+            <h1 class="fs-1 fw-normal-sackers green-text mt-5" >Contacta un <span class="beige-text">Agente</span></h1>
             <hr>
             <p class="green-text fw-normal-zen fs-5">Contáctenos por medio de nuestro formulario de contacto o en nuestro teléfono 
                 <a href="tel:322 265 4686" class="link-dark">322 265 4686.</a>

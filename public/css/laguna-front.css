@@ -329,7 +329,7 @@
 }
 
 .svg-container .building{
-    fill: rgba(30, 71, 72, 0.4);
+    fill: rgba(30, 71, 72, 0.5);
     stroke: #193C3D;
     stroke-width: 5px;
     transition: 0.2s;
@@ -341,10 +341,66 @@
     transition: 0.3s;
 }
 
+.svg-container .unit-polygon{
+    fill: rgba(30, 71, 72, 0.7);
+    stroke: #193C3D;
+    stroke-width: 5px;
+    transition: 0.2s;
+}
+
 .btn-more-towers{
     position: absolute; 
     left:10px; 
     top:30px;
+}
+
+.svg-container .building-Disponible{
+    fill: rgba(30, 71, 72, 0.5);
+    stroke: #193C3D;
+    stroke-width: 5px;
+    transition: 0.2s;
+}
+
+.svg-container .building-Disponible:hover{
+    fill: rgba(30, 71, 72, 0.9);
+    transition: 0.3s;
+}
+
+.svg-container .building-Apartada{
+    fill: #CEB54A;
+    fill-opacity: 0.5;
+    stroke: #CEB54A;
+    stroke-width: 5px;
+    transition: 0.2s;
+}
+
+.svg-container .building-Apartada:hover{
+    fill-opacity: 0.9;
+    transition: 0.3s;
+}
+
+.svg-container .building-Vendida{
+    fill: #631E1E;
+    fill-opacity: 0.5;
+    stroke: #631E1E;
+    stroke-width: 5px;
+    transition: 0.2s;
+}
+
+.svg-container .building-Vendida:hover{
+    fill-opacity: 0.9;
+    transition: 0.3s;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #193C3D !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #AEA06C;
+}
+
+.nav-pills .nav-link {
+    color: #193C3D !important;
+    border-radius: 0 !important;
 }
 
 /*About us*/
@@ -378,6 +434,35 @@
 .search-img{
     height: 40vh;
     object-fit: contain;
+}
+
+.pagination{
+    margin-bottom: 0;
+    padding-bottom: 4rem;
+    justify-content: center!important;
+}
+
+.page-link {
+    color: #193C3D;
+    background-color: #E8E7D5;
+    border: 1px solid #aea06c;
+}
+
+.page-link:hover {
+    color: #fff;
+    background-color: #1E4748;
+    border: 1px solid #1E4748;
+}
+
+.page-item.active .page-link {
+    background-color: #193C3D;
+    border-color: #193C3D;
+}
+
+.page-item.disabled .page-link {
+    color: #1E4748;
+    background-color: #fff;
+    border-color: #aea06c;
 }
 
 @media (max-width: 767px) {

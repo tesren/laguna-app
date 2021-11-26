@@ -13,12 +13,12 @@
             <h1 class="fw-normal-sackers">Estilo de Vida</h1>
             <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
 
-            <a class="btn btn-arrow mt-5"><i class="fas fa-chevron-down"></i></a>
+            <a class="btn btn-arrow mt-5" href="#arrow-lifestyle"><i class="fas fa-chevron-down"></i></a>
         </div>
 
     </div>
 
-    <h2 class="green-text fw-normal-sackers text-center mb-6">Olvida el tráfico, <br><span class="beige-text">todo esta cerca en Nuevo Vallarta</span></h2>
+    <h2 class="green-text fw-normal-sackers text-center mb-6" id="arrow-lifestyle">Olvida el tráfico, <br><span class="beige-text">todo esta cerca en Nuevo Vallarta</span></h2>
 
     <div class="row mx-auto w-100 mb-6">
 

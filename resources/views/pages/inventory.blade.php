@@ -11,11 +11,12 @@
 
         <div class="title">
             <h1 class="fw-normal-sackers">Inventario</h1>
-            <img width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <a class="btn btn-arrow mt-5" href="#arrow-inventory"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <h2 class="green-text fw-normal-sackers text-center my-6">Echa un vistazo a nuestras <br> 
+    <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-inventory">Echa un vistazo a nuestras <br> 
         <span class="beige-text">Unidades Disponibles</span>
     </h2>
 
@@ -58,10 +59,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1280 720">     
                         
                         @foreach ($units as $unit )
-                            <a href="{{route('view.unit',['id'=>$unit->id]);}}" class="text-decoration-none" style="position: relative">
-                    
+
+                            <a 
+                                @if ($unit->status == "Disponible")
+                                    href="{{route('view.unit',['id'=>$unit->id]);}}" 
+                                    class="text-decoration-none" 
+                                @else
+                                    class="text-decoration-none disabled"
+                                    aria-disabled="true"
+                                @endif
+                                style="position: relative"
+                            >
                                 
-                                <polygon class="building" points="{{ $unit->shape[0]['points'] ?? 0,0; }}"></polygon>
+                                <polygon class="building-{{$unit->status}}" points="{{ $unit->shape[0]['points'] ?? 0,0; }}"></polygon>
 
                                 <text x="{{$unit->shape[0]['text_x'] ?? 0;}}" 
                                       y="{{$unit->shape[0]['text_y'] ?? 0; }}" 
