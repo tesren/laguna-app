@@ -10,13 +10,13 @@
         <div class="gradient-overlay"></div>
 
         <div class="title">
-            <h1 class="fw-normal-sackers">Nosotros</h1>
+            <h1 class="fw-normal-sackers">{{__('Nosotros')}}</h1>
             <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             <a class="btn btn-arrow mt-5" href="#arrow-about"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <h1 class="green-text fw-normal-sackers fs-1 mt-6 mb-5" id="arrow-about">Información sobre <br><span class="beige-text">el desarrollador</span></h1>
+    <h1 class="green-text fw-normal-sackers fs-1 mt-6 mb-5" id="arrow-about">{{__('Información sobre')}} <br><span class="beige-text">{{__('el desarrollador')}}</span></h1>
 
     <div class="row mx-auto w-100 justify-content-center mb-6">
 
@@ -38,15 +38,15 @@
     <div class="row mx-auto w-100 justify-content-center mb-6">
         <div class="col-11 col-lg-3 mb-3">
             <div class="fw-bold-zen fs-1 green-text">100%</div>
-            <div class="fs-5 fw-normal-zen">Porcentaje de compras exitosas</div>
+            <div class="fs-5 fw-normal-zen">{{__('Porcentaje de compras exitosas')}}</div>
         </div>
         <div class="col-11 col-lg-3 mb-3">
             <div class="fw-bold-zen fs-1 green-text">10</div>
-            <div class="fs-5 fw-normal-zen">Años de experiencia inmobiliaria</div>
+            <div class="fs-5 fw-normal-zen">{{__('Años de experiencia inmobiliaria')}}</div>
         </div>
         <div class="col-11 col-lg-3 mb-3">
             <div class="fw-bold-zen fs-1 green-text">432</div>
-            <div class="fs-5 fw-normal-zen">Viviendas desarrolladas</div>
+            <div class="fs-5 fw-normal-zen">{{__('Viviendas desarrolladas')}}</div>
         </div>
     </div>
 
@@ -57,8 +57,8 @@
         <div class="col-10 col-lg-3 green-text align-self-center">
             <h2 class="fw-normal-sackers fs-2 mt-3 mt-lg-0">Dan M. Schon Weinberg</h2>
             <hr>
-            <h3 class="fw-normal-sackers fs-4">Lic. en Administración</h3>
-            <p class="fw-normal-zen">Emprendió como desarrollador en el año 2011 con un proyecto de 300 viviendas denominado “STAR” el cual fue un total éxito.</p>
+            <h3 class="fw-normal-sackers fs-4">{{__('Lic. en Administración')}}</h3>
+            <p class="fw-normal-zen">{{__("Emprendió como desarrollador en el año 2011 con un proyecto de 300 viviendas denominado 'STAR' el cual fue un total éxito.")}}</p>
             <img class="mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
         </div>
     </div>

@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-      <a class="navbar-brand py-2 ms-2 ms-lg-4 logo-yellow" href="/">
+      <a class="navbar-brand py-2 ms-2 ms-lg-4 logo-yellow" href="{{route('home.page')}}">
         <img class="w-100" src="{{asset('assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
       </a>
 
@@ -15,30 +15,44 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5 fw-normal-zen">
 
           <li class="nav-item me-5">
-            <a class="nav-link link-light" href="{{route('view.towers');}}">Inventario</a>
+            <a class="nav-link link-light" href="{{route('view.towers');}}">{{__('Inventario')}}</a>
           </li>
 
           <li class="nav-item me-5 d-none">
-            <a class="nav-link link-light" href="#">Construcción</a>
+            <a class="nav-link link-light" href="#">{{__('Construcción')}}</a>
           </li>
           
           <li class="nav-item me-5">
-            <a href="{{route('view.lifestyle');}}" class="nav-link link-light">Estilo de Vida</a>
+            <a href="{{route('view.lifestyle');}}" class="nav-link link-light">{{__('Estilo de Vida')}}</a>
           </li>
 
           <li class="nav-item me-5">
-            <a href="{{route('view.about');}}" class="nav-link link-light">Nosotros</a>
+            <a href="{{route('view.about');}}" class="nav-link link-light">{{__('Nosotros')}}</a>
           </li>
 
           <li class="nav-item me-5">
-            <a href="{{route('view.contact');}}" class="nav-link link-light">Contacto</a>
+            <a href="{{route('view.contact');}}" class="nav-link link-light">{{__('Contacto')}}</a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item me-5">
             <!-- Button trigger modal -->
             <button class="btn btn-yellow" type="button" style="vertical-align: -webkit-baseline-middle;" data-bs-toggle="modal" data-bs-target="#searchModal" onclick="indexTowers();">
                 <i class="fas fa-search"></i>
             </button>
+          </li>
+
+          <li class="nav-item">
+
+            @if (app()->getLocale() == 'es')
+              <a class="btn fs-5 p-0" href="{{url('/en')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                <i class="fas fa-globe"></i> EN
+              </a>
+            @else
+              <a class="btn fs-5 p-0" href="{{url('/es')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                <i class="fas fa-globe"></i> ES
+              </a>
+            @endif
+           
           </li>
 
         </ul>
@@ -54,7 +68,7 @@
     <div class="modal-content bg-beige green-text">
 
       <div class="modal-header">
-        <h5 class="modal-title fw-normal-sackers" id="searchModalLabel">Busqueda</h5>
+        <h6 class="modal-title fw-normal-sackers" id="searchModalLabel">{{__('Busqueda')}}</h6>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -63,7 +77,7 @@
         <form action="{{route('view.search');}}" method="get">
           @csrf
           <div class="row justify-content-center mb-4">
-            <label class="text-center mb-2">Precio</label>
+            <label class="text-center mb-2">{{__('Precio')}}</label>
 
             <input class="col-5 search-form" type="number" name="minprice" id="minprice" placeholder="Min">
             <span class="col-1 fs-4 text-center">-</span>
@@ -73,10 +87,10 @@
           </div>
 
           
-          <label class="text-center mb-2">Recámaras</label>
+          <label class="text-center mb-2">{{__('Recámaras')}}</label>
           <select class="form-select mb-4" aria-label="Select Bedrooms" name="search-bedrooms" id="search-bedrooms">
 
-            <option value="" selected>Elige uno</option>
+            <option value="" selected>{{__('Elige uno')}}</option>
             <option value="1">1 + Flex</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -84,14 +98,14 @@
           </select>
           
 
-          <label for="tower">Torre</label>
+          <label for="tower">{{__('Torre')}}</label>
           <select class="form-select mb-4" aria-label="Select Torre" name="search-towers" id="search-towers">
 
-              <option value="" selected>Elige uno</option>
+              <option value="" selected>{{__('Elige uno')}}</option>
               
           </select>
 
-          <button type="submit" class="btn btn-yellow w-100 shadow-7">Buscar</button>
+          <button type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Buscar')}}</button>
         </form>
         
       </div>

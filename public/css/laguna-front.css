@@ -374,10 +374,10 @@
     transition: 0.2s;
 }
 
-.svg-container .building-Apartada:hover{
+/* .svg-container .building-Apartada:hover{
     fill-opacity: 0.9;
     transition: 0.3s;
-}
+} */
 
 .svg-container .building-Vendida{
     fill: #631E1E;
@@ -387,10 +387,10 @@
     transition: 0.2s;
 }
 
-.svg-container .building-Vendida:hover{
+/* .svg-container .building-Vendida:hover{
     fill-opacity: 0.9;
     transition: 0.3s;
-}
+} */
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #193C3D !important;

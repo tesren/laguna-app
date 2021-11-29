@@ -10,31 +10,31 @@
         <div class="gradient-overlay"></div>
 
         <div class="title">
-            <h1 class="fw-normal-sackers">Inventario</h1>
+            <h1 class="fw-normal-sackers">{{__('Inventario')}}</h1>
             <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             <a class="btn btn-arrow mt-5" href="#arrow-inventory"><i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
 
-    <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-inventory">Echa un vistazo a nuestras <br> 
-        <span class="beige-text">Unidades Disponibles</span>
+    <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-inventory">{{__('Echa un vistazo a nuestras')}} <br> 
+        <span class="beige-text">{{__('Unidades Disponibles')}}</span>
     </h2>
 
     <div class="row w-100 justify-content-center fw-normal-zen text-center fs-3 mb-4 mx-auto">
 
         <div class="col-4 col-lg-2">
             <i class="fas fa-square" style="color: #235631;"></i>
-            <span class="green-text">Disponible</span>
+            <span class="green-text">{{__('Disponible')}}</span>
         </div>
 
         <div class="col-4 col-lg-2">
             <i class="fas fa-square" style="color: #CEB54A;"></i>
-            <span class="green-text">Apartada</span>
+            <span class="green-text">{{__('Apartada')}}</span>
         </div>
 
         <div class="col-4 col-lg-2">
             <i class="fas fa-square" style="color: #631E1E;"></i>
-            <span class="green-text">Vendida</span>
+            <span class="green-text">{{__('Vendida')}}</span>
         </div>
 
     </div>
@@ -44,12 +44,12 @@
 
             <div class="container-darkbeige p-4" style="position: relative;">
                 <a class="btn btn-yellow btn-more-towers shadow-7" href="{{route('view.towers');}}">
-                    <i class="fas fa-arrow-left"></i> Más torres
+                    <i class="fas fa-arrow-left"></i> {{__('Más torres')}}
                 </a>
 
-                <p class="fw-light-zen green-text fs-3 text-center mb-3 mt-4 mt-lg-0">Haz clic en una unidad para ver mas información</p>
+                <p class="fw-light-zen green-text fs-3 text-center mb-3 mt-4 mt-lg-0">{{__('Haz clic en una unidad para ver mas información')}}</p>
 
-                <h2 class="fs-2 fw-normal-sackers green-text text-center mb-0">Torre 
+                <h2 class="fs-2 fw-normal-sackers green-text text-center mb-0">{{__('Torre')}} 
                     <span class="beige-text">{{$tower->name}}</span>
                 </h2>
                 

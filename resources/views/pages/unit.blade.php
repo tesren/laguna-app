@@ -10,7 +10,7 @@
             <div class="gradient-overlay"></div>
     
             <div class="title">
-                <h1 class="fw-normal-sackers">Unidad {{$unit->name}}</h1>
+                <h1 class="fw-normal-sackers">{{__('Unidad')}} {{$unit->name}}</h1>
                 <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
                 <a class="btn btn-arrow mt-5" href="#arrow-unit"><i class="fas fa-chevron-down"></i></a>
             </div>
@@ -19,14 +19,22 @@
         <div class="row mx-auto justify-content-evenly w-100">
 
             <div class="col-12 col-lg-4 green-text">
-                <h3 class="fw-normal-sackers mt-6 fs-2" id="arrow-unit">Modelo 
-                    <span class="beige-text">{{$unit->unitType->name}}</span>
-                </h3>
+
+                @if (app()->getLocale()=='en')
+                    <h3 class="fw-normal-sackers mt-6 fs-2" id="arrow-unit">{{$unit->unitType->name}}
+                        <span class="beige-text"> {{__('Modelo')}}</span>
+                    </h3>
+                @else
+                    <h3 class="fw-normal-sackers mt-6 fs-2" id="arrow-unit">{{__('Modelo')}} 
+                        <span class="beige-text">{{$unit->unitType->name}}</span>
+                    </h3>
+                @endif
+                
 
                 <hr class="w-75" style="opacity:1; color:#1E4748;">
 
-                <h4 class="fw-normal-sackers fs-5 mb-4">Construcción: {{$unit->meters_total}} m²</h4>
-                <p class="fw-light-zen fs-6 mb-4">{{$unit->unitType->description}}</p>
+                <h4 class="fw-normal-sackers fs-5 mb-4">{{__('Construcción')}}: {{$unit->meters_total}} m²</h4>
+                <p class="fw-light-zen fs-6 mb-4">{{--$unit->unitType->description--}}</p>
 
                 <img width="20px" class="mb-5" src="{{asset('/assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
 
@@ -49,19 +57,19 @@
 
         <div class="row mx-auto justify-content-center w-100 green-text text-center">
 
-            <h4 class="fw-normal-sackers fs-2 mb-5">Detalles</h4>
+            <h4 class="fw-normal-sackers fs-2 mb-5">{{__('Detalles')}}</h4>
 
             <div class="col-12 col-lg-2 mb-3">
                 <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="55px" src="{{asset('assets/icons/bedroom.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bedrooms}} Recámaras</div>
+                    <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bedrooms}} {{__('Recámaras')}}</div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-3">
                 <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="50px" src="{{asset('assets/icons/bath.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bathrooms}} Baños</div>
+                    <div class="mt-3 mb-5 fs-4">{{$unit->unitType->bathrooms}} {{__('Baños')}}</div>
                 </div>
             </div>
 
@@ -75,20 +83,20 @@
             <div class="col-12 col-lg-2 mb-3">
                 <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="40px" src="{{asset('assets/icons/terrace.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">Terraza {{$unit->meters_ext}} m²</sup></div>
+                    <div class="mt-3 mb-5 fs-4">{{__('Terraza')}} {{$unit->meters_ext}} m²</sup></div>
                 </div>
             </div>
 
             <div class="col-12 col-lg-2 mb-6">
                 <div class="container-darkbeige p-1 p-lg-4 fw-normal-zen shadow-7">
                     <img class="mt-5" width="40px" src="{{asset('assets/icons/building.svg');}}" alt="">
-                    <div class="mt-3 mb-5 fs-4">Piso {{$unit->floor}}</div>
+                    <div class="mt-3 mb-5 fs-4">{{__('Nivel')}} {{$unit->floor}}</div>
                 </div>
             </div>
 
         </div>
 
-        <h4 class="text-center fw-normal-sackers fs-2 green-text">Galería</h4>
+        <h4 class="text-center fw-normal-sackers fs-2 green-text">{{__('Galería')}}</h4>
 
         <div class="row mx-auto w-100 justify-content-center mb-6">
 
@@ -127,7 +135,7 @@
             </div>
         </div>
 
-        <h4 class="text-center fw-normal-sackers fs-2 green-text">Ubicada en la torre <span class="beige-text">{{$unit->tower->name}}</span></h4>
+        <h4 class="text-center fw-normal-sackers fs-2 green-text">{{__('Ubicada en la Torre')}} <span class="beige-text">{{$unit->tower->name}}</span></h4>
         <div class="row mx-auto justify-content-center w-100 mb-6">
             <div class="col-12 col-lg-8 container-darkbeige">
                 
@@ -146,14 +154,14 @@
             </div>
         </div>
 
-        <h4 class="text-center fw-normal-sackers fs-2 green-text mb-4">Planos de la <span class="beige-text">Unidad</span></h4>
+        <h4 class="text-center fw-normal-sackers fs-2 green-text mb-4">{{__('Planos de')}} <span class="beige-text">{{__('la Unidad')}}</span></h4>
 
         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active link-laguna" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">Ubicación en planta</button>
+              <button class="nav-link active link-laguna" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">{{__('Ubicación en planta')}}</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link link-laguna" id="pills-avaliable-tab" data-bs-toggle="pill" data-bs-target="#pills-avaliable" type="button" role="tab" aria-controls="pills-avaliable" aria-selected="false">Planos</button>
+              <button class="nav-link link-laguna" id="pills-avaliable-tab" data-bs-toggle="pill" data-bs-target="#pills-avaliable" type="button" role="tab" aria-controls="pills-avaliable" aria-selected="false">{{__('Planos')}}</button>
             </li>
         </ul>
 
@@ -183,27 +191,29 @@
             </div>
         </div>
         
-        <h4 class="text-center fw-normal-sackers fs-2 green-text">Plan de <span class="beige-text">Pago</span></h4>
+        <h4 class="text-center fw-normal-sackers fs-2 green-text">{{__('Plan de')}} <span class="beige-text">{{__('Pago')}}</span></h4>
         <div class="row mx-auto justify-content-center w-100">
 
-            <div class="col-11 col-lg-4 container-darkbeige mb-6 shadow-7" style="position: relative">
-                <h5 class="text-center fw-normal-sackers fs-2 green-text mt-4">De <span class="beige-text">Contado</span></h5>
+            <div class="col-11 col-lg-4 container-darkbeige mb-1 shadow-7" style="position: relative">
+                <h5 class="text-center fw-normal-sackers fs-2 green-text mt-4">@if(app()->getLocale()=='es') De @endif <span class="beige-text">{{__('Contado')}}</span></h5>
                 <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
 
                 <div class="row mx-auto text-center green-text">
 
                     <div class="col-6 mb-5">
                         <div class="fs-2 fw-bold-zen">40%</div>
-                        <div class="fw-normal-zen">Primer Pago</div>
+                        <div class="fw-normal-zen">{{__('Primer Pago')}}</div>
                     </div>
                     <div class="col-6 mb-5">
                         <div class="fs-2 fw-bold-zen">60%</div>
-                        <div class="fw-normal-zen">En 24 Mensualidades</div>
+                        <div class="fw-normal-zen">{{__('En 24 Mensualidades')}}</div>
                     </div>
 
                 </div>
                 <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
             </div>
+
+            <p class="fw-normal-zen green-text text-center mb-6">{{__('Los precios, descuentos y planes de pago están sujetos a modificaciones sin previo aviso.')}}</p>
 
         </div>
 

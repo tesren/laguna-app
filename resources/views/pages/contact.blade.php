@@ -10,7 +10,7 @@
         <div class="gradient-overlay"></div>
 
         <div class="title">
-            <h1 class="fw-normal-sackers">Contacto</h1>
+            <h1 class="fw-normal-sackers">{{__('Contacto')}}</h1>
             <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             <a class="btn btn-arrow mt-5" href="#arrow-contact"><i class="fas fa-chevron-down"></i></a>
         </div>
@@ -18,13 +18,13 @@
 
     <div class="row w-100 mx-auto bg-beige justify-content-evenly py-5" id="arrow-contact">
         <div class="col-12 col-lg-4">
-            <h1 class="fs-1 fw-normal-sackers green-text mt-5" >Contacta un <span class="beige-text">Agente</span></h1>
+            <h1 class="fs-1 fw-normal-sackers green-text mt-5" >{{__('Contacta un')}} <span class="beige-text">{{__('Agente')}}</span></h1>
             <hr>
-            <p class="green-text fw-normal-zen fs-5">Contáctenos por medio de nuestro formulario de contacto o en nuestro teléfono 
+            <p class="green-text fw-normal-zen fs-5">{{__('Contáctenos por medio de nuestro formulario de contacto o en nuestro teléfono')}} 
                 <a href="tel:322 265 4686" class="link-dark">322 265 4686.</a>
             </p>
             <img class="d-block mb-5" width="20px" src="{{asset('assets/icons/green-leaf.svg')}}" alt="">
-            <a class="btn btn-yellow shadow-7 mb-5 mb-lg-0" href="#contact-form">Ir al Formulario</a>
+            <a class="btn btn-yellow shadow-7 mb-5 mb-lg-0" href="#contact-form">{{__('Ir al Formulario')}}</a>
         </div>
         <div class="col-12 col-lg-4">
             <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/pool-render.jpg')}}" alt="Pool" style="object-position: left;">

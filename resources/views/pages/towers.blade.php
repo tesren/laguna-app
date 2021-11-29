@@ -10,23 +10,23 @@
             <div class="gradient-overlay"></div>
 
             <div class="title">
-                <h1 class="fw-normal-sackers">Inventory</h1>
+                <h1 class="fw-normal-sackers">{{__('Inventario')}}</h1>
                 <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
                 <a class="btn btn-arrow mt-5" href="#arrow-towers"><i class="fas fa-chevron-down"></i></a>
             </div>
         </div>
 
-        <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-towers">Echa un vistazo a nuestras <br> 
-            <span class="beige-text">Unidades Disponibles</span>
+        <h2 class="green-text fw-normal-sackers text-center my-6" id="arrow-towers">{{__('Echa un vistazo a nuestras')}} <br> 
+            <span class="beige-text">{{__('Unidades Disponibles')}}</span>
         </h2>
 
         <div class="row justify-content-evenly w-100 mx-auto">
 
             <div class="col-12 col-lg-3 green-text">
-                <h3 class="fw-normal-sackers mt-0 mt-lg-5 text-center text-lg-start">Fase 
+                <h3 class="fw-normal-sackers mt-0 mt-lg-5 text-center text-lg-start">{{__('Fase')}} 
                     <span class="beige-text">01</span>
                 </h3>
-                <p class="fw-light-zen">Haz clic en una torre para ver las unidades disponibles</p>
+                <p class="fw-light-zen">{{__('Haz clic en una torre para ver las unidades disponibles')}}</p>
                 <img class="mb-5 mb-lg-0" width="20px" src="{{asset('/assets/icons/green-leaf.svg');}}" alt="">
             </div>
 

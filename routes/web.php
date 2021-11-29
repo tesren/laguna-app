@@ -20,42 +20,49 @@ use App\Http\Controllers\FrontController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$locale = App::currentLocale();
 
-Route::get('/', [FrontController::class, 'home'])->name('home.page');
+Route::redirect('/', '/'.$locale);
 
+//Rutas con traducciones
+Route::group(['prefix'=>'{locale}', 'middleware' => 'setLocale'], function () {
+    
+    Route::get('/', [FrontController::class, 'home'])->name('home.page');
+
+    Route::get('/contact', function () {
+        return view('pages.contact');
+    })->name('view.contact');
+
+    Route::get('/about', function () {
+        return view('pages.about');
+    })->name('view.about');
+
+    Route::get('/progress', function () {
+        return view('pages.cprogress');
+    });
+
+    Route::get('/lifestyle', function () {
+        return view('pages.lifestyle');
+    })->name('view.lifestyle');
+
+
+    Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
+
+    Route::get('/unit/{id}', [FrontController::class, 'unit'])->name('view.unit');
+
+    Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
+
+    Route::get('/search/',[FrontController::class, 'search'])->name('view.search');
+});
+
+//Rutas sin traducciones
 Route::get('/admin', function () {
     return view('auth.login');
 });
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('view.contact');
-
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('view.about');
-
-Route::get('/progress', function () {
-    return view('pages.about');
-});
-
-Route::get('/lifestyle', function () {
-    return view('pages.lifestyle');
-})->name('view.lifestyle');
-
-
-Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
-
-Route::get('/unit/{id}', [FrontController::class, 'unit'])->name('view.unit');
-
-Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
-
 Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
 
 Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');
-
-Route::get('/search/',[FrontController::class, 'search'])->name('view.search');
-
 
 
 //admin routes

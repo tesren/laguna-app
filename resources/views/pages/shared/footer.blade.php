@@ -53,7 +53,7 @@
     </div>
 
     <div class="container-fluid px-0 py-3 bg-darkgreen fs-6 fw-light-zen">
-        <a class="link-light text-decoration-underline me-5" href="#">Políticas de Privacidad</a>
+        <a class="link-light text-decoration-underline me-5" href="#">{{__('Políticas de Privacidad')}}</a>
         <span>Laguna Living &copy; 2021</span>
     </div>
 
