@@ -20,12 +20,18 @@ use App\Http\Controllers\FrontController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+/* Route::redirect('/', '/'.$locale);
+Route::redirect('/towers', '/'.$locale.'/towers');
+Route::redirect('/about', '/'.$locale.'/about');
+Route::redirect('/contact', '/'.$locale.'/contact');
+Route::redirect('/lifestyle', '/'.$locale.'/lifestyle'); */
+
 $locale = App::currentLocale();
 
-Route::redirect('/', '/'.$locale);
-
 //Rutas con traducciones
-Route::group(['prefix'=>'{locale}', 'middleware' => 'setLocale'], function () {
+Route::localized( function () {
     
     Route::get('/', [FrontController::class, 'home'])->name('home.page');
 
@@ -37,15 +43,12 @@ Route::group(['prefix'=>'{locale}', 'middleware' => 'setLocale'], function () {
         return view('pages.about');
     })->name('view.about');
 
-    Route::get('/progress', function () {
-        return view('pages.cprogress');
-    });
-
     Route::get('/lifestyle', function () {
         return view('pages.lifestyle');
     })->name('view.lifestyle');
 
-
+    Route::get('/progress', [FrontController::class, 'progress'])->name('view.progress');
+    
     Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
 
     Route::get('/unit/{id}', [FrontController::class, 'unit'])->name('view.unit');

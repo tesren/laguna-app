@@ -6,6 +6,28 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
+
+    /**
+     * The priority-sorted list of middleware.
+     *
+     * This forces non-global middleware to always be in the given order.
+     *
+     * @var array
+     */
+    protected $middlewarePriority = [
+        \Illuminate\Cookie\Middleware\EncryptCookies::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \Illuminate\Contracts\Auth\Middleware\AuthenticatesRequests::class,
+        \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        \Illuminate\Routing\Middleware\ThrottleRequestsWithRedis::class,
+        \Illuminate\Session\Middleware\AuthenticateSession::class,
+        \CodeZero\LocalizedRoutes\Middleware\SetLocale::class,
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        \Illuminate\Auth\Middleware\Authorize::class,
+    ];
+
+
     /**
      * The application's global HTTP middleware stack.
      *
@@ -63,6 +85,5 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'setLocale' => \App\Http\Middleware\Language::class,
     ];
 }

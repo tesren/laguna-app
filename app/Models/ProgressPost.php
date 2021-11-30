@@ -13,7 +13,7 @@ class ProgressPost extends Model
 
     public function images()
     {
-        return $this->hasMany( ProgressImg::class, 'progress_post_id');
+        return $this->hasMany( ProgressImg::class);
     }
 
 }

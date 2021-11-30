@@ -299,6 +299,12 @@
     margin-bottom: 0px;
 }
 
+.carousel-gallery-img{
+    height: 60vh;
+    object-fit: cover;
+    width: 100%;
+}
+
 .carousel-tall-img{
     height: 50vh;
     object-fit: cover;
@@ -411,6 +417,16 @@
     border-bottom-right-radius: 15px;
 }
 
+.post-number{
+    border: 2px solid #193C3D;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: -38px;
+}
+
 /*Lifestyle*/
 
 .info-life{
@@ -465,6 +481,13 @@
     border-color: #aea06c;
 }
 
+/*Progress*/
+
+.progress-img{
+    height: 40vh;
+    object-fit: cover;
+}
+
 @media (max-width: 767px) {
     /*estilos generales movil*/
     #main-content{
@@ -490,11 +513,22 @@
         height: 25vh;
     }
 
+    .carousel-gallery-img{
+        height: 30vh;
+    }
+
     /*Inventory mobile*/
     .btn-more-towers{
         position: absolute; 
         left:5px; 
         top:5px;
+    }
+
+    /*Progress mobile*/
+    .post-number{
+        height: 36px;
+        width: 36px;
+        left: -30px;
     }
 }
 
@@ -517,5 +551,9 @@
     /*home page ipad*/
     .carousel-tall-img{
         height: 30vh;
+    }
+    
+    .carousel-gallery-img{
+        height: 40vh;
     }
 }

@@ -31,7 +31,7 @@ class FrontController extends Controller
         ]);
     }
 
-    public function inventory($locale, $id){
+    public function inventory($id){
         return view('pages.inventory', [
             'tower'=>Tower::find($id)->first(),
             'units'=>Unit::all()->where('tower_id',$id),
@@ -40,7 +40,7 @@ class FrontController extends Controller
         ]);
     }
 
-    public function unit($locale, $id){
+    public function unit($id){
 
         $unit = Unit::find($id);
 
@@ -103,5 +103,12 @@ class FrontController extends Controller
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
         }
+    }
+
+    public function progress(){
+        return view('pages.cprogress', [
+            'posts'=> ProgressPost::orderByDesc('date')->get(),
+            'imgs' => ProgressImg::all()->where('size', 'medium'),
+        ]);
     }
 }

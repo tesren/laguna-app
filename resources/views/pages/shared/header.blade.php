@@ -36,7 +36,7 @@
 
           <li class="nav-item me-5">
             <!-- Button trigger modal -->
-            <button class="btn btn-yellow" type="button" style="vertical-align: -webkit-baseline-middle;" data-bs-toggle="modal" data-bs-target="#searchModal" onclick="indexTowers();">
+            <button id="btn-search" class="btn btn-yellow" type="button" style="vertical-align: -webkit-baseline-middle;" data-bs-toggle="modal" data-bs-target="#searchModal">
                 <i class="fas fa-search"></i>
             </button>
           </li>
@@ -48,7 +48,7 @@
                 <i class="fas fa-globe"></i> EN
               </a>
             @else
-              <a class="btn fs-5 p-0" href="{{url('/es')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+              <a class="btn fs-5 p-0" href="{{url('/')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                 <i class="fas fa-globe"></i> ES
               </a>
             @endif
@@ -74,7 +74,7 @@
 
       <div class="modal-body fw-normal-zen">
 
-        <form action="{{route('view.search');}}" method="get">
+        <form action="{{route('view.search');}}" method="get" >
           @csrf
           <div class="row justify-content-center mb-4">
             <label class="text-center mb-2">{{__('Precio')}}</label>

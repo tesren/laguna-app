@@ -24,7 +24,7 @@ $('#slider-range-beds').slider({
     }
 });
 
-function indexTowers(){
+$( "#btn-search" ).one( "click", function() {
     $(document).ready( function () {
 
         $.ajax({
@@ -45,4 +45,4 @@ function indexTowers(){
         });
 
     });
-}
+  });

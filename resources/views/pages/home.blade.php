@@ -12,13 +12,13 @@
         <div class="overlay"></div>
 
         <div id="landing" class="text-center" style="color: white;">
-            <h1 class="d-none">Laguna Living</h1>
-            <h2 class="fw-normal-sackers fs-1">{{__('Diseñado para un')}}</h2>
+            <h1 class="fw-normal-sackers mb-3 fs-1">Laguna Living</h1>
+            <h2 class="fw-normal-sackers fs-2">{{__('Diseñado para un')}}</h2>
 
             <div class="d-flex justify-content-center">
-                <img class="d-none d-lg-block" width="45px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
-                <h2 class="mx-4 fw-normal-sackers fs-1">{{__('Estilo de Vida Saludable')}}</h2>
-                <img class="d-none d-lg-block" width="45px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <img class="d-none d-lg-block" width="30px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+                <h2 class="mx-4 fw-normal-sackers fs-2 mb-0">{{__('Estilo de Vida Saludable')}}</h2>
+                <img class="d-none d-lg-block" width="30px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             </div>
 
             <div class="row mx-auto justify-content-center text-center w-100 mt-6">
@@ -175,6 +175,48 @@
 
         </div>
     </div>
+
+    {{-- Galería de Renders --}}
+    <h3 class="fw-normal-sackers mb-4 text-center green-text">{{__('Galería')}}</h3>
+    <div class="row w-100 justify-content-center mb-6 mx-auto pb-1 pb-lg-5">
+
+        <div class="col-11 col-lg-7 px-0" style="position: relative;">
+
+            <img class="d-none d-lg-block" width="150px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; right:-150px; top:45%;">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+
+                    @for ($j = 0; $j<=11; $j++)
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$j;}}" @if($j==0) class="active" aria-current="true" @endif aria-label="Slide {{$j+1;}}"></button>
+                    @endfor
+                 
+                </div>
+
+                <div class="carousel-inner">
+
+                    @for ($i = 1; $i<=12; $i++)
+                        <div class="carousel-item @if($i==1) active @endif">
+                            <img src="{{asset('assets/renders/render-'.$i.'.webp')}}" class="d-block rounded-img carousel-gallery-img" alt="Render Laguna Living" loading="lazy">
+                        </div>
+                    @endfor
+                    
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
 
     <div class="row w-100 justify-content-center mb-6 mx-auto" style="position: relative;">
         <div class="col-11 col-lg-4 align-self-center" >
