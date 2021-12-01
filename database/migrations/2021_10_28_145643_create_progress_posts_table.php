@@ -16,9 +16,10 @@ class CreateProgressPostsTable extends Migration
         Schema::create('progress_posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('title_en');
             $table->date('date');
             $table->text('description')->nullable();
-            //$table->boolean('visible')->default(0);
+            $table->text('description_en')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -29,11 +29,17 @@
                     <label for="title">Título</label>
                     <input class="form-control mb-3" type="text" name="title" id="title" value="{{$post->title}}" required>
 
+                    <label for="title">Título en Inglés</label>
+                    <input class="form-control mb-3" type="text" name="title-en" id="title-en" value="{{$post->title_en}}" required>
+
                     <label for="date">Fecha del avance</label>
                     <input class="form-control mb-3" type="date" name="date" id="date" value="{{$post->date}}" required>
 
                     <label for="description">Descripción</label>
                     <textarea class="form-control mb-3" name="description" id="description" maxlength="500" rows="4" required>{{$post->description}}</textarea>
+
+                    <label for="description">Descripción en Inglés</label>
+                    <textarea class="form-control mb-3" name="description-en" id="description-en" maxlength="500" rows="4" required>{{$post->description_en}}</textarea>
 
                     @php
                         $progImgs = $imgs->where('size', 'large');                   
@@ -66,7 +72,7 @@
                     @endif
 
                     <label for="imgfiles">Seleccione nuevas imágenes del avance</label>
-                    <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                    <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg">
 
                     @if (session('errors'))
                         <span class="d-block fs-6 mb-3" style="color:#dc3545;">

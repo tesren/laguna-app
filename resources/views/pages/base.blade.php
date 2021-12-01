@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="Laguna Living, Venta de departamentos en Nuevo Vallarta, Nayarit">
-        <title>Laguna Living</title>
+        <title>@yield('title')</title>
 
         <!--favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/assets/icons/apple-touch-icon.png')}}">

@@ -38,8 +38,8 @@ class MessagesController extends Controller
         $msg->content = $request->input('message');
 
         //tipo de contacto
-        $msg->type = 'General';
-        $msg->unit = '';
+        $msg->type = $request->input('c-type');
+        //$msg->unit = '';
         $msg->created_at = now();
 
         $msg->save();

@@ -67,6 +67,7 @@ Route::post('/messages/store', [MessagesController::class, 'store'])->name('stor
 
 Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');
 
+Route::redirect('/dashboard', '/admin/dashboard');
 
 //admin routes
 Route::prefix('admin')->middleware('auth')->group( function () {

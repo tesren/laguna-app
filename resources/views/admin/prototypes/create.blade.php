@@ -61,14 +61,19 @@
                         <input class="form-control" type="number" min="0" step="0.01" name="exterior" id="exterior" required>
                     </div> --}}
 
-                    <div class="col-12 mb-3">
+                    {{-- <div class="col-12 mb-3">
                         <label for="description">Descripción</label>
                         <textarea class="form-control" name="description" id="description" maxlength="500" rows="4"></textarea>
+                    </div> --}}
+
+                    <div class="mb-3">
+                        <label for="mainfile" class="form-label">Suba la imagen principal del prototipo</label>
+                        <input class="form-control" type="file" id="mainfile" name="mainfile" accept=".jpg, .jpeg, .png, .webp, .svg" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="mainfile" class="form-label">Suba la imagen principal de la unidad</label>
-                        <input class="form-control" type="file" id="mainfile" name="mainfile" accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                        <label for="blueprint" class="form-label">Suba la imagen de los Planos del prototipo</label>
+                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg" required>
                     </div>
 
                     <div class="mb-3">

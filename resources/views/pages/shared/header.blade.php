@@ -41,16 +41,39 @@
             </button>
           </li>
 
+          {{-- Boton de cambiar idioma dinamico --}}
           <li class="nav-item">
 
             @if (app()->getLocale() == 'es')
-              <a class="btn fs-5 p-0" href="{{url('/en')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
-                <i class="fas fa-globe"></i> EN
-              </a>
+
+              @if (Route::currentRouteName() == 'es.view.inventory' or Route::currentRouteName() == 'es.view.unit')
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id], true, 'en'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> EN
+                </a>
+              @else
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), [], true, 'en'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> EN
+                </a>
+              @endif
+
             @else
-              <a class="btn fs-5 p-0" href="{{url('/')}}" style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
-                <i class="fas fa-globe"></i> ES
-              </a>
+              @if (Route::currentRouteName() == 'en.view.inventory' or Route::currentRouteName() == 'en.view.unit')
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id], true, 'es'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> EN
+                </a>
+              @else
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), [], true, 'es'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> EN
+                </a>
+              @endif
             @endif
            
           </li>

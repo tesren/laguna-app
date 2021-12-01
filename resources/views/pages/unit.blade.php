@@ -1,5 +1,15 @@
 @extends('pages.base')
 
+@if (app()->getLocale() == 'en')
+    @section('title')
+        Laguna Living - Unit {{$unit->name}}
+    @endsection
+@else
+    @section('title')
+        Laguna Living - Unidad {{$unit->name}}
+    @endsection
+@endif
+
 @section('content')
 
     <div class="container-fluid p-0 bg-beige">
@@ -179,11 +189,11 @@
 
                 {{-- Plano de la unidad --}}
                 @php
-                    $typeClean = str_replace('á','a', trim(strtolower($unit->unitType->name)));
+                    $blueprint = $img->where('type','blueprint')->first();
                 @endphp
 
                 <div class="tab-pane fade" id="pills-avaliable" role="tabpanel" aria-labelledby="pills-avaliable-tab">
-                    <img class="w-100" src="{{asset('assets/marked-units/'.$typeClean.'.jpg')}}" alt="Unit {{$unit->name}} blueprints" loading="lazy">
+                    <img class="w-100" src="{{asset($blueprint->url)}}" alt="Unit {{$unit->name}} blueprints" loading="lazy">
                 </div>
 
                 </div>

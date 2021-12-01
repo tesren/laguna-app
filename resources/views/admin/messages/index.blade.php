@@ -34,7 +34,15 @@
                                     <td>{{ $message->name; }}</td>
                                     <td>{{ $message->subject; }} </td>
                                     <td>{{ $message->email; }}</td>
-                                    <td>{{ $message->type}}</td>
+
+                                    <td>
+                                        @if ($message->type == 'General')
+                                            {{$message->type}}
+                                        @else
+                                            {{'Desde Unidad '.$message->type}}
+                                        @endif
+                                    </td>
+
                                     <td class="text-center">
                                         <a href="{{ route('show.message', ['id' => $message->id] ) }}" class="btn btn-primary mt-1 mt-lg-0">Ver</a>
                                     </td>

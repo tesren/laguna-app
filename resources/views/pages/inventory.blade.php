@@ -1,5 +1,15 @@
 @extends('pages.base')
 
+@if (app()->getLocale() == 'en')
+    @section('title')
+        Laguna Living - Tower {{$tower->name}}
+    @endsection
+@else
+    @section('title')
+        Laguna Living - Torre {{$tower->name}}
+    @endsection
+@endif
+
 @section('content')
 
 <div class="container-fluid p-0 bg-beige">

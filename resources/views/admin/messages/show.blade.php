@@ -44,10 +44,15 @@
                         </div>
                     @endif
 
-                    @if (!empty($message->unit))
+                    @if ($message->type == 'General')
                         <div class="col-12 col-md-6">
-                            Interesado en la unidad: 
-                            <strong>{{$message->unit}}</strong>
+                            Tipo de Contacto: 
+                            <strong>{{$message->type}}</strong>
+                        </div>
+                    @else
+                        <div class="col-12 col-md-6">
+                            Contactó desde la Unidad: 
+                            <strong>{{$message->type}}</strong>
                         </div>
                     @endif
 

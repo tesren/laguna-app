@@ -14,7 +14,7 @@
             </div>
         @endif
 
-        <div class="col-11 card shadow-7 px-0">
+        {{-- <div class="col-11 card shadow-7 px-0">
 
             <form action="{{route('update.progress',['id'=>$progress->id]);}}" method="post">
                 @csrf
@@ -24,7 +24,7 @@
                     <i class="fas fa-hammer"></i>
                     Progreso General
                     </span>
-                    {{--Un botón distinto para movil para que se vea mejor--}}
+                    
                     <button id="update" type="submit" class="btn btn-primary disabled d-none d-md-block" onclick="this.disabled=true;this.form.submit();">Guardar Cambios</button>
                     <button id="update" type="submit" class="btn btn-primary disabled d-block d-md-none" onclick="this.disabled=true;this.form.submit();">Guardar</button>
                 </div>
@@ -76,13 +76,10 @@
                         </div>
                     </div>
 
-
-                    
-
                 </div>
             </form>
 
-        </div>
+        </div> --}}
 
         <div class="col-11 card shadow-7 px-0 my-4">
             <div class="card-header d-flex justify-content-between">

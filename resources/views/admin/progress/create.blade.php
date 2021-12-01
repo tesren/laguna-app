@@ -29,11 +29,17 @@
                     <label for="title">Título</label>
                     <input class="form-control mb-3" type="text" name="title" id="title" required>
 
+                    <label for="title">Título en Inglés</label>
+                    <input class="form-control mb-3" type="text" name="title-en" id="title-en" required>
+
                     <label for="date">Fecha del Avance</label>
                     <input class="form-control mb-3" type="date" name="date" id="date" required>
 
                     <label for="description">Descripción</label>
                     <textarea class="form-control mb-3" name="description" id="description" maxlength="500" rows="4" required></textarea>
+
+                    <label for="description">Descripción en Inglés</label>
+                    <textarea class="form-control mb-3" name="description-en" id="description-en" maxlength="500" rows="4" required></textarea>
 
                     <label for="imgfiles">Seleccione imágenes del Avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>

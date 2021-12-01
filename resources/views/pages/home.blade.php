@@ -1,5 +1,7 @@
 @extends('pages.base')
 
+@section('title', 'Laguna Living')
+
 @section('content')
 
 <div class="container-fluid p-0 bg-beige" style="position:relative">
@@ -193,11 +195,11 @@
                  
                 </div>
 
-                <div class="carousel-inner">
+                <div class="carousel-inner container-darkbeige">
 
                     @for ($i = 1; $i<=12; $i++)
                         <div class="carousel-item @if($i==1) active @endif">
-                            <img src="{{asset('assets/renders/render-'.$i.'.webp')}}" class="d-block rounded-img carousel-gallery-img" alt="Render Laguna Living" loading="lazy">
+                            <img src="{{asset('assets/renders/render-'.$i.'.webp')}}" class="d-block p-4 carousel-gallery-img" alt="Render Laguna Living" loading="lazy">
                         </div>
                     @endfor
                     

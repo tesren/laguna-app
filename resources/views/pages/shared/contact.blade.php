@@ -24,6 +24,8 @@
 
                 <input class="form-contact mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required>
 
+                <input type="hidden" name="c-type" id="c-type" value="{{$unit->name ?? 'General'}}">
+
                 <textarea class="form-contact mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
 
                 <button type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>

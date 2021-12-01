@@ -62,10 +62,10 @@
                         <input class="form-control" type="number" min="0" step="0.01" name="exterior" id="exterior" value="{{$prototype->meters_ext}}" required onchange="enableBtn();">
                     </div> --}}
 
-                    <div class="col-12 mb-3">
+                    {{-- <div class="col-12 mb-3">
                         <label for="description">Descripción</label>
                         <textarea class="form-control" name="description" id="description" rows="4" maxlength="500" onchange="enableBtn();">{{$prototype->description}}</textarea>
-                    </div>
+                    </div> --}}
 
                     @php
                         $mainImg = $imgs->where('type', 'main')->where('size', 'large')->first();
@@ -78,7 +78,7 @@
                         </div>
                     @endif
 
-                    <div class="col-12 mb-3">
+                    <div class="col-12 mb-4">
                         <label for="mainfile" class="form-label d-block">Elige un nuevo render</label>
                         <input class="form-control" type="file" id="mainfile" name="mainfile" accept=".jpg, .jpeg, .png, .webp, .svg" onchange="enableBtn();">
                     </div>
@@ -119,9 +119,25 @@
                         </div>
                     @endif
 
-                    <div class="col-12 mb-3">
-                        <label for="imgfiles" class="form-label d-block">Elige imágenes para la galería</label>
+                    <div class="col-12 mb-4">
+                        <label for="imgfiles" class="form-label d-block">Elige nuevas imágenes para la galería</label>
                         <input class="form-control" type="file" id="imgfiles" name="imgfiles[]" accept=".jpg, .jpeg, .png, .webp, .svg" multiple onchange="enableBtn();">
+                    </div>
+
+                    @php
+                        $blueprint = $imgs->where('type', 'blueprint')->where('size', 'large')->first();
+                    @endphp
+
+                    @if (!empty($blueprint->url))
+                        <div class="col-12 mb-3 text-center">
+                            <label class="d-block text-start" for="description">Planos actuales</label>
+                            <img class="w-100" src="{{asset($blueprint->url);}}" alt="Plano actual">
+                        </div>
+                    @endif
+
+                    <div class="mb-3">
+                        <label for="blueprint" class="form-label">Elige un nuevo Plano del prototipo</label>
+                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg" required onchange="enableBtn();">
                     </div>
 
                     <div class="col-12">

@@ -89,8 +89,10 @@ class ProgressController extends Controller
 
             $post = new ProgressPost();
             $post->title = $request->input('title');
+            $post->title_en = $request->input('title-en');
             $post->date = $request->input('date');
             $post->description = $request->input('description');
+            $post->description_en = $request->input('description-en');
             $post->created_at = now();
             $post->save();
 
@@ -180,8 +182,10 @@ class ProgressController extends Controller
 
             $post = ProgressPost::find($id);
             $post->title = $request->input('title');
+            $post->title_en = $request->input('title-en');
             $post->date = $request->input('date');
             $post->description = $request->input('description');
+            $post->description_en = $request->input('description-en');
             $post->updated_at = now();
             $post->save();
 

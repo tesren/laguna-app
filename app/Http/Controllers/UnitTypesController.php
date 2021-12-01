@@ -115,6 +115,57 @@ class UnitTypesController extends Controller
              $smImg->url = '/storage/img/unit-types/'.$nameMainImgSm;
              $smImg->save();
 
+
+             //imagen de planos large
+            $blueImg = new UnitTypesImg();
+            $blueImg->unit_type_id = $type->id;
+            $blueImg->type = 'blueprint';
+            $blueImg->size = 'large';
+    
+            $nameBlueImg = 'img-blueprint-large-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+            $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+            $imgBlueFile = $request->file('blueprint');
+            Image::make($imgBlueFile)->resize(1920, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($mainImgPath, 90, 'webp');
+            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+            $blueImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+            $blueImg->save();
+    
+            //imagen de planos medium
+            $blueMdImg = new UnitTypesImg();
+            $blueMdImg->unit_type_id = $type->id;
+            $blueMdImg->type = 'blueprint';
+            $blueMdImg->size = 'medium';
+    
+            $nameBlueImg = 'img-blueprint-medium-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+            $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+            
+            Image::make($imgBlueFile)->resize(1080, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($mainImgPath, 80, 'webp');
+            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+            $blueMdImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+            $blueMdImg->save();
+
+             //imagen de planos small
+             $blueSmImg = new UnitTypesImg();
+             $blueSmImg->unit_type_id = $type->id;
+             $blueSmImg->type = 'blueprint';
+             $blueSmImg->size = 'small';
+     
+             $nameBlueImg = 'img-blueprint-small-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+             $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+             
+             Image::make($imgBlueFile)->resize(540, null, function ($constraint) {
+                 $constraint->aspectRatio();
+             })->save($mainImgPath, 70, 'webp');
+             //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+             $blueSmImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+             $blueSmImg->save();
+
+
+
              //imagenes de la galería
             $imageFiles = $request->file('imgfiles');
         
@@ -261,6 +312,59 @@ class UnitTypesController extends Controller
                 //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
                 $smImg->url = '/storage/img/unit-types/'.$nameMainImgSm;
                 $smImg->save();
+            }
+
+
+            if(!empty($request->file('blueprint'))){
+
+                //imagen de planos large
+                $blueImg = new UnitTypesImg();
+                $blueImg->unit_type_id = $type->id;
+                $blueImg->type = 'blueprint';
+                $blueImg->size = 'large';
+        
+                $nameBlueImg = 'img-blueprint-large-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+                $imgBlueFile = $request->file('blueprint');
+                Image::make($imgBlueFile)->resize(1920, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($mainImgPath, 90, 'webp');
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $blueImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+                $blueImg->save();
+        
+                //imagen de planos medium
+                $blueMdImg = new UnitTypesImg();
+                $blueMdImg->unit_type_id = $type->id;
+                $blueMdImg->type = 'blueprint';
+                $blueMdImg->size = 'medium';
+        
+                $nameBlueImg = 'img-blueprint-medium-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+                
+                Image::make($imgBlueFile)->resize(1080, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($mainImgPath, 80, 'webp');
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $blueMdImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+                $blueMdImg->save();
+
+                //imagen de planos small
+                $blueSmImg = new UnitTypesImg();
+                $blueSmImg->unit_type_id = $type->id;
+                $blueSmImg->type = 'blueprint';
+                $blueSmImg->size = 'small';
+        
+                $nameBlueImg = 'img-blueprint-small-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                $mainImgPath = storage_path() . '/app/public/img/unit-types/' . $nameBlueImg;
+                
+                Image::make($imgBlueFile)->resize(540, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($mainImgPath, 70, 'webp');
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $blueSmImg->url = '/storage/img/unit-types/'.$nameBlueImg;
+                $blueSmImg->save();
+
             }
 
 

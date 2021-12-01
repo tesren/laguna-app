@@ -1,5 +1,11 @@
 @extends('pages.base')
 
+@if (app()->getLocale() == 'en')
+    @section('title', 'Laguna Living - Contact')
+@else
+    @section('title', 'Laguna Living - Contacto')
+@endif
+
 @section('content')
 
 <div class="container-fluid px-0">
