@@ -1,5 +1,7 @@
 @extends('dashboard.errorBase')
 
+@section('title', 'Laguna Living - Error 500')
+
 @section('content')
 
     <div class="container my-5">

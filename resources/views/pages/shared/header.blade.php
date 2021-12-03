@@ -54,7 +54,7 @@
                 </a>
               @else
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName(), [], true, 'en'); }}" 
+                  href="{{route( Route::currentRouteName() ?? 'es.home.page', [], true, 'en'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> EN
                 </a>
@@ -65,13 +65,13 @@
                 <a class="btn fs-5 p-0" 
                   href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id], true, 'es'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
-                  <i class="fas fa-globe"></i> EN
+                  <i class="fas fa-globe"></i> ES
                 </a>
               @else
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName(), [], true, 'es'); }}" 
+                  href="{{route( Route::currentRouteName() ?? 'es.home.page', [], true, 'es'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
-                  <i class="fas fa-globe"></i> EN
+                  <i class="fas fa-globe"></i> ES
                 </a>
               @endif
             @endif

@@ -106,6 +106,21 @@ Route::prefix('admin')->middleware('auth')->group( function () {
     Route::get('/progress/{id}', [ProgressController::class, 'edit'])->name('edit.progress');
     Route::post('/progress/update-post/{id}',[ProgressController::class, 'update'])->name('update.post');
 
+    //Rutas para correr comandos en artisan en servidor
+    Route::get('/cache-views', function() {
+        $exitCode = Artisan::call('view:cache');
+        return 'Application Views cached';
+    });
+
+    Route::get('/cache-routes', function() {
+        $exitCode = Artisan::call('route:cache');
+        return 'Application routes cached';
+    });
+
+    Route::get('/optimize', function() {
+        $exitCode = Artisan::call('optimize');
+        return 'Application optimized';
+    });
 
 });
 

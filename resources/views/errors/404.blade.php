@@ -1,5 +1,7 @@
 @extends('pages.base')
 
+@section('title', 'Laguna Living - Error 404')
+
 @section('content')
 
     <div class="container-fluid bg-beige text-center bg-beige " style="min-height: 60vh">

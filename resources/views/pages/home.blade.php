@@ -59,7 +59,7 @@
 
         <div class="row mx-auto justify-content-center w-100">
             <div class="col-12 col-lg-5">
-                <img class="w-100 rounded-img" src="{{asset('/assets/img/render-parking.jpg')}}" alt="Render Parking Lot">
+                <img class="w-100 rounded-img" src="{{asset('/assets/img/render-parking.webp')}}" alt="Render Parking Lot">
             </div>
 
             <div class="col-12 col-lg-3">
@@ -230,13 +230,13 @@
         </div>
 
         <div class="col-11 col-lg-4">
-            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/relaxing.jpg')}}" alt="Healthy market" loading="lazy">
+            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/relaxing.webp')}}" alt="Healthy market" loading="lazy">
         </div>
     </div>
 
     <div class="row w-100 justify-content-evenly mb-6 mx-auto" style="position: relative;">
         <div class="col-11 col-lg-4 order-1 order-lg-12">
-            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/inventory-landing.jpg')}}" alt="Healthy market" loading="lazy">
+            <img class="w-100 rounded-img tall-img" src="{{asset('assets/img/inventory-landing.webp')}}" alt="Healthy market" loading="lazy">
         </div>
 
         <div class="col-11 col-lg-4 align-self-center order-12 order-lg-1">
@@ -316,7 +316,7 @@
     {{-- Ubicaciones --}}
     <div class="container-fluid px-0" style="position: relative;">
         <picture>
-            <source type="image/jpg" media="all and (max-width:768px)" srcset="{{asset('assets/img/location-mobile.jpg');}}">
+            <source type="image/jpg" media="all and (max-width:768px)" srcset="{{asset('assets/img/location-mobile.webp');}}">
 
             <source type="image/jpg" media="all and (min-width:769px)" srcset="{{asset('assets/img/location-desktop.jpg');}}">
 
@@ -407,7 +407,7 @@
                             <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
                                 <div class="row justify-content-evenly mx-auto w-100">
                                     <div class="col-12 col-lg-4">
-                                        <img src="{{asset('assets/img/beach.jpg');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
+                                        <img src="{{asset('assets/img/beach.webp');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
                                     </div>
                                     <div class="col-12 col-lg-6 text-center green-text">
                                         <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
@@ -438,7 +438,7 @@
                     <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
                         <div class="row justify-content-evenly mx-auto w-100">
                             <div class="col-12 col-lg-4">
-                                <img src="{{asset('assets/img/golf.jpg');}}" class="d-block carousel-tall-img" alt="Golf field" loading="lazy">
+                                <img src="{{asset('assets/img/golf.webp');}}" class="d-block carousel-tall-img" alt="Golf field" loading="lazy">
                             </div>
                             <div class="col-12 col-lg-6 text-center green-text">
                                 <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
@@ -467,7 +467,7 @@
                     <div class="col-11 col-lg-8 container-darkbeige py-4 py-lg-5">
                         <div class="row justify-content-evenly mx-auto w-100">
                             <div class="col-12 col-lg-4">
-                                <img src="{{asset('assets/img/mountains.jpg');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
+                                <img src="{{asset('assets/img/mountains.webp');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
                             </div>
                             <div class="col-12 col-lg-6 text-center green-text">
                                 <img class="mt-5 mb-3 d-none d-lg-block mx-auto" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
