@@ -7,7 +7,7 @@
 <div class="container-fluid p-0 bg-beige" style="position:relative">
 
     <div id="video-container">
-        <video autoplay muted loop id="video-home">
+        <video autoplay muted loop id="video-home" poster="{{asset('assets/img/landing-poster.webp');}}">
             <source src="{{asset('/assets/videos/new-video.m4v');}}" type="video/mp4">
         </video>
 
@@ -260,13 +260,22 @@
 
                 @php
                     $largeImg = $unitTypeImgs->where('size','large')->where('unit_type_id',$type->id)->first();
+                    $smallImg = $unitTypeImgs->where('size','small')->where('unit_type_id',$type->id)->first();
                     //hace el calculo solo con unidades disponibles
                     $lowestPrice = $units->where('type_id',$type->id)->min('price');
                 @endphp
 
                 <div class="carousel-item @if($j==0) active @endif text-center">
                     <div class="container-darkbeige mx-auto" style="width: fit-content">
-                        <img src="{{asset($largeImg['url']);}}" class="d-block tall-img" alt="..." style="max-height: 60vh;">
+                        
+
+                        <picture>
+                            <source type="image/jpg" media="all and (max-width:768px)" srcset="{{asset($smallImg['url']);}}">
+                
+                            <source type="image/jpg" media="all and (min-width:769px)" srcset="{{asset($largeImg['url']);}}">
+                
+                            <img src="{{asset($largeImg['url']);}}" class="d-block tall-img" alt="{{$type->name}}" style="max-height: 60vh;" loading="lazy">
+                        </picture>
                     </div>
 
                     <h5 class="fw-normal-sackers fs-3 mt-3 mt-lg-5 mb-4 green-text">{{$type->name}}</h5>

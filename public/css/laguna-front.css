@@ -8,23 +8,32 @@
 
 @font-face {
     font-family: "Zen Kaku Medium";
-    src: url("/fonts/ZenKakuGothicNew-Regular.ttf") format("truetype");
     font-weight: medium;
     font-style: normal;
+    src: local('Zen Kaku Medium'),
+        url('/fonts/ZenKakuGothicNew-Regular.woff2') format('woff2'),
+        url('/fonts/ZenKakuGothicNew-Regular.woff') format('woff'),
+        url('/fonts/ZenKakuGothicNew-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Zen Kaku Light";
-    src: url("/fonts/ZenKakuGothicNew-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
+    src: local('Zen Kaku Light'),
+        url('/fonts/ZenKakuGothicNew-Light.woff2') format('woff2'),
+        url('/fonts/ZenKakuGothicNew-Light.woff') format('woff'),
+        url('/fonts/ZenKakuGothicNew-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Zen Kaku Bold";
-    src: url("/fonts/ZenKakuGothicNew-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    src: local('Zen Kaku Bold'),
+        url('/fonts/ZenKakuGothicNew-Bold.woff2') format('woff2'),
+        url('/fonts/ZenKakuGothicNew-Bold.woff') format('woff'),
+        url('/fonts/ZenKakuGothicNew-Bold.ttf') format('truetype');
 }
 
 /*Estilos generales*/

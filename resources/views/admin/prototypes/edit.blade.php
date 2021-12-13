@@ -137,7 +137,7 @@
 
                     <div class="mb-3">
                         <label for="blueprint" class="form-label">Elige un nuevo Plano del prototipo</label>
-                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg" required onchange="enableBtn();">
+                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg"  onchange="enableBtn();">
                     </div>
 
                     <div class="col-12">
