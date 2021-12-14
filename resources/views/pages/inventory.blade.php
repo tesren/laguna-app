@@ -15,8 +15,12 @@
 <div class="container-fluid p-0 bg-beige">
 
     <div class="landing-container text-center">
-        <img class="landing-img w-100" src="{{asset('assets/img/inventory-landing.webp');}}" alt="Laguna Living Render">
-
+        <picture>
+            <source srcset="{{asset('assets/img/inventory-landing.webp');}}" type="image/webp" />
+           
+            <img class="landing-img w-100" src="{{asset('assets/img/inventory-landing.jpg');}}" alt="Laguna Living Render">
+        </picture> 
+        
         <div class="gradient-overlay"></div>
 
         <div class="title">
