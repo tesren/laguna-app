@@ -29,7 +29,12 @@
     <div class="row mx-auto w-100 mb-6">
 
         <div class="col-12 col-lg-3 px-0" style="position: relative">
-            <img class="tall-img w-100" src="{{asset('assets/img/beach.webp')}}" alt="Beach" loading="lazy">
+            <picture>
+                <source srcset="{{asset('assets/img/beach.webp');}}" type="image/webp" />
+               
+                <img src="{{asset('assets/img/beach.jpg');}}" class="tall-img w-100" alt="Beach" loading="lazy">
+            </picture>
+            
             <div class="gradient-overlay"></div>
             <div class="info-life">
                 <h3 class="fw-normal-sackers fs-2">{{__('Playa')}}</h3>
@@ -114,7 +119,11 @@
     <div class="row justify-content-evenly mx-auto w-100 mb-6" style="position: relative">
 
         <div class="col-11 col-lg-4">
-            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/golf.webp')}}" alt="Golf field">
+            <picture>
+                <source srcset="{{asset('assets/img/golf.webp');}}" type="image/webp" />
+               
+                <img src="{{asset('assets/img/golf.jpg');}}" class="w-100 tall-img rounded-img" alt="Golf field" loading="lazy">
+            </picture>
         </div>
 
         <div class="col-11 col-lg-4 green-text align-self-center">
@@ -139,7 +148,12 @@
     <div class="row justify-content-evenly mx-auto w-100 mb-6" style="position: relative">
 
         <div class="col-11 col-lg-3">
-            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/mountains.webp')}}" alt="Golf field">
+            <picture>
+                <source srcset="{{asset('assets/img/mountains.webp');}}" type="image/webp" />
+               
+                <img src="{{asset('assets/img/mountains.jpg');}}" class="w-100 tall-img rounded-img" alt="Mountains" loading="lazy">
+            </picture> 
+            
         </div>
 
         <div class="col-11 col-lg-4 green-text align-self-center">

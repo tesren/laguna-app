@@ -150,7 +150,11 @@
             <div class="col-12 col-lg-8 container-darkbeige">
                 
                 <div class="svg-container">
-                    <img class="w-100" src="{{$towerImg->url}}" alt="Torre {{$unit->tower->name}}" loading="lazy">
+                    <picture>
+                        <source srcset="{{$towerImg->url}}" type="image/webp" />
+                        <img class="w-100" src="{{$towerImgJpg->url}}" alt="Torre {{$unit->tower->name}}" loading="lazy">
+                    </picture>
+                    
 
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1280 720"> 
 

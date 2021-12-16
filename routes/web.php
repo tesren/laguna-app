@@ -63,6 +63,10 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
+/* Route::get('/register', function () {
+    return view('auth.register');
+}); */
+
 Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
 
 Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');

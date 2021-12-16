@@ -104,6 +104,27 @@ class TowersController extends Controller
             $mainImgSm->url = '/storage/img/towers/'.$nameImgSm;
             $mainImgSm ->created_at = now();
             $mainImgSm->save();
+
+
+            //full jpg para navegadores viejos
+            $mainjpg = new TowerImg();
+            $mainjpg->tower_id = $tower->id;
+            $mainjpg->type = 'fulljpg';
+            $mainjpg->size = 'full';
+    
+            $nameJpg = 'img-torre-jpg-'.strtolower(str_replace(" ", "", $request->input('name').'.jpg'));
+            
+            $imgPath = storage_path() . '/app/public/img/towers/' . $nameJpg;
+    
+    
+            Image::make($imgFile)->resize(1920, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($imgPath, 90, 'jpg');
+    
+            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+            $mainjpg->url = '/storage/img/towers/'.$nameJpg;
+            $mainjpg ->created_at = now();
+            $mainjpg->save();
             
 
             return redirect()->route('create.tower')->with('message', 'Torre registrada exitosamente');
@@ -213,6 +234,26 @@ class TowersController extends Controller
             $mainImgSm ->created_at = now();
             $mainImgSm->save();
             }
+
+            //full jpg para navegadores viejos
+            $mainjpg = new TowerImg();
+            $mainjpg->tower_id = $tower->id;
+            $mainjpg->type = 'fulljpg';
+            $mainjpg->size = 'full';
+    
+            $nameJpg = 'img-torre-jpg-'.strtolower(str_replace(" ", "", $request->input('name').'.jpg'));
+            
+            $imgPath = storage_path() . '/app/public/img/towers/' . $nameJpg;
+    
+    
+            Image::make($imgFile)->resize(1280, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($imgPath, 90, 'jpg');
+    
+            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+            $mainjpg->url = '/storage/img/towers/'.$nameJpg;
+            $mainjpg ->created_at = now();
+            $mainjpg->save();
 
             $tower->updated_at = now();
             $tower->save();

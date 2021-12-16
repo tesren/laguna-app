@@ -68,7 +68,11 @@
                 </h2>
                 
                 <div class="svg-container">
-                    <img class="w-100" src="{{asset($img->url)}}" alt="">
+                    <picture>
+                        <source srcset="{{asset($img->url)}}" type="image/webp" />
+                        <img class="w-100" src="{{asset($imgjpg->url)}}" alt="{{$tower->name}}" loading="lazy">
+                    </picture>
+                    
         
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1280 720">     
                         

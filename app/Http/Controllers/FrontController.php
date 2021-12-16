@@ -33,10 +33,11 @@ class FrontController extends Controller
 
     public function inventory($id){
         return view('pages.inventory', [
-            'tower'=>Tower::find($id)->first(),
+            'tower'=>Tower::find($id),
             'units'=>Unit::all()->where('tower_id',$id),
             //'shapes'=>Shape::all()->where('tower_id',$id),
-            'img'=>TowerImg::all()->where('tower_id',$id)->where('size','large')->first(),
+            'img'=>TowerImg::all()->where('tower_id',$id)->where('size','medium')->first(),
+            'imgjpg'=>TowerImg::all()->where('tower_id',$id)->where('size','full')->first(),
         ]);
     }
 
@@ -52,6 +53,7 @@ class FrontController extends Controller
             'unit'=> $unit,
             'img' =>UnitTypesImg::all()->where('unit_type_id', $unitType)->where('size','large'),
             'towerImg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','large')->first(),
+            'towerImgJpg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','full')->first(),
             'shape'=> Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first(),
         ]);
     }

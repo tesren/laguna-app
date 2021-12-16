@@ -508,7 +508,7 @@
                                 <picture>
                                     <source srcset="{{asset('assets/img/mountains.webp');}}" type="image/webp" />
                                    
-                                    <img src="{{asset('assets/img/mountains.jpg');}}" class="d-block carousel-tall-img" alt="Beach" loading="lazy">
+                                    <img src="{{asset('assets/img/mountains.jpg');}}" class="d-block carousel-tall-img" alt="Mountains" loading="lazy">
                                 </picture> 
                             </div>
                             <div class="col-12 col-lg-6 text-center green-text">
