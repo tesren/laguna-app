@@ -18,6 +18,9 @@
 
             <form action="{{route('store.message');}}" method="post">
                 @csrf
+
+                <x-honeypot />
+
                 <input class="form-contact mb-3" type="text" name="name" id="name" placeholder="{{__('Nombre')}}" required>
 
                 <input class="form-contact mb-3" type="email" name="email" id="email" placeholder="{{__('Correo electrónico')}}" required>

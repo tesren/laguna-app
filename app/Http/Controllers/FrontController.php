@@ -82,26 +82,26 @@ class FrontController extends Controller
 
         if($type=="" and !empty($tower) ){
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('tower_id', $tower)->paginate(9),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
         }
         elseif($tower=="" and !empty($type)){
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->paginate(9),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
 
         }
         elseif($tower=="" and $type==""){
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->paginate(9),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
         }
         else{
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->where('tower_id', $tower)->paginate(9),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
         }

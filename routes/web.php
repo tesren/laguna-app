@@ -9,6 +9,8 @@ use App\Http\Controllers\UnitTypesImgController;
 use App\Http\Controllers\TowersController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ContactFormSubmissionController;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +69,7 @@ Route::get('/admin', function () {
     return view('auth.register');
 }); */
 
-Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message');
+Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message')->middleware(ProtectAgainstSpam::class);
 
 Route::post('/ajax/towers',[FrontController::class, 'allTowers'])->name('ajax.towers');
 
