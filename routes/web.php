@@ -65,9 +65,10 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
-/* Route::get('/register', function () {
-    return view('auth.register');
-}); */
+//cookies
+Route::get('/setAgentCookie', [FrontController::class, 'setAgentCookie'])->name('set.agent.cookie');
+Route::get('/getAgentCookie', [FrontController::class, 'getAgentCookie'])->name('get.agent.cookie');
+
 
 Route::post('/messages/store', [MessagesController::class, 'store'])->name('store.message')->middleware(ProtectAgainstSpam::class);
 

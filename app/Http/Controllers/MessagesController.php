@@ -34,6 +34,7 @@ class MessagesController extends Controller
         $msg->name = $request->input('name');
         $msg->subject = 'Mensaje de lagunalivingvallarta.com';
         $msg->email = $request->input('email');
+        $msg->agent = $request->input('agent');
         $msg->phone = $request->input('phone');
         $msg->content = $request->input('message');
 
@@ -51,6 +52,7 @@ class MessagesController extends Controller
         $body .= "De: ".$msg->name."\r\n";
         $body .= "Correo: ".$msg->email."\r\n";
         $body .= "Teléfono: ".$msg->phone."\r\n";
+        $body .= "Agente: ".$msg->agent."\r\n";
         $body .= "Descripción: ".$msg->content."\r\n";
         mail($to, $subject, $body);
 

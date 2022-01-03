@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->string('phone')->nullable();
             $table->string('type')->nullable();
+            $table->string('agent')->nullable();
             //$table->string('unit')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();

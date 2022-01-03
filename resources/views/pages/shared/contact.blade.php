@@ -28,6 +28,8 @@
                 <input class="form-contact mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required>
 
                 <input type="hidden" name="c-type" id="c-type" value="{{$unit->name ?? 'General'}}">
+                
+                <input type="hidden" name="agent" id="agent" value="{{request()->query('utm_campaign') ?? Cookie::get('agent') ?? 'Sin Agente'}}">
 
                 <textarea class="form-contact mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
 

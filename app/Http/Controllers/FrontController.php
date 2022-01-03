@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\Unit;
 use App\Models\Shape;
 use App\Models\UnitType;
@@ -112,5 +113,20 @@ class FrontController extends Controller
             'posts'=> ProgressPost::orderByDesc('date')->get(),
             'imgs' => ProgressImg::all()->where('size', 'medium'),
         ]);
+    }
+
+    public function setAgentCookie(Request $request){
+
+        $agentName = $request->input('agent_cookie');
+        $cookie = cookie('agent', $agentName, 43200);
+
+        return redirect()->back()->withCookie($cookie);
+    }
+
+    public function getAgentCookie(Request $request){
+
+        $cookie = $request->cookie('agent');
+
+        echo $cookie;
     }
 }

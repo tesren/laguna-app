@@ -20,7 +20,7 @@
                         <thead>
                             <tr>
                                 <th>Nombre</th>
-                                <th>Asunto</th>
+                                <th>Agente Asignado</th>
                                 <th>Correo</th>
                                 <th>Tipo de contacto</th>
                                 <th class="text-center">Acciones</th>
@@ -32,7 +32,7 @@
                         @foreach($messages->all() as $message)
                                 <tr>
                                     <td>{{ $message->name; }}</td>
-                                    <td>{{ $message->subject; }} </td>
+                                    <td>{{ $message->agent ?? 'Sin Agente'; }} </td>
                                     <td>{{ $message->email; }}</td>
 
                                     <td>

@@ -61,6 +61,27 @@
         @include('pages.shared.header')
         <div id="main-content">
             @yield('content')
+
+            <!-- Cookies Modal -->
+            <div class="modal fade" id="cookiesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content  green-text bg-beige">
+                        <div class="modal-header fw-normal-sackers">
+                            <h5 class="modal-title" id="cookiesModalLabel">{{__('Política de cookies')}}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body fw-normal-zen">
+                            <p class="fs-5">{{__('Utilizamos Cookies propias y de terceros en nuestro sitio web para mejorar nuestros servicios y la experiencia en el sitio')}}</p>
+                            <form action="{{route('set.agent.cookie')}}" method="get">
+                                @csrf
+                                <input type="hidden" name="agent_cookie" value="{{request()->query('utm_campaign') ?? 'Sin Agente'}}">
+                                <button type="submit" class="btn btn-yellow w-100">{{__('Aceptar Cookies')}}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
         </div>
         @include('pages.shared.footer')
         
@@ -69,6 +90,15 @@
         <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="{{ asset('/js/laguna.js') }}"></script>
+
+        @if (Cookie::get('agent') == null)
+            <script type="text/javascript">
+                $(window).on('load',function(){
+                    $('#cookiesModal').modal('show');
+                });
+            </script>
+        @endif
+
         <script>
             var chatbox = document.getElementById('fb-customer-chat');
             chatbox.setAttribute("page_id", "100237132452253");
