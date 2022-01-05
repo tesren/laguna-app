@@ -33,8 +33,8 @@
                     </div>
 
                     <div class="col-12 my-3">
-                        Asunto:
-                        <strong>{{$message->subject}}</strong>
+                        Agente:
+                        <strong>{{$message->agent ?? 'Sin Agente'}}</strong>
                     </div>
 
                     @if (!empty($message->phone))
@@ -63,6 +63,13 @@
                         </div>
                     @endif
 
+                    <div class="col-12 mt-2 fs-6 text-end" style="color: #6c757d">
+                        @php
+                            $fecha = date_format($message->created_at, 'j-m-Y')
+                        @endphp
+
+                       Recibido el: <span class="fw-light">{{$fecha}}</span>
+                    </div>
 
                 </div>
 

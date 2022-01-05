@@ -80,6 +80,7 @@ Route::redirect('/dashboard', '/admin/dashboard');
 Route::prefix('admin')->middleware('auth')->group( function () {
 
     Route::get('/messages', [MessagesController::class, 'index'])->name('all.messages');
+    Route::post('/messages/{id}/change-agent', [MessagesController::class, 'changeAgent'])->name('change.message.agent');
     Route::get('/messages/{id}', [MessagesController::class, 'show'])->name('show.message');
     Route::delete('/messages/{id}/delete', [MessagesController::class, 'destroy'])->name('delete.message');
 

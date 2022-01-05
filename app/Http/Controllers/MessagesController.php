@@ -59,4 +59,14 @@ class MessagesController extends Controller
         return redirect()->back()->with('message', 'Gracias, su mensaje ha sido enviado');
 
     }
+
+    public function changeAgent(Request $request , $id){
+        $msg = Message::find($id);
+
+        $msg->agent = $request->input('msg_agent');
+        $msg->updated_at = now();
+        $msg->save();
+        
+        return redirect()->back()->with('message', 'Agente Asignado');
+    }
 }

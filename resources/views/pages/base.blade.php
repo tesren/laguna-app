@@ -25,16 +25,18 @@
         <!--JQuery-Ui-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/jquery-ui.min.css') }}"/>
 
+        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-THG4RYV6QE"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134824574-3"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
+            gtag('config', 'UA-134824574-3');
             gtag('config', 'G-THG4RYV6QE');
         </script>
-
 
         <!-- Facebook Pixel Code -->
         <script>
