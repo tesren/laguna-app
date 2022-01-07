@@ -92,6 +92,7 @@
     "Ubicación en planta": "Floor location",
     "Planos" : "Blueprints",
     "Plan de": "Payment",
+    "Planes de":"Payment",
     "Pago" : "Plan",
     "Contado" : "Cash",
     "Primer Pago" : "First Payment",
@@ -136,6 +137,13 @@
     "Laguna Living, Venta de departamentos en Nuevo Vallarta, Nayarit": "Laguna Living, Condos for sale in Nuevo Vallarta, Mexico",
     "Política de cookies" : "Cookie Policy",
     "Utilizamos Cookies propias y de terceros en nuestro sitio web para mejorar nuestros servicios y la experiencia en el sitio" : "We use our own and third-party cookies on our website to improve our services and user experience on the website.",
-    "Aceptar Cookies" : "Accept Cookies"
+    "Aceptar Cookies" : "Accept Cookies",
+    "Descuento": "Discount",
+    "A la Entrega" : "Upon Delivery",
+    "Enganche" : "Down Payment",
+    "Mensualidades" : "Monthly Payments",
+    "En":"In",
+    "En Dos":"In Two",
+    "Pagos" : "Payments"
 
 }
