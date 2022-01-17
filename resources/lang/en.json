@@ -144,6 +144,8 @@
     "Mensualidades" : "Monthly Payments",
     "En":"In",
     "En Dos":"In Two",
-    "Pagos" : "Payments"
+    "Pagos" : "Payments",
+    "A la": "Upon",
+    "Entrega": "Delivery"
 
 }

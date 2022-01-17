@@ -3,8 +3,16 @@
 
         <img class="logo-yellow my-4" src="{{asset('assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
 
+        @php
+            if(app()->getLocale() == 'en'){
+                $emailSubject = rawurlencode('Hello, I come from the website of Laguna Living');
+            }else{
+                $emailSubject = rawurlencode('Hola, vengo del sitio web de Laguna Living');
+            }
+        @endphp
+
         <div class="d-flex justify-content-center fs-2 mb-5">
-            <a class="link-light" href="https://wa.me/523222654686?text=" target="_blank" rel="noopener">
+            <a id="whatsapp_footer" class="link-light" href="https://wa.me/523222654686?text={{$emailSubject}}" target="_blank" rel="noopener">
                 <i class="fab fa-whatsapp"></i>
             </a>
 
@@ -20,17 +28,94 @@
 
         <div class="row justify-content-center pb-5 px-0 w-100 mx-auto">
 
+            @php
+
+                // Datos de contacto según el Asesor
+                if(request()->query('utm_campaign')){
+
+                    if (request()->query('utm_campaign') == 'Jose Escobar'){
+                        $phone = '3223230410';
+                        $email = 'jose@c21oceanrealty.com';
+                    }
+                    elseif(request()->query('utm_campaign') == 'Carlos Haro'){
+                        $phone = '3222406386';
+                        $email = 'carlos@c21oceanrealty.com';
+                    }
+                    elseif(request()->query('utm_campaign')== 'Kenia Avila'){
+                        $phone = '3222748089';
+                        $email = 'kenia@c21oceanrealty.com';
+                    }
+                    elseif(request()->query('utm_campaign')== 'Carmen Jasso'){
+                        $phone = '3221680576';
+                        $email = 'carmen@c21oceanrealty.com';
+                    }
+                    elseif(request()->query('utm_campaign')== 'Lizbeth Morales'){
+                        $phone = '3221702666';
+                        $email = 'lizbeth@c21oceanrealty.com';
+                    }
+                    elseif(request()->query('utm_campaign')== 'Albertina Azcona'){
+                        $phone = '3221339404';
+                        $email = 'albertina@c21oceanrealty.com';
+                    }
+                    else{
+                        $phone = '3222654686';
+                        $email = 'info@lagunalivingvallarta.com';
+                    }
+                }
+                elseif(Cookie::get('agent')){
+
+                    if (Cookie::get('agent') == 'Jose Escobar'){
+                        $phone = '3223230410';
+                        $email = 'jose@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Carlos Haro'){
+                        $phone = '3222406386';
+                        $email = 'carlos@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Kenia Avila'){
+                        $phone = '3222748089';
+                        $email = 'kenia@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Carmen Jasso'){
+                        $phone = '3221680576';
+                        $email = 'carmen@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Lizbeth Morales'){
+                        $phone = '3221702666';
+                        $email = 'lizbeth@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Albertina Azcona'){
+                        $phone = '3221339404';
+                        $email = 'albertina@c21oceanrealty.com';
+                    }
+                    else{
+                        $phone = '3222654686';
+                        $email = 'info@lagunalivingvallarta.com';
+                    }
+
+                }
+                else{
+                        $phone = '3222654686';
+                        $email = 'info@lagunalivingvallarta.com';
+                    }
+            @endphp
+
             <div class="col-8 col-lg-2">
                 <img width="50px" src="{{asset('assets/icons/sobre.svg');}}" alt="">
-                <a href="mailto:info@lagunalivingvallarta.com" class="link-light">
-                    <h6 class="fs-6 fw-light-zen mt-3">info@lagunalivingvallarta.com</h6>
+
+                {{-- Muestra correo segun el asesor asignado --}}
+                <a id="mail_footer" href="mailto:{{$email}}?subject={{$emailSubject}}" class="link-light" target="_blank" rel="noopener">
+                    <h6 class="fs-6 fw-light-zen mt-3">{{$email}}</h6>
                 </a>
             </div>
 
+
             <div class="col-4 col-lg-2">
                 <img width="40px" src="{{asset('assets/icons/phone.svg');}}" alt="">
-                <a href="tel:+523222654686" class="link-light">
-                    <h6 class="fs-6 fw-light-zen mt-3">322 265 4686</h6>
+                <a id="phone_contact" href="tel:+52{{$phone}}" class="link-light">
+
+                    {{-- Muestra telefono segun el asesor asignado --}}
+                    <h6 class="fs-6 fw-light-zen mt-3">{{$phone}}</h6>
                 </a>
             </div>
 
@@ -54,7 +139,7 @@
 
     <div class="container-fluid px-0 py-3 bg-darkgreen fs-6 fw-light-zen">
         <a class="link-light text-decoration-underline me-5" href="#">{{__('Políticas de Privacidad')}}</a>
-        <span>Laguna Living &copy; 2021</span>
+        <span>Laguna Living &copy; 2022</span>
     </div>
 
 </footer>

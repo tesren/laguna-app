@@ -489,6 +489,19 @@
     background-color: #fff;
     border-color: #aea06c;
 }
+/*Whatsapp button*/
+#whatsapp-floating{
+    position: fixed;
+    z-index: 100;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background-color: #193C3D;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 40px;
+}
 
 /*Progress*/
 

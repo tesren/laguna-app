@@ -209,16 +209,19 @@
 
         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active link-laguna" id="pills-pay-1-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-1" type="button" role="tab" aria-controls="pills-pay-1" aria-selected="true">{{__('1')}}</button>
+              <button class="nav-link active link-laguna" id="pills-pay-1-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-1" type="button" role="tab" aria-controls="pills-pay-1" aria-selected="true">1</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link link-laguna" id="pills-pay-2-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-2" type="button" role="tab" aria-controls="pills-pay-2" aria-selected="false">{{__('2')}}</button>
+              <button class="nav-link link-laguna" id="pills-pay-2-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-2" type="button" role="tab" aria-controls="pills-pay-2" aria-selected="false">2</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link link-laguna" id="pills-pay-3-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-3" type="button" role="tab" aria-controls="pills-pay-3" aria-selected="false">{{__('3')}}</button>
+                <button class="nav-link link-laguna" id="pills-pay-3-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-3" type="button" role="tab" aria-controls="pills-pay-3" aria-selected="false">3</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link link-laguna" id="pills-pay-4-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-4" type="button" role="tab" aria-controls="pills-pay-4" aria-selected="false">{{__('4')}}</button>
+                <button class="nav-link link-laguna" id="pills-pay-4-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-4" type="button" role="tab" aria-controls="pills-pay-4" aria-selected="false">4</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link link-laguna" id="pills-pay-5-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-5" type="button" role="tab" aria-controls="pills-pay-5" aria-selected="false">5</button>
             </li>
         </ul>
 
@@ -329,6 +332,28 @@
                         <div class="col-4 mb-5">
                             <div class="fs-2 fw-bold-zen">5%</div>
                             <div class="fw-normal-zen">{{__('Descuento')}}</div>
+                        </div>
+
+                    </div>
+                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
+                </div>
+            </div>
+
+            {{-- Plan de pago 5 --}}
+            <div class="tab-pane fade" id="pills-pay-5" role="tabpanel" aria-labelledby="pills-pay-5-tab">
+                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
+                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">{{__('A la')}} <span class="beige-text">{{__('Entrega')}}</span></h5>
+                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
+
+                    <div class="row mx-auto text-center green-text">
+
+                        <div class="col-6 mb-5">
+                            <div class="fs-2 fw-bold-zen">35%</div>
+                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
+                        </div>
+                        <div class="col-6 mb-5">
+                            <div class="fs-2 fw-bold-zen">65%</div>
+                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
                         </div>
 
                     </div>
