@@ -98,9 +98,17 @@
                 </div>
             </div>
 
-            <div id="whatsapp-floating" class="shadow-7 text-center">
+            @php
+                if(app()->getLocale() == 'en'){
+                    $emailSubject = rawurlencode('Hello, I come from the website of Laguna Living');
+                }else{
+                    $emailSubject = rawurlencode('Hola, vengo del sitio web de Laguna Living');
+                }
+            @endphp
+
+            <a href="https://wa.me/523222654686?text={{$emailSubject}}" id="whatsapp-floating" class="shadow-7 text-center" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
-            </div>
+            </a>
 
   
         </div>

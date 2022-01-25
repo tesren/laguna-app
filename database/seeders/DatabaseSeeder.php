@@ -31,10 +31,11 @@ class DatabaseSeeder extends Seeder
             UnitTypesSeeder::class,
             TowerSeeder::class,
             UnitSeeder::class,
-            //MessagesSeeder::class,
+            MessagesSeeder::class,
             ProgressSeeder::class,
             //ProgressPostsSeeder::class,
             //ProgressImgsSeeder::class,
+            PaymentPlansSeeder::class,
         ]);
     }
 }

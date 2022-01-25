@@ -8,6 +8,7 @@ use App\Http\Controllers\UnitTypesController;
 use App\Http\Controllers\UnitTypesImgController;
 use App\Http\Controllers\TowersController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\PaymentPlansController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ContactFormSubmissionController;
 use Spatie\Honeypot\ProtectAgainstSpam;
@@ -113,6 +114,14 @@ Route::prefix('admin')->middleware('auth')->group( function () {
     Route::post('/progress/update/{id}',[ProgressController::class, 'updateProgress'])->name('update.progress');
     Route::get('/progress/{id}', [ProgressController::class, 'edit'])->name('edit.progress');
     Route::post('/progress/update-post/{id}',[ProgressController::class, 'update'])->name('update.post');
+
+    Route::get('/payment-plans', [PaymentPlansController::class, 'index'])->name('all.payments');
+    Route::get('/payment-plans/create', [PaymentPlansController::class, 'create'])->name('create.payment');
+    Route::post('/payment-plans/store', [PaymentPlansController::class, 'store'])->name('store.payment');
+    Route::get('/payment-plans/edit/{id}', [PaymentPlansController::class, 'edit'])->name('edit.payment');
+    Route::post('/payment-plans/update/{id}', [PaymentPlansController::class, 'update'])->name('update.payment');
+    Route::delete('/payment-plans/delete/{id}', [PaymentPlansController::class, 'destroy'])->name('delete.payment');
+
 
     //Rutas para correr comandos en artisan en servidor
     Route::get('/cache-views', function() {

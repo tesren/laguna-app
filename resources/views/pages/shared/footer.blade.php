@@ -3,13 +3,6 @@
 
         <img class="logo-yellow my-4" src="{{asset('assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
 
-        @php
-            if(app()->getLocale() == 'en'){
-                $emailSubject = rawurlencode('Hello, I come from the website of Laguna Living');
-            }else{
-                $emailSubject = rawurlencode('Hola, vengo del sitio web de Laguna Living');
-            }
-        @endphp
 
         <div class="d-flex justify-content-center fs-2 mb-5">
             <a id="whatsapp_footer" class="link-light" href="https://wa.me/523222654686?text={{$emailSubject}}" target="_blank" rel="noopener">

@@ -51,6 +51,12 @@
                 Mensajes
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{route('all.payments');}}" class="nav-link link-light">
+                <i class="fas fa-hand-holding-usd"></i>
+                Planes de Pago
+            </a>
+        </li>
     </ul>
     
     <div class="d-flex p-2 bg-darkgreen">

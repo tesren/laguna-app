@@ -208,159 +208,80 @@
         <h4 class="text-center fw-normal-sackers fs-2 green-text">{{__('Planes de')}} <span class="beige-text">{{__('Pago')}}</span></h4>
 
         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active link-laguna" id="pills-pay-1-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-1" type="button" role="tab" aria-controls="pills-pay-1" aria-selected="true">1</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link link-laguna" id="pills-pay-2-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-2" type="button" role="tab" aria-controls="pills-pay-2" aria-selected="false">2</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link link-laguna" id="pills-pay-3-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-3" type="button" role="tab" aria-controls="pills-pay-3" aria-selected="false">3</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link link-laguna" id="pills-pay-4-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-4" type="button" role="tab" aria-controls="pills-pay-4" aria-selected="false">4</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link link-laguna" id="pills-pay-5-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-5" type="button" role="tab" aria-controls="pills-pay-5" aria-selected="false">5</button>
-            </li>
+
+            @php
+                $l=1;
+                foreach($plans as $plan):
+            @endphp
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link @if($l==1) active @endif link-laguna" id="pills-pay-{{$l}}-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-{{$l}}" type="button" role="tab" aria-controls="pills-pay-{{$l}}" aria-selected="true">{{$l}}</button>
+                </li>
+            @php
+                $l++;
+                endforeach;
+            @endphp
+
         </ul>
 
         <div class="tab-content" id="pills-tabContentPayments">
 
-            {{-- Plan de pago 1 --}}
-            <div class="tab-pane fade show active" id="pills-pay-1" role="tabpanel" aria-labelledby="pills-pay-1-tab">
-                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
-                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">@if(app()->getLocale()=='es') De @endif <span class="beige-text">{{__('Contado')}}</span></h5>
-                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
+            {{-- Planes de Pago --}}
+            @php
+                $m=1;
+                foreach($plans as $plan):
+            @endphp
+                <div class="tab-pane fade show @if($m==1) active @endif" id="pills-pay-{{$m}}" role="tabpanel" aria-labelledby="pills-pay-{{$m}}-tab">
+                    <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
 
-                    <div class="row mx-auto text-center green-text">
+                        <h5 class="text-center fw-normal-sackers fs-2 beige-text pt-4">
+                            @if (app()->getLocale() == 'en')
+                                {{__($plan->name_en)}}
+                            @else
+                                {{__($plan->name)}}
+                            @endif
+                        </h5>
 
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">90%</div>
-                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
-                        </div>
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">10%</div>
-                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
-                        </div>
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">10%</div>
-                            <div class="fw-normal-zen">{{__('Descuento')}}</div>
-                        </div>
+                        <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
 
+                        <div class="row justify-content-evenly mx-auto text-center green-text">
+
+                            @if (!empty($plan->down_payment) or $plan->down_payment != 0)
+                                <div class="col-6 col-lg-3 mb-5">
+                                    <div class="fs-2 fw-bold-zen">{{$plan->down_payment}}%</div>
+                                    <div class="fw-normal-zen">{{__('Enganche')}}</div>
+                                </div>
+                            @endif
+
+                            @if (!empty($plan->month_percent) or $plan->month_percent != 0)
+                                <div class="col-6 col-lg-3 mb-5">
+                                    <div class="fs-2 fw-bold-zen">{{$plan->month_percent}}%</div>
+                                    <div class="fw-normal-zen">{{__('En')}} {{$plan->months}} {{__('Mensualidades')}}</div>
+                                </div>
+                            @endif
+
+                            @if (!empty($plan->closing_payment) or $plan->closing_payment != 0)
+                                <div class="col-6 col-lg-3 mb-5">
+                                    <div class="fs-2 fw-bold-zen">{{$plan->closing_payment}}%</div>
+                                    <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
+                                </div>
+                            @endif
+
+                            @if (!empty($plan->discount) or $plan->discount != 0)
+                                <div class="col-6 col-lg-3 mb-5">
+                                    <div class="fs-2 fw-bold-zen">{{$plan->discount}}%</div>
+                                    <div class="fw-normal-zen">{{__('Descuento')}}</div>
+                                </div>
+                            @endif
+
+                        </div>
+                        <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
                     </div>
-                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
                 </div>
-            </div>
-            
-            {{-- Plan de pago 2 --}}
-            <div class="tab-pane fade" id="pills-pay-2" role="tabpanel" aria-labelledby="pills-pay-2-tab">
-                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
-                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">{{__('En')}} <span class="beige-text">{{__('Mensualidades')}}</span></h5>
-                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
 
-                    <div class="row mx-auto text-center green-text">
-
-                        <div class="col-6 col-lg-3 mb-4 mb-lg-5">
-                            <div class="fs-2 fw-bold-zen">40%</div>
-                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-4 mb-lg-5 px-0">
-                            <div class="fs-2 fw-bold-zen">50%</div>
-                            <div class="fw-normal-zen">{{__('En 24 Mensualidades')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-5">
-                            <div class="fs-2 fw-bold-zen">10%</div>
-                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-5">
-                            <div class="fs-2 fw-bold-zen">8%</div>
-                            <div class="fw-normal-zen">{{__('Descuento')}}</div>
-                        </div>
-
-                    </div>
-                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
-                </div>
-            </div>
-
-            {{-- Plan de pago 3 --}}
-            <div class="tab-pane fade" id="pills-pay-3" role="tabpanel" aria-labelledby="pills-pay-3-tab">
-                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
-                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">{{__('En')}} <span class="beige-text">{{__('Mensualidades')}}</span></h5>
-                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
-
-                    <div class="row mx-auto text-center green-text">
-
-                        <div class="col-6 col-lg-3 mb-4 mb-lg-5">
-                            <div class="fs-2 fw-bold-zen">35%</div>
-                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-4 mb-lg-5 px-0">
-                            <div class="fs-2 fw-bold-zen">55%</div>
-                            <div class="fw-normal-zen">{{__('En 24 Mensualidades')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-5">
-                            <div class="fs-2 fw-bold-zen">10%</div>
-                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-5">
-                            <div class="fs-2 fw-bold-zen">7%</div>
-                            <div class="fw-normal-zen">{{__('Descuento')}}</div>
-                        </div>
-
-                    </div>
-                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
-                </div>
-            </div>
-
-             {{-- Plan de pago 4 --}}
-             <div class="tab-pane fade" id="pills-pay-4" role="tabpanel" aria-labelledby="pills-pay-4-tab">
-                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
-                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">{{__('En Dos')}} <span class="beige-text">{{__('Pagos')}}</span></h5>
-                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
-
-                    <div class="row mx-auto text-center green-text">
-
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">60%</div>
-                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
-                        </div>
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">40%</div>
-                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
-                        </div>
-                        <div class="col-4 mb-5">
-                            <div class="fs-2 fw-bold-zen">5%</div>
-                            <div class="fw-normal-zen">{{__('Descuento')}}</div>
-                        </div>
-
-                    </div>
-                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
-                </div>
-            </div>
-
-            {{-- Plan de pago 5 --}}
-            <div class="tab-pane fade" id="pills-pay-5" role="tabpanel" aria-labelledby="pills-pay-5-tab">
-                <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">
-                    <h5 class="text-center fw-normal-sackers fs-2 green-text pt-4">{{__('A la')}} <span class="beige-text">{{__('Entrega')}}</span></h5>
-                    <hr class="w-75 mx-auto" style="opacity:1; color:#1E4748;">
-
-                    <div class="row mx-auto text-center green-text">
-
-                        <div class="col-6 mb-5">
-                            <div class="fs-2 fw-bold-zen">35%</div>
-                            <div class="fw-normal-zen">{{__('Enganche')}}</div>
-                        </div>
-                        <div class="col-6 mb-5">
-                            <div class="fs-2 fw-bold-zen">65%</div>
-                            <div class="fw-normal-zen">{{__('A la Entrega')}}</div>
-                        </div>
-
-                    </div>
-                    <img class="d-none d-lg-block" width="100px" src="{{asset('assets/img/leaves-left.png');}}" alt="" style="position:absolute; top:15%; right:-100px;" loading="lazy">
-                </div>
-            </div>
-
+            @php
+                $m++;
+                endforeach;
+            @endphp
                 
             <p class="fw-normal-zen green-text text-center pb-5 mb-0 px-3 px-lg-0">{{__('Los precios, descuentos y planes de pago están sujetos a modificaciones sin previo aviso.')}}</p>
             

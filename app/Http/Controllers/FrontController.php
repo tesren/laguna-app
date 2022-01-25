@@ -13,6 +13,8 @@ use App\Models\TowerImg;
 use App\Models\Progress;
 use App\Models\ProgressPost;
 use App\Models\ProgressImg;
+use App\Models\PaymentPlan;
+
 
 class FrontController extends Controller
 {
@@ -56,6 +58,7 @@ class FrontController extends Controller
             'towerImg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','large')->first(),
             'towerImgJpg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','full')->first(),
             'shape'=> Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first(),
+            'plans' => PaymentPlan::all(),
         ]);
     }
 
