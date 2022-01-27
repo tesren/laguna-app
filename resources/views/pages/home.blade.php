@@ -26,20 +26,24 @@
             </div>
 
             <div class="row mx-auto justify-content-center text-center w-100 mt-6">
-                <div class="col-11 col-lg-3 mb-4 mb-lg-0">
+                <div class="col-11 col-lg-3 mb-3 mb-lg-0">
                     <img class="mt-2 mb-3" src="{{asset('/assets/icons/graphic.svg');}}" alt="">
                     <h3 class="fw-light-zen fs-4">{{__('Gran Retorno de Inversión')}}</h3>
                 </div>
-                <div class="col-11 col-lg-3 mb-4 mb-lg-0">
+                <div class="col-11 col-lg-3 mb-3 mb-lg-0">
                     <span class="fs-1 mb-1 d-block fw-bold-zen">243</span>
                     <h3 class="fw-light-zen fs-4">{{__('Unidades en Venta')}}</h3>
                 </div>
                 <div class="col-11 col-lg-3">
-                    <i class="fas fa-dollar-sign mt-2 mb-4 fs-1"></i>
+                    <i class="fas fa-dollar-sign mt-2 mb-3 mb-lg-4 fs-1"></i>
                     <h3 class="fw-light-zen fs-4">{{__('Desde')}}: 2,868,000 MXN</h3>
                 </div>
             </div>
-            <a class="btn btn-arrow mt-5" href="#info-section"><i class="fas fa-chevron-down"></i></a>
+            {{-- <a class="btn btn-arrow mt-5" href="#info-section"><i class="fas fa-chevron-down"></i></a> --}}
+            <div class="d-flex justify-content-center w-100 text-center" id="section03">
+                <a href="#info-section" class="mb-0 mb-lg-5"><span class="bottom-0" style="top:initial;"></span></a>
+            </div>
+
         </div>
 
     </div>

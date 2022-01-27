@@ -11,15 +11,17 @@
 <div class="container-fluid px-0 bg-beige">
 
     <div class="landing-container text-center mb-6">
-        <img class="landing-img w-100" src="{{asset('assets/img/lifestyle-landing.jpg');}}" alt="Laguna Living Render">
+        <img class="landing-img w-100" src="{{asset('assets/img/lifestyle-landing-new.jpg');}}" alt="Laguna Living Render">
 
         <div class="gradient-overlay"></div>
 
         <div class="title">
             <h1 class="fw-normal-sackers">{{__('Estilo de Vida')}}</h1>
-            <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+            <img class="mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
+        </div>
 
-            <a class="btn btn-arrow mt-5" href="#arrow-lifestyle"><i class="fas fa-chevron-down"></i></a>
+        <div class="d-flex justify-content-center w-100 text-center position-absolute bottom-0" id="section03">
+            <a href="#arrow-lifestyle" class="mb-5"><span></span></a>
         </div>
 
     </div>
@@ -73,6 +75,22 @@
             </div>
         </div>
 
+    </div>
+
+    <h2 class="green-text fw-normal-sackers text-center mt-6 mb-5">{{__('Estilo de Vida en')}} <span class="beige-text">Laguna Living</span></h2>
+
+    <div class="row justify-content-center mx-auto w-100 mb-6">
+        <div class="col-11 col-lg-8 text-center container-darkbeige p-2 position-relative">
+
+            <img class="w-100 rounded-img" src="{{ 'https://i.ytimg.com/vi/YgJVaR9FRNU/maxresdefault.jpg'}}" alt="Video Laguna Living"> 
+
+            <a class="btn-youtube link-light text-decoration-none" data-fancybox="video" href="https://youtu.be/YgJVaR9FRNU">
+                <i class="fab fa-6x fa-youtube"></i>
+                <h3 class="fw-normal-sackers fs-2" style="text-shadow: 1px 1px black;">{{__('Ver Video')}}</h3>
+            </a>
+
+            <img class="px-0 d-none d-lg-block" src="{{asset('/assets/img/leaves-right.png');}}" alt="" style="position:absolute; left:-140px; top:60%; width:140px;">
+        </div>
     </div>
 
     <h3 class="green-text fs-1 fw-normal-sackers text-center mb-5">{{__('¿Qué caracteriza a')}} <br><span class="beige-text">Nuevo Vallarta?</span></h3>
@@ -189,7 +207,7 @@
     <div class="row justify-content-evenly mx-auto w-100 pb-5" style="position: relative">
 
         <div class="col-11 col-lg-3">
-            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/laguna.jpg')}}" alt="Golf field">
+            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/laguna-1.jpg')}}" alt="Golf field">
         </div>
 
         <div class="col-11 col-lg-4 green-text align-self-center">
@@ -208,4 +226,8 @@
 
 </div>
     
+@endsection
+
+@section('javascript')
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 @endsection

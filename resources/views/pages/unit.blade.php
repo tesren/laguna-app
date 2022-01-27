@@ -21,9 +21,13 @@
     
             <div class="title">
                 <h1 class="fw-normal-sackers">{{__('Unidad')}} {{$unit->name}}</h1>
-                <img class="d-none d-lg-block mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
-                <a class="btn btn-arrow mt-5" href="#arrow-unit"><i class="fas fa-chevron-down"></i></a>
+                <img class="mx-auto" width="50px" src="{{asset('/assets/icons/four-leaves.svg');}}" alt="">
             </div>
+
+            <div class="d-flex justify-content-center w-100 text-center position-absolute bottom-0" id="section03">
+                <a href="#arrow-unit" class="mb-5"><span></span></a>
+            </div>
+
         </div>
 
         <div class="row mx-auto justify-content-evenly w-100">

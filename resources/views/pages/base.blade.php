@@ -21,11 +21,11 @@
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>
         <!--Styles-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-front.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-front-styles.css') }}"/>
         <!--JQuery-Ui-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/jquery-ui.min.css') }}"/>
-
-        
+        {{-- Fancybox --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134824574-3"></script>
@@ -119,6 +119,7 @@
         <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
         <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="{{ asset('/js/laguna.js') }}"></script>
+        @yield('javascript')
 
         @if (Cookie::get('agent') == null)
             <script type="text/javascript">

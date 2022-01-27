@@ -67,7 +67,7 @@
                                     </td>
 
                                     @php
-                                        $fecha = date_format($message->created_at, 'j-m-Y')
+                                        $fecha = date_format($message->created_at, 'Y-m-j')
                                     @endphp
 
                                     <td>{{$fecha}}</td>
