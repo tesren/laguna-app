@@ -1,10 +1,10 @@
 $('#slider-range-precios').slider({
     orientation: "horizontal",
     range: true,
-    min: 0,
+    min: 2500000,
     max: 4000000,
-    values: [0,4000000],
-    step: 1000,
+    values: [2500000,4000000],
+    step: 100000,
     slide: function( event, ui ) {
         $( "#minprice" ).val(ui.values[0]);
         $( "#maxprice" ).val(ui.values[1]);

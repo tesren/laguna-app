@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="{{__('Laguna Living, Venta de departamentos en Nuevo Vallarta, Nayarit')}}">
+        <meta name="description" content="{{__('Laguna Living es un concepto que te conecta con la naturaleza y al mismo tiempo te ofrece comodidad, bienestar y confort.')}}">
         <title>@yield('title')</title>
 
         <!--favicons-->
@@ -17,6 +17,7 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <meta name="facebook-domain-verification" content="gzfqyqphag4ydt4256iuzg5bm2dhl3" />
+        @yield('metatags-fb')
         
         <!--bootstrap-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}"/>

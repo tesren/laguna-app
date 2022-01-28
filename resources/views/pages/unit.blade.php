@@ -10,6 +10,14 @@
     @endsection
 @endif
 
+@section('metatags-fb')
+    <meta property="og:title" content="{{__('Departamento')}} {{$unit->name}} - Laguna Living" />
+    <meta property="og:url"   content="{{URL::current();}}" />
+    <meta property="og:type"  content="website" />
+    <meta property="og:description"   content="{{__('Ubicado en el destino residencial-turístico de Nuevo Vallarta, Laguna Living es el lugar perfecto para vivir la experiencia de conectar con la naturaleza y disfrutar lo mejor que la Riviera Nayarit tiene para ofrecer, al nivel del mar.')}}" />
+    <meta property="og:image"  content="{{asset('assets/img/unit-landing.jpg');}}" />
+@endsection
+
 @section('content')
 
     <div class="container-fluid p-0 bg-beige">
@@ -290,7 +298,31 @@
             <p class="fw-normal-zen green-text text-center pb-5 mb-0 px-3 px-lg-0">{{__('Los precios, descuentos y planes de pago están sujetos a modificaciones sin previo aviso.')}}</p>
             
         </div>
+
+        <h5 class="mt-6 mb-5 fw-normal-sackers fs-3 green-text text-center">{{__('Comparte esta unidad en tus')}} <span class="beige-text">{{__('redes sociales')}}</span></h5>
+
+        <div class="d-flex justify-content-center pb-5">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{URL::current();}}" class="btn-yellow me-5" title="{{__('Compartir en Facebook')}}" aria-label="{{__('Compartir en Facebook')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+                <i class="fab fs-4 fa-facebook-f" style="padding: 7px 14px;"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text={{URL::current();}}" class="btn-yellow me-5" title="{{__('Compartir en Whatsapp')}}" aria-label="{{__('Compartir en Whatsapp')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+                <i class="fab fs-4 fa-whatsapp" style="padding: 8px 10px;"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?text={{__('Departamento en Preventa en Laguna Living')}}&url={{URL::current();}}" class="btn-yellow" title="{{__('Compartir en Twitter')}}" aria-label="{{__('Compartir en Twitter')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+                <i class="fab fs-4 fa-twitter" style="padding: 8px 10px;"></i>
+            </a>
+        </div>
+
     </div>
 
     @include('pages.shared.contact')
+@endsection
+
+@section('javascript')
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 @endsection

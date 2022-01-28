@@ -33,7 +33,7 @@
 
                 <textarea class="form-contact mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
 
-                <button type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>
+                <button id="contact_submit" type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>
             </form>
 
             @if (session('message'))

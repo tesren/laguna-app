@@ -91,7 +91,7 @@
     <div class="modal-content bg-beige green-text">
 
       <div class="modal-header">
-        <h6 class="modal-title fw-normal-sackers" id="searchModalLabel">{{__('Busqueda')}}</h6>
+        <h6 class="modal-title fw-normal-sackers" id="searchModalLabel">{{__('Búsqueda')}}</h6>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -100,7 +100,7 @@
         <form action="{{route('view.search');}}" method="get" >
           @csrf
           <div class="row justify-content-center mb-4">
-            <label class="text-center mb-2">{{__('Precio')}}</label>
+            <label class="text-center mb-2">{{__('Precio')}} (MXN)</label>
 
             <input class="col-5 search-form" type="number" name="minprice" id="minprice" placeholder="Min">
             <span class="col-1 fs-4 text-center">-</span>

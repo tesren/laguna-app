@@ -67,6 +67,13 @@
     border-radius: 10px;
 }
 
+.btn-yellow:hover {
+    color: #1E4748;
+    background-color: #dabf4a;
+    border-color: #dabf4a;
+    transition: 0.2s ease-in-out;
+}
+
 .green-text{
     color:#1E4748;
 }
