@@ -207,7 +207,7 @@
     <div class="row justify-content-evenly mx-auto w-100 pb-5" style="position: relative">
 
         <div class="col-11 col-lg-3">
-            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/laguna-1.jpg')}}" alt="Golf field">
+            <img class="w-100 tall-img rounded-img" src="{{asset('assets/img/laguna.jpg')}}" alt="Golf field">
         </div>
 
         <div class="col-11 col-lg-4 green-text align-self-center">

@@ -320,7 +320,28 @@
 .form-contact::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
+}
+
+.form-contact-home{
+    background-color: transparent;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ECD259;
+    color: #193C3D !important;
+    display: block;
+    width: 100%;
+    font-family: "Zen Kaku Light";
+    padding: 5px;
+}
+
+.form-contact-home::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #193C3D;
+    opacity: 1; /* Firefox */
+    font-size: 1.1rem;
   }
+
 
 /*front page*/
 

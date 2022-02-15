@@ -48,7 +48,42 @@
 
     </div>
 
-    <div class="container-fluid px-0 py-5" id="info-section" style="position: relative;">
+    <div class="container-fluid px-0 py-5 position-relative" id="info-section">
+
+        @if (request()->query('utm_medium')=="Revista")
+            <div class="row mx-auto w-100 justify-content-center">
+
+                {{-- Formulario para los que vienen de la revista Vallarta Real Estate Guide --}}
+                <div class="col-11 col-lg-5 card p-3 p-lg-4 bg-beige position-relative shadow-7 collapse show" id="collapseForm">
+
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-1 me-1" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm"></button>
+
+                    <div class="text-center fs-2 fw-normal-sackers green-text">{{__("¿Necesitas más")}} <span class="beige-text">{{__('información?')}}</span></div>
+                    <div class="text-center fs-4 fw-light-zen green-text mb-3">{{__("Déjanos tu información de contacto")}}</div>
+                    <form action="{{route('store.message');}}" method="post">
+                        @csrf
+
+                        <x-honeypot />
+        
+                        <input class="form-contact-home mb-3" type="text" name="name" id="name" placeholder="{{__('Nombre')}}" required>
+        
+                        <input class="form-contact-home mb-3" type="email" name="email" id="email" placeholder="{{__('Correo electrónico')}}" required>
+        
+                        <input class="form-contact-home mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required>
+        
+                        <input type="hidden" name="c-type" id="c-type" value="General">
+                        
+                        <input type="hidden" name="agent" id="agent" value="Sin Agente">
+        
+                        <textarea class="form-contact-home mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
+        
+                        <button id="contact_submit" type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>
+                    </form>
+                </div>
+            </div>
+        @endif
+        
+
         <div class="row w-100 justify-content-center my-6 mx-auto">
 
             <img class="px-0 d-none d-lg-block" src="{{asset('/assets/img/leaves-left.png');}}" alt="" style="position:absolute; left:0; top:75px; width:140px;">

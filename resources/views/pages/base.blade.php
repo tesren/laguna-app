@@ -15,7 +15,7 @@
         <link rel="manifest" href="{{asset('/assets/icons/site.webmanifest')}}">
         <link rel="mask-icon" href="{{asset('/assets/icons/safari-pinned-tab.svg')}}" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#1E4748">
         <meta name="facebook-domain-verification" content="gzfqyqphag4ydt4256iuzg5bm2dhl3" />
         @yield('metatags-fb')
         
