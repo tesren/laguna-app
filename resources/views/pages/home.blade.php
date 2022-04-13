@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-11 col-lg-3">
                     <i class="fas fa-dollar-sign mt-2 mb-3 mb-lg-4 fs-1"></i>
-                    <h3 class="fw-light-zen fs-4">{{__('Desde')}}: 2,868,000 MXN</h3>
+                    <h3 class="fw-light-zen fs-4">{{__('Desde')}}: 3,153,793  MXN</h3>
                 </div>
             </div>
             {{-- <a class="btn btn-arrow mt-5" href="#info-section"><i class="fas fa-chevron-down"></i></a> --}}
