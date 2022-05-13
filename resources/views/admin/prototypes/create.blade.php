@@ -73,12 +73,12 @@
 
                     <div class="mb-3">
                         <label for="blueprint" class="form-label">Suba la imagen de los Planos del prototipo</label>
-                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                        <input class="form-control" type="file" id="blueprint" name="blueprint" accept=".jpg, .jpeg, .png, .webp, .svg" >
                     </div>
 
                     <div class="mb-3">
                         <label for="imgfiles" class="form-label">Suba imágenes para la galería</label>
-                        <input class="form-control" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                        <input class="form-control" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" >
                     </div>
 
                     @if (session('errors'))

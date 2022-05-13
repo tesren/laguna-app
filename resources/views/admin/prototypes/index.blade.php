@@ -21,6 +21,7 @@
                     <table class="table table-sm table-striped table-bordered" id="all_types_table" data-page-length='10'>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Tipo</th>
                             <th>Recámaras</th>
                             <th>Baños</th>
@@ -33,8 +34,9 @@
         
                         <tbody>
                         
-                        @foreach($unitTypes->all() as $type)
+                            @foreach($unitTypes->all() as $type)
                                 <tr>
+                                    <td>{{ $type->id; }}</td>
                                     <td>{{ $type->name; }}</td>
                                     <td>{{ $type->bedrooms; }}</td>
                                     <td>{{ $type->bathrooms; }}</td>
@@ -45,7 +47,7 @@
                                         <a href="{{route('edit.prototypes', ['id' => $type->id])}}" class="btn btn-primary">Editar</a>
                                     </td>
                                 </tr>
-                        @endforeach
+                            @endforeach
         
                         </tbody>
                     </table>

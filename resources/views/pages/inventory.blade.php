@@ -92,7 +92,7 @@
                                 style="position: relative"
                             >
                                 
-                                <polygon class="building-{{$unit->status}}" points="{{ $unit->shape[0]['points'] ?? 0,0; }}"></polygon>
+                                <polygon class="building-{{$unit->status}}" points="{{ $unit->shape[0]['points'] ?? '0,0'; }}"></polygon>
 
                                 <text x="{{$unit->shape[0]['text_x'] ?? 0;}}" 
                                       y="{{$unit->shape[0]['text_y'] ?? 0; }}" 

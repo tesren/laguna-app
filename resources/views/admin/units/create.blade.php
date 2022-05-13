@@ -108,7 +108,7 @@
 
                         <div class="col-12 mb-4">
                             <label for="price">Precio</label>
-                            <input class="form-control" type="number" name="price" id="price" required min="0">   
+                            <input class="form-control" type="number" name="price" id="price" max="99999999" value="0" required min="0">   
                         </div>
 
                         <div class="col-12">

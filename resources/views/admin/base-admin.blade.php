@@ -21,7 +21,7 @@
         <!--Styles-->
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/laguna-back.css') }}"/>
         {{--Data tables--}}
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/datatables.min.css') }}"/>
     </head>
 
     <body>

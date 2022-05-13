@@ -35,13 +35,13 @@ class FrontController extends Controller
     }
 
     public function inventory($id){
-        return view('pages.inventory', [
-            'tower'=>Tower::find($id),
-            'units'=>Unit::all()->where('tower_id',$id),
-            //'shapes'=>Shape::all()->where('tower_id',$id),
-            'img'=>TowerImg::all()->where('tower_id',$id)->where('size','medium')->first(),
-            'imgjpg'=>TowerImg::all()->where('tower_id',$id)->where('size','full')->first(),
-        ]);
+        $tower = Tower::find($id);
+        $units = Unit::where('tower_id',$id)->get();
+        //$shapes=Shape::all()->where('tower_id',$id);
+        $img = TowerImg::all()->where('tower_id',$id)->where('size','medium')->first();
+        $imgjpg = TowerImg::all()->where('tower_id',$id)->where('size','full')->first();
+
+        return view('pages.inventory', compact('tower', 'units', 'img', 'imgjpg'));
     }
 
     public function unit($id){
@@ -54,7 +54,8 @@ class FrontController extends Controller
 
         return view('pages.unit', [
             'unit'=> $unit,
-            'img' =>UnitTypesImg::all()->where('unit_type_id', $unitType)->where('size','large'),
+            'img' =>UnitTypesImg::where('unit_type_id', $unitType)->get(),
+            'blueprint' => UnitTypesImg::where('unit_type_id', $unitType)->where('type', 'blueprint')->where('size', 'large')->first(),
             'towerImg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','large')->first(),
             'towerImgJpg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','full')->first(),
             'shape'=> Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first(),

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Unit;
 use App\Models\UnitType;
 use App\Models\Tower;
+use App\Models\Shape;
 
 class UnitsController extends Controller
 {
@@ -46,7 +47,7 @@ class UnitsController extends Controller
         $unit->created_at = now();
         $unit->save();
 
-        return redirect()->route('create.unit')->with('message', 'Unidad registrada exitosamente');
+        return redirect()->route('create.unit')->with('message', 'Unidad '.$unit->name.' registrada exitosamente');
     }
 
     public function update(Request $request, $id)
@@ -63,7 +64,25 @@ class UnitsController extends Controller
         $unit->status = $request->input('status');
         $unit->updated_at = now();
         $unit->save();
-        //$request->session()->flash('message', 'Cambios Guardados');
+
+        $shape = Shape::find($unit->id);
+        if($shape){
+            $shape->unit_id = $unit->id;
+            $shape->tower_id = $unit->tower_id;
+            $shape->points = $request->input('points');
+            $shape->text_x = $request->input('text_x');
+            $shape->text_y = $request->input('text_y');
+            $shape->save();
+        }else{
+            $shape = new Shape();
+            $shape->unit_id = $unit->id;
+            $shape->tower_id = $unit->tower_id;
+            $shape->points = $request->input('points');
+            $shape->text_x = $request->input('text_x');
+            $shape->text_y = $request->input('text_y');
+            $shape->save();
+        }
+
         
         return redirect()->route('show.unit',['id'=> $id])->with('message', 'Unidad actualizada exitosamente');
     }

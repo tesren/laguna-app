@@ -204,12 +204,10 @@
                 </div>
 
                 {{-- Plano de la unidad --}}
-                @php
-                    $blueprint = $img->where('type','blueprint')->first();
-                @endphp
-
                 <div class="tab-pane fade" id="pills-avaliable" role="tabpanel" aria-labelledby="pills-avaliable-tab">
-                    <img class="w-100" src="{{asset($blueprint->url)}}" alt="Unit {{$unit->name}} blueprints" loading="lazy">
+                    @if($blueprint)
+                        <img class="w-100" src="{{$blueprint->url}}" alt="Unit {{$unit->name}} blueprints" loading="lazy">
+                    @endif
                 </div>
 
                 </div>

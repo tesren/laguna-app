@@ -45,13 +45,13 @@
     "Nos importa" : "We take care about",
     "tu seguridad" : "your security",
     "Contamos con acceso controlado y seguridad 24/7 para que disfrutes de las instalaciones sin ninguna preocupación." : "We have controlled access and 24/7 security so you can enjoy the facilities without any worries.",
-    "Modelos Disponibles":"Avaliable Models",
+    "Modelos Disponibles":"Available Models",
     "Modelo":"Model",
-    "Disponible" : "Avaliable",
+    "Disponible" : "Available",
     "Apartada" : "On Hold",
     "Vendida" : "Sold",
     "No hay disponibles" : "Not currently avaliable",
-    "Ver Unidades Disponibles":"View Avalible Units",
+    "Ver Unidades Disponibles":"View Available Units",
     "Ubicación":"Location",
     "Centro comercial a 10 min." : "Mall 10 min.",
     "Restaurantes a 3 min.": "Restaurants 3 min.",
@@ -76,7 +76,7 @@
     "Conocer más de la zona":"Know more about the area",
     "Póngase en contacto con un agente para obtener más información sobre este desarrollo, estaremos listos para responder cualquier pregunta.":"Contact an agent for more information on this development, we will be ready to answer any questions.",
     "Echa un vistazo a nuestras":"Take a look at our",
-    "Unidades Disponibles":"Avaliable Units",
+    "Unidades Disponibles":"Available Units",
     "Fase":"Phase",
     "Haz clic en una torre para ver las unidades disponibles" : "Click on a Tower to see our avaliable Units",
     "Más torres" : "More Towers",
@@ -161,7 +161,10 @@
     "Compartir en Twitter":"Share on Twitter",
     "Déjanos tu información de contacto":"Leave us your contact information",
     "¿Necesitas más" :"Need more",
-    "información?" : "information?"
+    "información?" : "information?",
+    "Torres Disponibles" : "Available Towers",
+    "Elige una" : "Pick a"
+
 
 
 }

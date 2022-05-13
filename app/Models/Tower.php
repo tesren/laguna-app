@@ -11,7 +11,7 @@ class Tower extends Model
 
     public function units()
     {
-        return $this->hasMany( Unit::class, 'tower_id');
+        return $this->belongsToMany( Unit::class, 'tower_id');
     }
 
     public function shapes()

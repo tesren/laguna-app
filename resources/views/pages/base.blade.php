@@ -28,7 +28,7 @@
         {{-- Fancybox --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134824574-3"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -67,14 +67,17 @@
             />
         </noscript>
         {{-- End Facebook Pixel Code  --}}
+        
+       
     </head>
 
     <body>
+        
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ5JZS3"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
+        
         @include('pages.shared.header')
         <div id="main-content">
             @yield('content')
@@ -130,7 +133,8 @@
             </script>
         @endif
 
-        <script>
+        
+       {{--  <script>
             var chatbox = document.getElementById('fb-customer-chat');
             chatbox.setAttribute("page_id", "100237132452253");
             chatbox.setAttribute("attribution", "biz_inbox");
@@ -149,7 +153,9 @@
                 js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
-        </script>
+        </script> --}}
+        
+        
     </body>
 
 </html>
