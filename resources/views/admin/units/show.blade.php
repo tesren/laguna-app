@@ -14,6 +14,15 @@
                 </div>
             @endif
 
+            @if (session('errors'))
+                @foreach (session('errors') as $error)
+                    <div class="col-11 fs-5 my-2 text-center" style="color: #dc3545;">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                        {{ $error; }}
+                    </div>
+                @endforeach
+            @endif
+
             <div class="col-11 col-md-10 col-lg-8 px-0 card shadow-8 mb-5">
 
                 <div class="card-header">
@@ -107,7 +116,7 @@
                             </select>
                         </div>
 
-                        <div class="col-12 mb-3">
+                        {{-- <div class="col-12 mb-3">
                             <label for="points">Puntos</label>
                             <input type="text" class="form-control" name="points" id="points" value="{{$unit->shape['0']['points'] ?? ''}}" required  onchange="enableBtn();" maxlength="254">
                         </div>
@@ -120,7 +129,7 @@
                         <div class="col-6 mb-3">
                             <label for="text_x">Text Y</label>
                             <input type="number" class="form-control" name="text_y" id="text_y" value="{{$unit->shape['0']['text_y'] ?? ''}}" required min="0" onchange="enableBtn();">
-                        </div>
+                        </div> --}}
 
 
                         <div class="col-12 mb-4">

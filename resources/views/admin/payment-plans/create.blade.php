@@ -70,9 +70,21 @@
                     </div>
 
                     <label for="closing">Pago a la entrega</label>
-                    <div class="input-group mb-4">
+                    <div class="input-group mb-3">
                         <input type="number" name="closing" id="closing" class="form-control" aria-describedby="basic-addon4" min="0">
                         <span class="input-group-text" id="basic-addon4">%</span>
+                    </div>
+
+                    <label class="">Torres</label>
+                    <div class="row mb-4">
+                        @foreach ($towers as $tower)
+                            <div class="form-check col-6 col-lg-2">
+                                <input class="form-check-input" type="checkbox" value="{{$tower->id}}" id="torre-{{$tower->id}}" name="towers[]">
+                                <label class="form-check-label fs-6" for="torre-{{$tower->id}}">
+                                    {{$tower->name}}
+                                </label>
+                            </div>
+                        @endforeach
                     </div>
 
                     <button id="submitBtn" class="btn btn-success w-100" type="submit">Agregar Plan de Pago</button>

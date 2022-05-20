@@ -88,7 +88,7 @@
                             }
                         },
                 columnDefs: [
-                    { orderable: false, targets: 6 }
+                    { orderable: false, targets: 4 }
                 ]
             });
         });

@@ -7,6 +7,7 @@ use App\Models\Unit;
 use App\Models\UnitType;
 use App\Models\Tower;
 use App\Models\Shape;
+use Illuminate\Support\Facades\Validator;
 
 class UnitsController extends Controller
 {
@@ -34,6 +35,21 @@ class UnitsController extends Controller
     }
 
     public function store(Request $request){
+
+        $inputArray = array(
+            'unidad'=> $request->input('unit'),
+        );
+
+        $rules = array(
+            'unidad'=>'unique:units,name',
+        );
+
+        $validator = Validator::make( $inputArray, $rules);
+
+        if($validator->fails()){
+            return redirect()->back()->with(['errors'=> $validator->errors()->all()]);
+        }
+
         $unit = new Unit();
         $unit->name = $request->input('unit');
         $unit->tower_id = $request->input('tower');
@@ -53,6 +69,21 @@ class UnitsController extends Controller
     public function update(Request $request, $id)
     {
         $unit = Unit::find($id);
+
+        /* $inputArray = array(
+            'unidad'=> $request->input('unit'),
+        );
+
+        $rules = array(
+            'unidad'=>'unique:units,name,'.$unit->name,
+        );
+
+        $validator = Validator::make( $inputArray, $rules);
+
+        if($validator->fails()){
+            return redirect()->back()->with(['errors'=> $validator->errors()->all()]);
+        } */
+
         $unit->name = $request->input('unit');
         $unit->tower_id = $request->input('tower');
         $unit->type_id = $request->input('type');
@@ -65,7 +96,7 @@ class UnitsController extends Controller
         $unit->updated_at = now();
         $unit->save();
 
-        $shape = Shape::find($unit->id);
+        /* $shape = Shape::find($unit->id);
         if($shape){
             $shape->unit_id = $unit->id;
             $shape->tower_id = $unit->tower_id;
@@ -81,7 +112,7 @@ class UnitsController extends Controller
             $shape->text_x = $request->input('text_x');
             $shape->text_y = $request->input('text_y');
             $shape->save();
-        }
+        } */
 
         
         return redirect()->route('show.unit',['id'=> $id])->with('message', 'Unidad actualizada exitosamente');

@@ -169,91 +169,92 @@ class TowersController extends Controller
             //$tower->floors = $request->input('floors');
             
             //actualizar imagen
-            if(!empty($request->file('imgfile'))){
-
-            //crear imagenes en 3 tamaños
-            //large
-            $mainImg = new TowerImg();
-            $mainImg->tower_id = $tower->id;
-            $mainImg->type = 'main';
-            $mainImg->size = 'large';
-
-            $nameImg = 'img-torre-large-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
-            
-            $imgPath = storage_path() . '/app/public/img/towers/' . $nameImg;
-
             $imgFile = $request->file('imgfile');
 
-            Image::make($imgFile)->resize(1280, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($imgPath, 100, 'webp');
+            if($imgFile){
+                //crear imagenes en 3 tamaños
+                //large
+                $mainImg = new TowerImg();
+                $mainImg->tower_id = $tower->id;
+                $mainImg->type = 'main';
+                $mainImg->size = 'large';
 
-            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-            $mainImg->url = '/storage/img/towers/'.$nameImg;
-            $mainImg ->created_at = now();
-            $mainImg->save();
-
-            //medium img
-            $mainImgMed = new TowerImg();
-            $mainImgMed->tower_id = $tower->id;
-            $mainImgMed->type = 'main';
-            $mainImgMed->size = 'medium';
-
-            $nameImgMed = 'img-torre-medium-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
-            
-            $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgMed;
+                $nameImg = 'img-torre-large-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                
+                $imgPath = storage_path() . '/app/public/img/towers/' . $nameImg;
 
 
-            Image::make($imgFile)->resize(1000, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($imgPath, 90, 'webp');
+                Image::make($imgFile)->resize(1280, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($imgPath, 100, 'webp');
 
-            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-            $mainImgMed->url = '/storage/img/towers/'.$nameImgMed;
-            $mainImgMed ->created_at = now();
-            $mainImgMed->save();
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $mainImg->url = '/storage/img/towers/'.$nameImg;
+                $mainImg ->created_at = now();
+                $mainImg->save();
+
+                //medium img
+                $mainImgMed = new TowerImg();
+                $mainImgMed->tower_id = $tower->id;
+                $mainImgMed->type = 'main';
+                $mainImgMed->size = 'medium';
+
+                $nameImgMed = 'img-torre-medium-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                
+                $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgMed;
 
 
-            //small img
-            $mainImgSm = new TowerImg();
-            $mainImgSm->tower_id = $tower->id;
-            $mainImgSm->type = 'main';
-            $mainImgSm->size = 'small';
-    
-            $nameImgSm = 'img-torre-small-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
-            
-            $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgSm;
-    
-    
-            Image::make($imgFile)->resize(600, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($imgPath, 80, 'webp');
-    
-            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-            $mainImgSm->url = '/storage/img/towers/'.$nameImgSm;
-            $mainImgSm ->created_at = now();
-            $mainImgSm->save();
+                Image::make($imgFile)->resize(1000, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($imgPath, 90, 'webp');
+
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $mainImgMed->url = '/storage/img/towers/'.$nameImgMed;
+                $mainImgMed ->created_at = now();
+                $mainImgMed->save();
+
+
+                //small img
+                $mainImgSm = new TowerImg();
+                $mainImgSm->tower_id = $tower->id;
+                $mainImgSm->type = 'main';
+                $mainImgSm->size = 'small';
+        
+                $nameImgSm = 'img-torre-small-'.strtolower(str_replace(" ", "", $request->input('name').'.webp'));
+                
+                $imgPath = storage_path() . '/app/public/img/towers/' . $nameImgSm;
+        
+        
+                Image::make($imgFile)->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($imgPath, 80, 'webp');
+        
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $mainImgSm->url = '/storage/img/towers/'.$nameImgSm;
+                $mainImgSm ->created_at = now();
+                $mainImgSm->save();
+
+                //full jpg para navegadores viejos
+                $mainjpg = new TowerImg();
+                $mainjpg->tower_id = $tower->id;
+                $mainjpg->type = 'fulljpg';
+                $mainjpg->size = 'full';
+        
+                $nameJpg = 'img-torre-jpg-'.strtolower(str_replace(" ", "", $request->input('name').'.jpg'));
+                
+                $imgPath = storage_path() . '/app/public/img/towers/' . $nameJpg;
+        
+        
+                Image::make($imgFile)->resize(1280, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save($imgPath, 90, 'jpg');
+        
+                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                $mainjpg->url = '/storage/img/towers/'.$nameJpg;
+                $mainjpg ->created_at = now();
+                $mainjpg->save();
+
             }
-
-            //full jpg para navegadores viejos
-            $mainjpg = new TowerImg();
-            $mainjpg->tower_id = $tower->id;
-            $mainjpg->type = 'fulljpg';
-            $mainjpg->size = 'full';
-    
-            $nameJpg = 'img-torre-jpg-'.strtolower(str_replace(" ", "", $request->input('name').'.jpg'));
-            
-            $imgPath = storage_path() . '/app/public/img/towers/' . $nameJpg;
-    
-    
-            Image::make($imgFile)->resize(1280, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($imgPath, 90, 'jpg');
-    
-            //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-            $mainjpg->url = '/storage/img/towers/'.$nameJpg;
-            $mainjpg ->created_at = now();
-            $mainjpg->save();
 
             $tower->updated_at = now();
             $tower->save();

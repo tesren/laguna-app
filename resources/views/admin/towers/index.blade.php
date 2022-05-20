@@ -21,9 +21,9 @@
                     <table class="table table-sm table-striped table-bordered" id="all_towers_table" data-page-length='10'>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Nombre</th>
                             <th>Unidades</th>
-                            <th>Visible</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                         </thead>
@@ -32,19 +32,13 @@
                         
                         @foreach($towers->all() as $tower)
                                 <tr>
+                                    <td>{{ $tower->id }}</td>
                                     <td>{{ $tower->name; }}</td>
                                     <td>{{ $tower->units; }}</td>
-                                    <td>
-                                        @if ($tower->visible == 0)
-                                            No
-                                        @else
-                                            Si   
-                                        @endif
-                                    </td>
                                     <td class="d-flex justify-content-center">
                                         <a href="{{route('edit.tower',['id'=>$tower->id]);}}" class="btn btn-primary me-1">Editar</a>
 
-                                        @if ($tower->visible == 1)
+                                        {{-- @if ($tower->visible == 1)
                                             <form action="{{route('tower.visible',['id'=>$tower->id]);}}" method="post">
                                                 @csrf
                                                 <input type="hidden" name="visibility" id="visibility" value="0">
@@ -56,7 +50,7 @@
                                                 <input type="hidden" name="visibility" id="visibility" value="1">
                                                 <button type="submit" class="btn btn-danger" onclick="this.disabled=true;this.form.submit();"><i class="far fa-eye-slash"></i></button>
                                             </form>
-                                        @endif
+                                        @endif --}}
                                         
                                     </td>
                                 </tr>

@@ -14,6 +14,15 @@
                 </div>
             @endif
 
+            @if (session('errors'))
+                @foreach (session('errors') as $error)
+                    <div class="col-11 fs-5 my-2 text-center" style="color: #dc3545;">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                        {{ $error; }}
+                    </div>
+                @endforeach
+            @endif
+
             <div class="col-11 col-md-10 col-lg-8 px-0 card shadow-8">
 
                 <div class="card-header">

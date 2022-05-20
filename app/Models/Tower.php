@@ -23,4 +23,9 @@ class Tower extends Model
     {
         return $this->hasMany( TowerImg::class, 'tower_id');
     }
+
+    public function paymentPlans(){
+        return $this->belongsToMany(PaymentPlan::class, 'tower_payplans');
+    }
+    
 }

@@ -45,22 +45,19 @@ class FrontController extends Controller
     }
 
     public function unit($id){
-
         $unit = Unit::find($id);
 
         $unitType = $unit->type_id;
-
         $towerID = $unit->tower_id;
 
-        return view('pages.unit', [
-            'unit'=> $unit,
-            'img' =>UnitTypesImg::where('unit_type_id', $unitType)->get(),
-            'blueprint' => UnitTypesImg::where('unit_type_id', $unitType)->where('type', 'blueprint')->where('size', 'large')->first(),
-            'towerImg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','large')->first(),
-            'towerImgJpg'=> TowerImg::all()->where('tower_id',$towerID)->where('size','full')->first(),
-            'shape'=> Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first(),
-            'plans' => PaymentPlan::all(),
-        ]);
+        $img = UnitTypesImg::where('unit_type_id', $unitType)->get();
+        $blueprint = UnitTypesImg::where('unit_type_id', $unitType)->where('type', 'blueprint')->where('size', 'large')->first();
+        $towerImg= TowerImg::all()->where('tower_id',$towerID)->where('size','large')->first();
+        $towerImgJpg = TowerImg::all()->where('tower_id',$towerID)->where('size','full')->first();
+        $shape = Shape::all()->where('tower_id',$towerID)->where('unit_id', $unit->id)->first();
+        $plans = PaymentPlan::where('tower_id', $towerID);
+
+        return view('pages.unit', compact('unit', 'img', 'blueprint', 'towerImg', 'towerImgJpg', 'shape', 'plans'));
     }
 
     public function allTowers(Request $request)
@@ -82,7 +79,7 @@ class FrontController extends Controller
             $maxPrice = 999999999;
         } 
 
-        $type = $request->input('search-bedrooms');
+        $type = str_split($request->input('search-bedrooms'));
         $tower = $request->input('search-towers');
 
         if($type=="" and !empty($tower) ){
@@ -93,7 +90,7 @@ class FrontController extends Controller
         }
         elseif($tower=="" and !empty($type)){
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->paginate(9)->appends(request()->query()),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->whereIn('type_id', $type)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
 
@@ -106,7 +103,7 @@ class FrontController extends Controller
         }
         else{
             return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('type_id', $type)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
+                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->whereIn('type_id', $type)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
                 'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
             ]);
         }

@@ -221,7 +221,7 @@
 
             @php
                 $l=1;
-                foreach($plans as $plan):
+                foreach($unit->tower->paymentPlans as $plan):
             @endphp
                 <li class="nav-item" role="presentation">
                     <button class="nav-link @if($l==1) active @endif link-laguna" id="pills-pay-{{$l}}-tab" data-bs-toggle="pill" data-bs-target="#pills-pay-{{$l}}" type="button" role="tab" aria-controls="pills-pay-{{$l}}" aria-selected="true">{{$l}}</button>
@@ -238,7 +238,7 @@
             {{-- Planes de Pago --}}
             @php
                 $m=1;
-                foreach($plans as $plan):
+                foreach($unit->tower->paymentPlans as $plan):
             @endphp
                 <div class="tab-pane fade show @if($m==1) active @endif" id="pills-pay-{{$m}}" role="tabpanel" aria-labelledby="pills-pay-{{$m}}-tab">
                     <div class="col-11 col-lg-5 container-darkbeige mb-1 shadow-7 mx-auto" style="position: relative">

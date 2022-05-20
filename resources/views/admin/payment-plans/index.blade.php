@@ -14,7 +14,7 @@
             </div>
         @endif
 
-        <div class="col-11 col-lg-10 card px-0 shadow-8">
+        <div class="col-11 col-lg-11 card px-0 shadow-8">
 
             <div class="card-header d-flex justify-content-between">
                 <span class="fs-5 d-block" style="align-self: center">
@@ -29,7 +29,9 @@
                     <table class="table table-sm table-striped table-bordered" id="all_payments_table" data-page-length='10'>
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Nombre</th>
+                            <th>Torre</th>
                             <th>Enganche</th>
                             <th>#Mensualidades</th>
                             <th>%Mensualidades</th>
@@ -41,21 +43,28 @@
         
                         <tbody>
                         
-                        @foreach($plans->all() as $plan)
-                                <tr>
-                                    <td>{{ $plan->name; }}</td>
-                                    <td>{{ $plan->down_payment; }}</td>
-                                    <td>{{ $plan->months}}</td>
-                                    <td>{{ $plan->month_percent}}</td>
-                                    <td>{{ $plan->closing_payment}}</td>
-                                    <td>{{ $plan->discount}}</td>
-                                    <td class="d-flex justify-content-center">
-                                        <a href="{{route('edit.payment',['id' => $plan->id])}}" class="btn btn-primary me-1">Editar</a>
-                                    </td>
-                                </tr>
-                        @endforeach
+                            @foreach($plans as $plan)
+                                    <tr>
+                                        <td>{{$plan->id}}</td>
+                                        <td>{{ $plan->name; }}</td>
+                                        <td>
+                                            @foreach ($plan->towers as $tower)
+                                                {{$tower->name;}},
+                                            @endforeach
+                                        </td>
+                                        <td>{{ $plan->down_payment; }}</td>
+                                        <td>{{ $plan->months}}</td>
+                                        <td>{{ $plan->month_percent}}</td>
+                                        <td>{{ $plan->closing_payment}}</td>
+                                        <td>{{ $plan->discount}}</td>
+                                        <td>
+                                            <a href="{{route('edit.payment',['id' => $plan->id])}}" class="btn btn-primary">Editar</a>
+                                        </td>
+                                    </tr>
+                            @endforeach
         
                         </tbody>
+
                     </table>
                 </div>
             </div>
@@ -94,7 +103,7 @@
                             }
                         },
                 columnDefs: [
-                    { orderable: false, targets: 6 }
+                    { orderable: false, targets: 8 }
                 ]
             });
         });

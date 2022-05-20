@@ -114,8 +114,9 @@
           <select class="form-select mb-4" aria-label="Select Bedrooms" name="search-bedrooms" id="search-bedrooms">
 
             <option value="" selected>{{__('Elige uno')}}</option>
-            <option value="1">1 + Flex</option>
+            <option value="[1,4,6]">1 + Flex</option>
             <option value="2">2</option>
+            <option value="5">2 + Flex</option>
             <option value="3">3</option>
             
           </select>

@@ -71,9 +71,32 @@
                     </div>
 
                     <label for="closing">Pago a la entrega</label>
-                    <div class="input-group mb-4">
+                    <div class="input-group mb-3">
                         <input type="number" name="closing" id="closing" class="form-control" value="{{$plan->closing_payment}}" aria-describedby="basic-addon4" min="0" onchange="enableBtn();">
                         <span class="input-group-text" id="basic-addon4">%</span>
+                    </div>
+
+                    <label class="">Torres</label>
+                    <div class="row mb-4">
+                        @php $i = 0; @endphp
+                        @foreach ($towers as $tower)
+                            <div class="form-check col-6 col-lg-2">
+                                <input class="form-check-input" type="checkbox" value="{{$tower->id}}" id="torre-{{$tower->id}}" name="towers[]" onchange="enableBtn();"
+                                
+                                    @foreach ($tower->paymentPlans as $tplan)
+                                        @if($tplan->id == $plan->id) 
+                                            checked  
+                                        @endif
+                                    @endforeach
+
+                                >
+
+                                <label class="form-check-label fs-6" for="torre-{{$tower->id}}">
+                                    {{$tower->name}}
+                                </label>
+                            </div>
+                            @php $i++; @endphp
+                        @endforeach
                     </div>
 
                     <button id="submitBtn" class="btn btn-primary w-100 disabled" type="submit">Guardar Cambios</button>

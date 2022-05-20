@@ -11,4 +11,8 @@ class PaymentPlan extends Model
 
     protected $table = "payment_plans";
 
+    public function towers(){
+        return $this->belongsToMany(Tower::class, 'tower_payplans');
+    }
+
 }
