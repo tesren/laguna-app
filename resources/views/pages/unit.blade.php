@@ -300,13 +300,13 @@
         <h5 class="mt-6 mb-5 fw-normal-sackers fs-3 green-text text-center">{{__('Comparte esta unidad en tus')}} <span class="beige-text">{{__('redes sociales')}}</span></h5>
 
         <div class="d-flex justify-content-center pb-5">
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{URL::current();}}" class="btn-yellow me-5" title="{{__('Compartir en Facebook')}}" aria-label="{{__('Compartir en Facebook')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{URL::current();}}" class="btn-yellow share_fb me-5" title="{{__('Compartir en Facebook')}}" aria-label="{{__('Compartir en Facebook')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
                 <i class="fab fs-4 fa-facebook-f" style="padding: 7px 14px;"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?text={{URL::current();}}" class="btn-yellow me-5" title="{{__('Compartir en Whatsapp')}}" aria-label="{{__('Compartir en Whatsapp')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+            <a href="https://api.whatsapp.com/send?text={{URL::current();}}" class="btn-yellow share_whatsapp me-5" title="{{__('Compartir en Whatsapp')}}" aria-label="{{__('Compartir en Whatsapp')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
                 <i class="fab fs-4 fa-whatsapp" style="padding: 8px 10px;"></i>
             </a>
-            <a href="https://twitter.com/intent/tweet?text={{__('Departamento en Preventa en Laguna Living')}}&url={{URL::current();}}" class="btn-yellow" title="{{__('Compartir en Twitter')}}" aria-label="{{__('Compartir en Twitter')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
+            <a href="https://twitter.com/intent/tweet?text={{__('Departamento en Preventa en Laguna Living')}}&url={{URL::current();}}" class="btn-yellow share_tweet" title="{{__('Compartir en Twitter')}}" aria-label="{{__('Compartir en Twitter')}}" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top">
                 <i class="fab fs-4 fa-twitter" style="padding: 8px 10px;"></i>
             </a>
         </div>

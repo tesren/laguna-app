@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-      <a class="navbar-brand py-2 ms-2 ms-lg-4 logo-yellow" href="{{route('home.page')}}">
+      <a class="navbar-brand py-2 ms-2 ms-lg-4 logo-yellow" href="{{route('home.page', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ])}}">
         <img class="w-100" src="{{asset('assets/img/logo-dorado.png');}}" alt="Logo Laguna Living">
       </a>
 
@@ -15,7 +15,7 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5 fw-normal-zen">
 
           <li class="nav-item me-5">
-            <a class="nav-link link-light" href="{{route('view.towers');}}">{{__('Inventario')}}</a>
+            <a class="nav-link link-light" href="{{route('view.towers', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}">{{__('Inventario')}}</a>
           </li>
 
           <li class="nav-item me-5 d-none">
@@ -23,15 +23,15 @@
           </li>
           
           <li class="nav-item me-5">
-            <a href="{{route('view.lifestyle');}}" class="nav-link link-light">{{__('Estilo de Vida')}}</a>
+            <a href="{{route('view.lifestyle', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}" class="nav-link link-light">{{__('Estilo de Vida')}}</a>
           </li>
 
           <li class="nav-item me-5">
-            <a href="{{route('view.about');}}" class="nav-link link-light">{{__('Nosotros')}}</a>
+            <a href="{{route('view.about', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}" class="nav-link link-light">{{__('Nosotros')}}</a>
           </li>
 
           <li class="nav-item me-5">
-            <a href="{{route('view.contact');}}" class="nav-link link-light">{{__('Contacto')}}</a>
+            <a href="{{route('view.contact', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}" class="nav-link link-light">{{__('Contacto')}}</a>
           </li>
 
           <li class="nav-item me-5">
@@ -48,13 +48,13 @@
 
               @if (Route::currentRouteName() == 'es.view.inventory' or Route::currentRouteName() == 'es.view.unit')
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id], true, 'en'); }}" 
+                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> EN
                 </a>
               @else
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName() ?? 'es.home.page', [], true, 'en'); }}" 
+                  href="{{route( Route::currentRouteName() ?? 'es.home.page', ['utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> EN
                 </a>
@@ -63,13 +63,13 @@
             @else
               @if (Route::currentRouteName() == 'en.view.inventory' or Route::currentRouteName() == 'en.view.unit')
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id], true, 'es'); }}" 
+                  href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> ES
                 </a>
               @else
                 <a class="btn fs-5 p-0" 
-                  href="{{route( Route::currentRouteName() ?? 'es.home.page', [], true, 'es'); }}" 
+                  href="{{route( Route::currentRouteName() ?? 'es.home.page', ['utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> ES
                 </a>
@@ -123,7 +123,7 @@
           
 
           <label for="tower">{{__('Torre')}}</label>
-          <select class="form-select mb-4" aria-label="Select Torre" name="search-towers" id="search-towers">
+          <select class="form-select mb-4" aria-label="Select Tower" name="search-towers" id="search-towers">
 
               <option value="" selected>{{__('Elige uno')}}</option>
               

@@ -39,7 +39,7 @@ class FrontController extends Controller
         $units = Unit::where('tower_id',$id)->get();
         //$shapes=Shape::all()->where('tower_id',$id);
         $img = TowerImg::all()->where('tower_id',$id)->where('size','medium')->first();
-        $imgjpg = TowerImg::all()->where('tower_id',$id)->where('size','full')->first();
+        $imgjpg = TowerImg::where('tower_id',$id)->where('size','full')->first();
 
         return view('pages.inventory', compact('tower', 'units', 'img', 'imgjpg'));
     }
@@ -69,44 +69,37 @@ class FrontController extends Controller
 
     public function search(Request $request){
 
+        $units = Unit::where('status', 'Disponible');
+
         $minPrice = $request->input('minprice');
-        if(!$minPrice){
-            $minPrice = 0;
+        if($minPrice){
+            $units = $units->where('price', '>=', $minPrice);
         } 
 
         $maxPrice = $request->input('maxprice');
-        if(!$maxPrice){
-            $maxPrice = 999999999;
+        if($maxPrice){
+            $units = $units->where('price', '<=', $maxPrice);
         } 
 
-        $type = str_split($request->input('search-bedrooms'));
+       
         $tower = $request->input('search-towers');
+        if($tower){
+            $units = $units->where('tower_id', $tower);
+        }
 
-        if($type=="" and !empty($tower) ){
-            return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
-                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
-            ]);
+        $type = $request->input('search-bedrooms');
+        if($type){
+            $arrTypes = str_split($type);
+            $units = $units->whereIn('type_id', $arrTypes);
         }
-        elseif($tower=="" and !empty($type)){
-            return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->whereIn('type_id', $type)->paginate(9)->appends(request()->query()),
-                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
-            ]);
+    
 
-        }
-        elseif($tower=="" and $type==""){
-            return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->paginate(9)->appends(request()->query()),
-                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
-            ]);
-        }
-        else{
-            return view('pages.search', [
-                'units' => Unit::where('status','Disponible')->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice)->whereIn('type_id', $type)->where('tower_id', $tower)->paginate(9)->appends(request()->query()),
-                'imgs'  => UnitTypesImg::all()->where('type','main')->where('size', 'medium'),
-            ]);
-        }
+        $units = $units->paginate(9)->appends(request()->query());
+        $imgs  = UnitTypesImg::where('type','main')->where('size', 'medium')->get();
+    
+        return view('pages.search', compact('units', 'imgs'));
+
+        
     }
 
     public function progress(){

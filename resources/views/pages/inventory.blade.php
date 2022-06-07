@@ -60,7 +60,7 @@
         <div class="col-12 col-md-11 col-lg-8">
 
             <div class="container-darkbeige p-4" style="position: relative;">
-                <a class="btn btn-yellow btn-more-towers shadow-7" href="{{route('view.towers');}}">
+                <a class="btn btn-yellow btn-more-towers shadow-7" href="{{route('view.towers', ['utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')]);}}">
                     <i class="fas fa-arrow-left"></i> {{__('Más torres')}}
                 </a>
 
@@ -83,7 +83,7 @@
 
                             <a 
                                 @if ($unit->status == "Disponible")
-                                    href="{{route('view.unit',['id'=>$unit->id]);}}" 
+                                    href="{{route('view.unit',['id'=>$unit->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')]);}}" 
                                     class="text-decoration-none" 
                                 @else
                                     class="text-decoration-none disabled"

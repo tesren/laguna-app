@@ -53,7 +53,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-content" viewBox="0 0 1190 967"> 
 
                             @foreach ($towers as $tower)
-                                <a href="{{route('view.inventory',['id'=>$tower->id]);}}" class="text-decoration-none">
+                                <a href="{{route('view.inventory',['id'=>$tower->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')]);}}" class="text-decoration-none">
                                     <polygon class="building" points="{{$tower->points ?? '0,0'}}"></polygon>
                                     <text x="{{$tower->text_x ?? 0}}" y="{{$tower->text_y ?? 0}}" font-size="44" font-weight="bold" fill="#fff" class="fw-normal-zen">{{$tower->name}}</text>
                                 </a> 

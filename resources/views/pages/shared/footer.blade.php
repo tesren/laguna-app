@@ -88,9 +88,9 @@
 
                 }
                 else{
-                        $phone = '3222654686';
-                        $email = 'info@lagunalivingvallarta.com';
-                    }
+                    $phone = '3222654686';
+                    $email = 'info@lagunalivingvallarta.com';
+                }
             @endphp
 
             <div class="col-8 col-lg-2">

@@ -58,7 +58,7 @@ Route::localized( function () {
 
     Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
 
-    Route::get('/search/',[FrontController::class, 'search'])->name('view.search');
+    Route::get('/search',[FrontController::class, 'search'])->name('view.search');
 });
 
 //Rutas sin traducciones

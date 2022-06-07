@@ -114,7 +114,9 @@
                     {{__('Laguna Living es el lugar perfecto para vivir la experiencia de conectar con la naturaleza y disfrutar lo mejor que la Riviera Nayarit tiene para ofrecer, como tiendas boutique, restaurantes gourmet y centros comerciales donde podrás disfrutar de un estilo de vida moderno y tranquilo al nivel del mar.')}}
                 </p>
                 <div class="container-fluid text-center text-lg-start">
-                    <a class="btn btn-yellow shadow-7 mt-4" href="{{route('view.towers')}}">{{__('Ver Inventario')}}</a>
+                    <a class="btn btn-yellow shadow-7 mt-4" href="{{route('view.towers', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ])}}">
+                        {{__('Ver Inventario')}}
+                    </a>
                 </div>
             </div>
         </div>
@@ -378,7 +380,7 @@
     </div>
 
     <div class="w-100 text-center mb-6">
-        <a href="{{route('view.towers')}}" class="btn btn-yellow shadow-7 my-5">{{__('Ver Unidades Disponibles')}}</a>
+        <a href="{{route('view.towers', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ])}}" class="btn btn-yellow shadow-7 my-5">{{__('Ver Unidades Disponibles')}}</a>
     </div>
     
 
@@ -587,7 +589,7 @@
     </div>
 
     <div class="text-center w-100">
-        <a class="btn btn-yellow shadow-7 mb-6" href="{{route('view.lifestyle')}}">{{__('Conocer más de la zona')}}</a>
+        <a class="btn btn-yellow shadow-7 mb-6" href="{{route('view.lifestyle', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ])}}">{{__('Conocer más de la zona')}}</a>
     </div>
     
    
