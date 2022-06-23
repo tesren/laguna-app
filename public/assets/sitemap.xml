@@ -1,552 +1,754 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://lagunalivingvallarta.com/</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://lagunalivingvallarta.com/</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/towers</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://lagunalivingvallarta.com/towers</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/lifestyle</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://lagunalivingvallarta.com/lifestyle</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/about</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://lagunalivingvallarta.com/about</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/contact</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://lagunalivingvallarta.com/contact</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://lagunalivingvallarta.com/en</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/towers</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/en/towers</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/inventory/1</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/inventory/1</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/inventory/2</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/inventory/2</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/lifestyle</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/inventory/3</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/about</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/inventory/4</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/contact</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://lagunalivingvallarta.com/inventory/5</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/inventory/1</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/lifestyle</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/inventory/2</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/about</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/4</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/contact</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/6</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/inventory/1</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/7</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/inventory/2</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/8</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/inventory/3</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/9</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/inventory/4</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/10</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/en/inventory/5</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/11</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/67</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/12</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/68</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/14</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/69</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/15</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/70</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/16</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/71</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/18</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/72</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/21</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/73</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/22</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/74</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/23</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/75</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/25</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/76</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/26</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/77</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/27</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/78</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/28</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/79</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/29</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/80</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/30</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/81</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/32</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/82</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/33</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/83</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/34</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/85</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/35</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/86</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/36</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/87</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/38</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/88</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/39</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/89</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/40</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/90</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/41</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/91</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/42</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/97</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/44</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/98</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/45</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/99</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/46</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/100</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/47</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/101</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/48</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/102</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/51</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/103</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/53</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/105</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/54</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/106</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/56</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/107</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/57</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/108</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/58</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/110</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/59</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/111</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/61</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/112</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/62</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/113</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/63</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/115</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/unit/65</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://lagunalivingvallarta.com/unit/116</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/4</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/117</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/6</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/118</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/7</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/120</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/8</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/124</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/9</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/125</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/10</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/126</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/11</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/127</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/12</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/128</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/14</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/129</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/15</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/130</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/16</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/131</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/18</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/132</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/21</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/133</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/22</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/134</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/23</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/135</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/25</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/136</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/26</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/137</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/27</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/138</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/28</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/139</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/29</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/140</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/30</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/141</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/32</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/142</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/33</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/143</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/34</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/unit/144</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.51</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/35</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/67</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/36</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/68</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/38</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/69</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/39</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/70</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/40</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/71</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/41</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/72</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/42</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/73</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/44</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/74</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/45</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/75</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/46</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/76</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/47</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/77</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/48</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/78</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/51</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/79</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/53</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/80</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/54</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/81</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/56</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/82</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/57</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/83</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/58</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/85</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/59</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/86</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/61</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/87</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/62</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/88</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/63</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/89</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
 <url>
-  <loc>https://lagunalivingvallarta.com/en/unit/65</loc>
-  <lastmod>2021-12-14T21:04:55+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://lagunalivingvallarta.com/en/unit/90</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
 </url>
-
-
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/91</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/97</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/98</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/99</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/100</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/101</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/102</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/103</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/105</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/106</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/107</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/108</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/110</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/111</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/112</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/113</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/115</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/116</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/117</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/118</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/120</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/124</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/125</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/126</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/127</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/128</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/129</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/130</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/131</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/132</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/133</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/134</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/135</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/136</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/137</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/138</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/139</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/140</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/141</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/142</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/143</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
+<url>
+<loc>https://lagunalivingvallarta.com/en/unit/144</loc>
+<lastmod>2022-06-23T16:28:38+00:00</lastmod>
+<priority>0.41</priority>
+</url>
 </urlset>

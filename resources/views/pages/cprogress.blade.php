@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - Progress')
-@else
-    @section('title', 'Laguna Living - Progreso')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Construcción')}}</title>
+    <meta name="description" content="{{__('Progreso de la construcción de Laguna Living, aquí podrás ver las actualizaciones mas recientes sobre el progreso de la obra de construcción')}}">
+@endsection
 
 @section('content')
 

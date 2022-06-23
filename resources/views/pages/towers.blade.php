@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - Towers')
-@else
-    @section('title', 'Laguna Living - Torres')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Torres')}}</title>
+    <meta name="description" content="{{__('Laguna Living te espera. Da clic en una torre para que puedas escoger una unidad de nuestro amplio inventario y podrás vivir y disfrutar de un ambiente en donde la tranquilidad, convivencia, y comodidad se mezclan para crear una comunidad en armonía')}}">
+@endsection
 
 @section('content')
 

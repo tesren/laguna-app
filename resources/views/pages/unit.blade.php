@@ -1,14 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title')
-        Laguna Living - Unit {{$unit->name}}
-    @endsection
-@else
-    @section('title')
-        Laguna Living - Unidad {{$unit->name}}
-    @endsection
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Unidad')}} {{$unit->name}}</title>
+    <meta name="description" content="{{__('Condominio')}} {{$unit->name}} {{__('de Laguna Living, con')}} {{$unit->unitType->bedrooms}} {{__('Recámaras')}} & {{$unit->unitType->bathrooms}} {{__('Baños')}}. {{__('Ubicado en una de las mejores zonas de Nuevo Vallarta con acceso a múltiples amenidades y cercanía de servicios')}}">
+@endsection
 
 @section('metatags-fb')
     <meta property="og:title" content="{{__('Departamento')}} {{$unit->name}} - Laguna Living" />

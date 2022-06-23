@@ -1,14 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title')
-        Laguna Living - Tower {{$tower->name}}
-    @endsection
-@else
-    @section('title')
-        Laguna Living - Torre {{$tower->name}}
-    @endsection
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Torre')}} {{$tower->name}}</title>
+    <meta name="description" content="{{__('Inventario de la Torre')}} {{$tower->name}}. {{__('Da clic en cualquiera de nuestras unidades disponibles para ver mas detalles y escoge la unidad mas adecuada a tus gustos y necesidades')}}">
+@endsection
 
 @section('content')
 

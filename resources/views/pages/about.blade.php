@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - About')
-@else
-    @section('title', 'Laguna Living - Nosotros')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Nosotros')}}</title>
+    <meta name="description" content="{{__('No dejes ir esta oportunidad de invertir en la mejor zona de Nuevo Vallarta. Con una plusvalía anual de hasta el 27%, este increíble desarrollo es sin duda una de las mejores opciones de inversión')}}">
+@endsection
 
 @section('content')
 

@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - Lifestyle')
-@else
-    @section('title', 'Laguna Living - Estilo de Vida')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Estilo de Vida')}}</title>
+    <meta name="description" content="{{__('Ubicado en el destino residencial-turístico de Nuevo Vallarta, Laguna Living es el lugar perfecto para vivir la experiencia de conectar con la naturaleza y disfrutar lo mejor que la Riviera Nayarit tiene para ofrecer, al nivel del mar.')}}">
+@endsection
 
 @section('content')
 

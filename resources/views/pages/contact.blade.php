@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - Contact')
-@else
-    @section('title', 'Laguna Living - Contacto')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Contacto')}}</title>
+    <meta name="description" content="{{__('Contacta con uno de nuestros agentes de ventas por medio de nuestro formulario de contacto, télefono, whatsapp o correo electrónico para obtener más información.')}}">
+@endsection
 
 @section('content')
 

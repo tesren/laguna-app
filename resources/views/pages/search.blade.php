@@ -1,10 +1,9 @@
 @extends('pages.base')
 
-@if (app()->getLocale() == 'en')
-    @section('title', 'Laguna Living - Search')
-@else
-    @section('title', 'Laguna Living - Busqueda')
-@endif
+@section('title')
+    <title>Laguna Living - {{__('Búsqueda de Condominios')}}</title>
+    <meta name="description" content="{{__('Busca y encuentra condominios que se adapten a tus gustos y necesidades dentro de uno de los mejores desarrollos inmobiliarios en Riviera Nayarit.')}}">
+@endsection
 
 @section('content')
 
