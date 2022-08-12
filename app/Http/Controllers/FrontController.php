@@ -123,4 +123,14 @@ class FrontController extends Controller
 
         echo $cookie;
     }
+
+    public function landingPage(){
+        
+        $units = Unit::all()->where('status','Disponible');
+        $unitTypes = UnitType::all();
+        $unitTypeImgs = UnitTypesImg::all()->where('type','main');
+
+        return view('pages.landing', compact('unitTypes', 'unitTypeImgs', 'units'));
+    }
+
 }

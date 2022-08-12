@@ -97,7 +97,7 @@
         $(document).ready( function () {
             $('#messages_table').DataTable({
           fixedHeader: {
-                header: true,
+                header: false,
                 footer:false,
             },
             "language": {
@@ -119,7 +119,8 @@
             },
            columnDefs: [
               { orderable: false, targets: 5 }
-            ]
+            ],
+            order: [4, 'desc'],
         });
         } );
     </script>

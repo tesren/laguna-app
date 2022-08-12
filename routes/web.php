@@ -66,6 +66,9 @@ Route::get('/admin', function () {
     return view('auth.login');
 });
 
+//Landing page
+Route::get('/landing', [FrontController::class, 'landingPage']);
+
 //cookies
 Route::get('/setAgentCookie', [FrontController::class, 'setAgentCookie'])->name('set.agent.cookie');
 Route::get('/getAgentCookie', [FrontController::class, 'getAgentCookie'])->name('get.agent.cookie');

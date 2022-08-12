@@ -47,14 +47,17 @@ class MessagesController extends Controller
 
         $to = 'info@lagunalivingvallarta.com';
         $subject = $msg->subject;
-        $body = $msg->content;
 
+        $headers = 'Cc: michelena@punto401.com' . "\r\n";
+        $headers .= 'Bcc: erick@punto401.com' . "\r\n";
+
+        $body = $msg->content."\r\n";
         $body .= "De: ".$msg->name."\r\n";
         $body .= "Correo: ".$msg->email."\r\n";
         $body .= "Teléfono: ".$msg->phone."\r\n";
         $body .= "Agente: ".$msg->agent."\r\n";
         $body .= "Descripción: ".$msg->content."\r\n";
-        mail($to, $subject, $body);
+        mail($to, $subject, $body, $headers);
 
         return redirect()->back()->with('message', 'Gracias, su mensaje ha sido enviado');
 
