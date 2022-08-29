@@ -109,6 +109,14 @@ class FrontController extends Controller
         ]);
     }
 
+    public function singleProgress($id){
+        $post = ProgressPost::find($id);
+        $imgs = ProgressImg::where('progress_post_id', $id)->where('type', 'image')->get();
+        $videos = ProgressImg::where('progress_post_id', $id)->where('type', 'video')->get();
+
+        return view('pages.single-progress', compact('post', 'imgs', 'videos'));
+    }
+
     public function setAgentCookie(Request $request){
 
         $agentName = $request->input('agent_cookie');
@@ -131,6 +139,10 @@ class FrontController extends Controller
         $unitTypeImgs = UnitTypesImg::all()->where('type','main');
 
         return view('pages.landing', compact('unitTypes', 'unitTypeImgs', 'units'));
+    }
+
+    public function privacyPolicy(){
+        return view('pages.privacy-policy');
     }
 
 }

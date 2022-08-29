@@ -101,56 +101,84 @@ class ProgressController extends Controller
             $imageFiles = $request->file('imgfiles');
         
             $i=0;
-            foreach($imageFiles as $imageFile){
+            if(!empty($imageFiles)){
+                foreach($imageFiles as $imageFile){
 
-                //imagen galeria large
-                $galImg = new ProgressImg();
-                $galImg->progress_post_id = $post->id;
-                $galImg->size = 'large';
-        
-                $nameGalImg = 'img-gallery-large-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
-                $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImg;
+                    //imagen galeria large
+                    $galImg = new ProgressImg();
+                    $galImg->progress_post_id = $post->id;
+                    $galImg->size = 'large';
+            
+                    $nameGalImg = 'img-gallery-large-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
+                    $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImg;
+                    
+                    Image::make($imageFile)->resize(1920, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    })->save($galImgPath, 100, 'webp');
+                    //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                    $galImg->url = '/storage/img/progress/'.$nameGalImg;
+                    $galImg->save();
+            
+    
+                    //imagen galeria medium
+                    $galImgMed = new ProgressImg();
+                    $galImgMed->progress_post_id = $post->id;
+                    $galImgMed->size = 'medium';
+            
+                    $nameGalImg = 'img-gallery-medium-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
+                    $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImg;
+                    
+                    Image::make($imageFile)->resize(1000, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    })->save($galImgPath, 90, 'webp');
+                    //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                    $galImgMed->url = '/storage/img/progress/'.$nameGalImg;
+                    $galImgMed->save();
+    
+    
+                    //imagen galeria small
+                    $galImgSm = new ProgressImg();
+                    $galImgSm->progress_post_id = $post->id;
+                    $galImgSm->size = 'small';
+            
+                    $nameGalImgSm = 'img-gallery-small-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
+                    $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImgSm;
+                    
+                    Image::make($imageFile)->resize(500, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    })->save($galImgPath, 80, 'webp');
+                    //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
+                    $galImgSm->url = '/storage/img/progress/'.$nameGalImgSm;
+                    $galImgSm->save();
+    
+                    $i++;
+                }
+            }
+            
+
+            if(!empty($request->file('videofiles'))){
+
+                $videoFiles = $request->file('videofiles');
+
+                $j=0;
+                foreach($videoFiles as $video){
+
+                    $galVid = new ProgressImg();
+                    $galVid->progress_post_id = $post->id;
+                    $filename = 'vid-progress-'.$post->id.'-'.$j;
+
+                    $galVid->url = '/storage/video/progress/'.$filename;
+                    $galVid->size = 'large';
+                    $galVid->type = 'video';
+
+                    $path ='public/video/progress/';
+                    $video->storeAs($path, $filename);
+                    
+                    $galVid->save();
+
+                    $j++;
+                }
                 
-                Image::make($imageFile)->resize(1920, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($galImgPath, 100, 'webp');
-                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-                $galImg->url = '/storage/img/progress/'.$nameGalImg;
-                $galImg->save();
-        
-
-                //imagen galeria medium
-                $galImgMed = new ProgressImg();
-                $galImgMed->progress_post_id = $post->id;
-                $galImgMed->size = 'medium';
-        
-                $nameGalImg = 'img-gallery-medium-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
-                $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImg;
-                
-                Image::make($imageFile)->resize(1000, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($galImgPath, 90, 'webp');
-                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-                $galImgMed->url = '/storage/img/progress/'.$nameGalImg;
-                $galImgMed->save();
-
-
-                //imagen galeria small
-                $galImgSm = new ProgressImg();
-                $galImgSm->progress_post_id = $post->id;
-                $galImgSm->size = 'small';
-        
-                $nameGalImgSm = 'img-gallery-small-'.strtolower(str_replace(" ", "", $request->input('title').'-'.$i.'.webp'));
-                $galImgPath = storage_path() . '/app/public/img/progress/' . $nameGalImgSm;
-                
-                Image::make($imageFile)->resize(500, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($galImgPath, 80, 'webp');
-                //la ruta guardada en la tabla tiene que ser diferente para que funcione con asset()
-                $galImgSm->url = '/storage/img/progress/'.$nameGalImgSm;
-                $galImgSm->save();
-
-                $i++;
             }
     
             return redirect()->route('create.progress')->with('message', 'Progreso registrado exitosamente');
@@ -161,7 +189,8 @@ class ProgressController extends Controller
     public function edit($id){
         return view('admin.progress.edit', [
             'post'  => ProgressPost::find($id),
-            'imgs'  => ProgressImg::all()->where('progress_post_id', $id),
+            'imgs'  => ProgressImg::where('progress_post_id', $id)->where('type', 'image')->get(),
+            'videos'=> ProgressImg::where('progress_post_id', $id)->where('type', 'video')->get(),
         ]);
     }
 
@@ -247,6 +276,31 @@ class ProgressController extends Controller
                     $i++;
                 }
 
+            }
+
+            if(!empty($request->file('videofiles'))){
+
+                $videoFiles = $request->file('videofiles');
+
+                $j=0;
+                foreach($videoFiles as $video){
+
+                    $galVid = new ProgressImg();
+                    $galVid->progress_post_id = $post->id;
+                    $filename = 'vid-progress-'.$post->id.'-'.$j;
+
+                    $galVid->url = '/storage/video/progress/'.$filename;
+                    $galVid->size = 'large';
+                    $galVid->type = 'video';
+
+                    $path ='public/video/progress/';
+                    $video->storeAs($path, $filename);
+                    
+                    $galVid->save();
+
+                    $j++;
+                }
+                
             }
             
             return redirect()->route('edit.progress',['id'=> $id])->with('message', 'Cambios guardados exitosamente');

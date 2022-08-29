@@ -51,7 +51,8 @@ class MessagesController extends Controller
         $headers = 'Cc: michelena@punto401.com' . "\r\n";
         $headers .= 'Bcc: erick@punto401.com' . "\r\n";
 
-        $body = $msg->content."\r\n";
+        $body = 'Una persona interesada en Laguna Living ha dejado sus datos en un formulario de contacto'."\r\n";
+        $body .= $msg->content."\r\n";
         $body .= "De: ".$msg->name."\r\n";
         $body .= "Correo: ".$msg->email."\r\n";
         $body .= "Teléfono: ".$msg->phone."\r\n";

@@ -51,6 +51,8 @@ Route::localized( function () {
     })->name('view.lifestyle');
 
     Route::get('/progress', [FrontController::class, 'progress'])->name('view.progress');
+
+    Route::get('/progress/{id}', [FrontController::class, 'singleProgress'])->name('view.single.progress');
     
     Route::get('/inventory/{id}', [FrontController::class, 'inventory'])->name('view.inventory');
 
@@ -59,6 +61,8 @@ Route::localized( function () {
     Route::get('/towers',[FrontController::class, 'towers'])->name('view.towers');
 
     Route::get('/search',[FrontController::class, 'search'])->name('view.search');
+
+    Route::get('/privacy-policy',[FrontController::class, 'privacyPolicy'])->name('view.privacy.policy');
 });
 
 //Rutas sin traducciones

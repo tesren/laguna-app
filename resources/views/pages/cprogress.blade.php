@@ -42,15 +42,17 @@
 
                         @if (app()->getLocale() == 'en')
                             <h3 class="fs-2 fw-normal-sackers">{{date('M Y',strtotime($post->date))}}</h3>
-                            <h4 class="fs-4 fw-normal-zen">{{$post->title_en}}</h4>
+                            <h4 class="fs-4 fw-normal-zen beige-text">{{$post->title_en}}</h4>
                             <p class="fw-light-zen fs-5">{{$post->description_en}}</p>
                         @else
                             <h3 class="fs-2 fw-normal-sackers">{{date('d/m/Y',strtotime($post->date))}}</h3>
-                            <h4 class="fs-4 fw-normal-zen">{{$post->title}}</h4>
+                            <h4 class="fs-4 fw-normal-zen beige-text">{{$post->title}}</h4>
                             <p class="fw-light-zen fs-5">{{$post->description}}</p>
                         @endif
+
+                        <a href="{{route('view.single.progress', ['id' => $post->id]) }}" class="btn btn-yellow mb-3">{{__('Más información')}}</a>
                         
-                        <img class="mb-3" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
+                        <img class="mb-3 d-block" width="20px" src="{{asset('assets/icons/green-leaf.svg');}}" alt="" loading="lazy">
 
                         <div class="post-number text-center fs-2 fw-normal-sackers bg-beige">{{$totalPosts}}</div>
                     </div>

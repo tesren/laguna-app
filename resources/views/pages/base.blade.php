@@ -116,11 +116,11 @@
         </div>
         @include('pages.shared.footer')
         
-        <script type="text/javascript" src="{{ asset('/js/jquery-3.6.0.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/jquery-ui.min.js') }}"></script>
-        <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="{{ asset('/js/laguna.js') }}"></script>
+        <script async type="text/javascript" src="{{ asset('/js/jquery-3.6.0.min.js') }}"></script>
+        <script async type="text/javascript" src="{{ asset('/js/jquery-ui.min.js') }}"></script>
+        <script async src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
+        <script async src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
+        <script async type="text/javascript" src="{{ asset('/js/laguna.js') }}"></script>
         @yield('javascript')
 
         @if (Cookie::get('agent') == null)

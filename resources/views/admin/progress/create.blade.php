@@ -42,7 +42,10 @@
                     <textarea class="form-control mb-3" name="description-en" id="description-en" maxlength="500" rows="4" required></textarea>
 
                     <label for="imgfiles">Seleccione imágenes del Avance</label>
-                    <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" required>
+                    <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg" >
+
+                    <label for="imgfiles">Seleccione videos del Avance</label>
+                    <input class="form-control mb-4" type="file" id="videofiles" name="videofiles[]" multiple accept=".mp4, .mv4" >
 
                     @if (session('errors'))
                         <span class="d-block fs-6 mb-3" style="color:#dc3545;">

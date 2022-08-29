@@ -131,7 +131,7 @@
     </div>
 
     <div class="container-fluid px-0 py-3 bg-darkgreen fs-6 fw-light-zen">
-        <a class="link-light text-decoration-underline me-5" href="#">{{__('Políticas de Privacidad')}}</a>
+        <a class="link-light text-decoration-underline me-5" href="{{route('view.privacy.policy')}}">{{__('Políticas de Privacidad')}}</a>
         <span>Laguna Living &copy; 2022</span>
     </div>
 

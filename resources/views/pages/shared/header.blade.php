@@ -18,8 +18,8 @@
             <a class="nav-link link-light" href="{{route('view.towers', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}">{{__('Inventario')}}</a>
           </li>
 
-          <li class="nav-item me-5 d-none">
-            <a class="nav-link link-light" href="#">{{__('Construcción')}}</a>
+          <li class="nav-item me-5">
+            <a class="nav-link link-light" href="{{route('view.progress', [ 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium') ]);}}">{{__('Construcción')}}</a>
           </li>
           
           <li class="nav-item me-5">
@@ -52,6 +52,12 @@
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> EN
                 </a>
+              @elseif (Route::currentRouteName() == 'es.view.single.progress')
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), ['id' => $post->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> EN
+                </a>
               @else
                 <a class="btn fs-5 p-0" 
                   href="{{route( Route::currentRouteName() ?? 'es.home.page', ['utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en'); }}" 
@@ -64,6 +70,12 @@
               @if (Route::currentRouteName() == 'en.view.inventory' or Route::currentRouteName() == 'en.view.unit')
                 <a class="btn fs-5 p-0" 
                   href="{{route( Route::currentRouteName(), ['id' => $tower->id ?? $unit->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'es'); }}" 
+                  style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
+                  <i class="fas fa-globe"></i> ES
+                </a>
+              @elseif (Route::currentRouteName() == 'en.view.single.progress')
+                <a class="btn fs-5 p-0" 
+                  href="{{route( Route::currentRouteName(), ['id' => $post->id, 'utm_campaign' => request()->query('utm_campaign'), 'utm_source' => request()->query('utm_source'), 'utm_medium' => request()->query('utm_medium')], true, 'en'); }}" 
                   style="vertical-align: -webkit-baseline-middle; color:#ECD259 ;">
                   <i class="fas fa-globe"></i> ES
                 </a>

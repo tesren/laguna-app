@@ -48,13 +48,13 @@
 
                     @if ($progImgs->isNotEmpty())
 
-                        <label>Imágenes actuales</label>
-                        <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <label class="fs-6">Imágenes actuales</label>
+                        <div id="carouselExampleControls" class="carousel slide mb-3 p-1" data-bs-ride="carousel">
                             <div class="carousel-inner">
 
                                 @foreach ($progImgs as $img)
                                     <div class="carousel-item @if($i==0) active @endif">
-                                        <img src="{{asset($img->url);}}" class="d-block w-100" alt="Imagenes progreso">
+                                        <img src="{{asset($img->url);}}" class="d-block w-100" alt="Imagenes progreso" style="height: 400px; object-fit:cover;">
                                     </div>
                                     @php $i++; @endphp
                                 @endforeach
@@ -71,8 +71,22 @@
                         </div>
                     @endif
 
+                    @if ($videos)
+                        <label class="fs-6">Videos actuales</label>
+                        <div class="row w-100 mx-auto mb-3">
+                            @foreach ($videos as $video)
+                                <div class="col-12 col-lg-6 p-1">
+                                    <video src="{{$video->url}}" class="w-100" controls style="height: 200px; object-fit:cover;"></video>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+
                     <label for="imgfiles">Seleccione nuevas imágenes del avance</label>
                     <input class="form-control mb-4" type="file" id="imgfiles" name="imgfiles[]" multiple accept=".jpg, .jpeg, .png, .webp, .svg">
+
+                    <label for="imgfiles">Seleccione nuevos videos del Avance</label>
+                    <input class="form-control mb-4" type="file" id="videofiles" name="videofiles[]" multiple accept=".mp4, .mv4" >
 
                     @if (session('errors'))
                         <span class="d-block fs-6 mb-3" style="color:#dc3545;">
