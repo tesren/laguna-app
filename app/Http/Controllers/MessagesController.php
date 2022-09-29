@@ -57,6 +57,7 @@ class MessagesController extends Controller
         $body .= "Correo: ".$msg->email."\r\n";
         $body .= "Teléfono: ".$msg->phone."\r\n";
         $body .= "Agente: ".$msg->agent."\r\n";
+        $body .= "Tipo: ".$msg->type."\r\n";
         $body .= "Descripción: ".$msg->content."\r\n";
         mail($to, $subject, $body, $headers);
 

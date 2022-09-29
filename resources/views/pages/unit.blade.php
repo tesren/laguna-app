@@ -118,7 +118,7 @@
         <div class="row mx-auto w-100 justify-content-center mb-6">
 
             @php
-                $galleryImgs = $img->where('type','gallery');
+                $galleryImgs = $img->where('type','gallery')->where('size', 'large');
             @endphp
 
             <div class="col-12 col-lg-8 px-0">

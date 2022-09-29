@@ -9,6 +9,10 @@ class Tower extends Model
 {
     use HasFactory;
 
+    protected $casts =[
+        'deliver_date'=>'date',
+    ];
+
     public function units()
     {
         return $this->hasMany( Unit::class, 'tower_id');

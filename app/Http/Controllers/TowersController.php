@@ -38,6 +38,7 @@ class TowersController extends Controller
             $tower = new Tower();
             $tower->name = $request->input('name');
             $tower->units = $request->input('units');
+            $tower->deliver_date = $request->input('deliver_date');
             //$tower->floors = $request->input('floors');
             $tower->created_at = now();
             $tower->save();
@@ -166,6 +167,7 @@ class TowersController extends Controller
             $tower = Tower::find($id);
             $tower->name = $request->input('name');
             $tower->units = $request->input('units');
+            $tower->deliver_date = $request->input('deliver_date');
             //$tower->floors = $request->input('floors');
             
             //actualizar imagen

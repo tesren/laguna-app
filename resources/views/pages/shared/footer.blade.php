@@ -50,6 +50,10 @@
                         $phone = '3221339404';
                         $email = 'albertina@c21oceanrealty.com';
                     }
+                    elseif(request()->query('utm_campaign')== 'Ariel Moran'){
+                        $phone = '3221404811';
+                        $email = 'ariel@c21oceanrealty.com';
+                    }
                     else{
                         $phone = '3222654686';
                         $email = 'info@lagunalivingvallarta.com';
@@ -80,6 +84,10 @@
                     elseif(Cookie::get('agent') == 'Albertina Azcona'){
                         $phone = '3221339404';
                         $email = 'albertina@c21oceanrealty.com';
+                    }
+                    elseif(Cookie::get('agent') == 'Ariel Moran'){
+                        $phone = '3221404811';
+                        $email = 'ariel@c21oceanrealty.com';
                     }
                     else{
                         $phone = '3222654686';

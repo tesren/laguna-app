@@ -10,6 +10,7 @@ use App\Http\Controllers\TowersController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\PaymentPlansController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\SimulatorController;
 use App\Http\Controllers\ContactFormSubmissionController;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
@@ -63,6 +64,11 @@ Route::localized( function () {
     Route::get('/search',[FrontController::class, 'search'])->name('view.search');
 
     Route::get('/privacy-policy',[FrontController::class, 'privacyPolicy'])->name('view.privacy.policy');
+
+    //Rutas del Simulador
+    Route::get('/price-calculator/home', [SimulatorController::class, 'home'])->name('simulator.home');
+    Route::get('/price-calculator/search', [SimulatorController::class, 'search'])->name('simulator.search');
+    Route::get('/price-calculator/unit/{id}', [SimulatorController::class, 'single'])->name('simulator.single');
 });
 
 //Rutas sin traducciones
@@ -72,6 +78,10 @@ Route::get('/admin', function () {
 
 //Landing page
 Route::get('/landing', [FrontController::class, 'landingPage']);
+    
+//Más Rutas del Simulador
+Route::post('/ajax/units/{id}',[SimulatorController::class, 'units']);
+Route::post('/price-calculator/message/store',[SimulatorController::class, 'sendLinkMail'])->name('create.pdf');
 
 //cookies
 Route::get('/setAgentCookie', [FrontController::class, 'setAgentCookie'])->name('set.agent.cookie');
@@ -137,6 +147,11 @@ Route::prefix('admin')->middleware('auth')->group( function () {
     });
 
     Route::get('/cache-routes', function() {
+        $exitCode = Artisan::call('route:cache');
+        return 'Application routes cached';
+    });
+
+    Route::get('/cache-clear', function() {
         $exitCode = Artisan::call('route:cache');
         return 'Application routes cached';
     });

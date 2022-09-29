@@ -118,7 +118,7 @@
                             </div>
                             <div class="col-11 col-lg-3">
                                 <i class="fas fa-dollar-sign mt-2 mb-3 mb-lg-4 fs-1"></i>
-                                <h3 class="fw-light-zen fs-4">{{__('Desde')}}: 2,945,250  MXN</h3>
+                                <h3 class="fw-light-zen fs-4">{{__('Desde')}}: 3,243,240 MXN</h3>
                             </div>
                         </div>
                         {{-- <a class="btn btn-arrow mt-5" href="#info-section"><i class="fas fa-chevron-down"></i></a> --}}
@@ -131,41 +131,7 @@
                 </div>
             
                 <div class="container-fluid px-0 py-5 position-relative" id="info-section">
-            
-                    @if (request()->query('utm_medium')=="Revista")
-                        <div class="row mx-auto w-100 justify-content-center">
-            
-                            {{-- Formulario para los que vienen de la revista Vallarta Real Estate Guide --}}
-                            <div class="col-11 col-lg-5 card p-3 p-lg-4 bg-beige position-relative shadow-7 collapse show" id="collapseForm">
-            
-                                <button type="button" class="btn-close position-absolute top-0 end-0 mt-1 me-1" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm"></button>
-            
-                                <div class="text-center fs-2 fw-normal-sackers green-text">{{__("¿Necesitas más")}} <span class="beige-text">{{__('información?')}}</span></div>
-                                <div class="text-center fs-4 fw-light-zen green-text mb-3">{{__("Déjanos tu información de contacto")}}</div>
-                                <form action="{{route('store.message');}}" method="post">
-                                    @csrf
-            
-                                    <x-honeypot />
                     
-                                    <input class="form-contact-home mb-3" type="text" name="name" id="name" placeholder="{{__('Nombre')}}" required>
-                    
-                                    <input class="form-contact-home mb-3" type="email" name="email" id="email" placeholder="{{__('Correo electrónico')}}" required>
-                    
-                                    <input class="form-contact-home mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required>
-                    
-                                    <input type="hidden" name="c-type" id="c-type" value="General">
-                                    
-                                    <input type="hidden" name="agent" id="agent" value="Sin Agente">
-                    
-                                    <textarea class="form-contact-home mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
-                    
-                                    <button id="contact_submit" type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>
-                                </form>
-                            </div>
-                        </div>
-                    @endif
-                    
-            
                     <div class="row w-100 justify-content-center my-6 mx-auto">
             
                         <img class="px-0 d-none d-lg-block" src="{{asset('/assets/img/leaves-left.png');}}" alt="" style="position:absolute; left:0; top:75px; width:140px;">
@@ -181,7 +147,7 @@
                     </div>
             
                     <div class="row mx-auto justify-content-center w-100">
-                        <div class="col-12 col-lg-5">
+                        <div class="col-12 col-lg-4">
                             <picture>
                                 <source srcset="{{asset('/assets/img/render-parking.webp')}}" type="image/webp" />
                                
@@ -190,8 +156,8 @@
                             
                         </div>
             
-                        <div class="col-12 col-lg-3 mt-3 mt-lg-0">
-                            <p class="green-text fw-normal-zen"> <span class="fw-bold-zen">{{__('Ubicado en el destino residencial-turístico de Nuevo Vallarta.')}}</span>
+                        <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+                            <p class="green-text fw-normal-zen fs-5"> <span class="fw-bold-zen">{{__('Ubicado en el destino residencial-turístico de Nuevo Vallarta.')}}</span>
                                 <br> <br>
                                 {{__('Laguna Living es el lugar perfecto para vivir la experiencia de conectar con la naturaleza y disfrutar lo mejor que la Riviera Nayarit tiene para ofrecer, como tiendas boutique, restaurantes gourmet y centros comerciales donde podrás disfrutar de un estilo de vida moderno y tranquilo al nivel del mar.')}}
                             </p>
@@ -199,6 +165,37 @@
                         </div>
                     </div>
                     
+                </div>
+
+                <div class="row mx-auto w-100 justify-content-center">
+        
+                    {{-- Formulario para los que vienen de la revista Vallarta Real Estate Guide --}}
+                    <div class="col-11 col-lg-5 card p-3 p-lg-4 bg-beige position-relative shadow-7 collapse show" id="collapseForm">
+    
+                        <button type="button" class="btn-close position-absolute top-0 end-0 mt-1 me-1" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm"></button>
+    
+                        <div class="text-center fs-2 fw-normal-sackers green-text">{{__("¿Necesitas más")}} <span class="beige-text">{{__('información?')}}</span></div>
+                        <div class="text-center fs-4 fw-light-zen green-text mb-3">{{__("Déjanos tu información de contacto")}}</div>
+                        <form action="{{route('store.message');}}" method="post">
+                            @csrf
+    
+                            <x-honeypot />
+            
+                            <input class="form-contact-home mb-3" type="text" name="name" id="name" placeholder="{{__('Nombre')}}" required>
+            
+                            <input class="form-contact-home mb-3" type="email" name="email" id="email" placeholder="{{__('Correo electrónico')}}" required>
+            
+                            <input class="form-contact-home mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required>
+            
+                            <input type="hidden" name="c-type" id="c-type" value="Landing Page">
+                            
+                            <input type="hidden" name="agent" id="agent" value="{{request()->query('utm_campaign') ?? Cookie::get('agent') ?? 'Sin Agente'}}">
+            
+                            <textarea class="form-contact-home mb-4" name="message" id="message" cols="30" rows="4" placeholder="{{__('Mensaje')}}"></textarea>
+            
+                            <button id="contact_submit" type="submit" class="btn btn-yellow w-100 shadow-7">{{__('Enviar')}}</button>
+                        </form>
+                    </div>
                 </div>
             
                 {{-- Tabs de amenidades --}}
@@ -529,7 +526,7 @@
                 
                                 <input class="form-contact mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required style="color: #1E4748 !important;">
                 
-                                <input type="hidden" name="c-type" id="c-type" value="{{$unit->name ?? 'General'}}">
+                                <input type="hidden" name="c-type" id="c-type" value="Landing Page">
                                 
                                 <input type="hidden" name="agent" id="agent" value="{{request()->query('utm_campaign') ?? Cookie::get('agent') ?? 'Sin Agente'}}">
                 
@@ -620,7 +617,7 @@
                     
                                     <input class="form-contact mb-3" type="tel" name="phone" id="phone" placeholder="{{__('Teléfono')}}" required style="color: #1E4748 !important;">
                     
-                                    <input type="hidden" name="c-type" id="c-type" value="{{$unit->name ?? 'General'}}">
+                                    <input type="hidden" name="c-type" id="c-type" value="Landing Page">
                                     
                                     <input type="hidden" name="agent" id="agent" value="{{request()->query('utm_campaign') ?? Cookie::get('agent') ?? 'Sin Agente'}}">
                     
@@ -670,7 +667,7 @@
             </div>
         
             <div class="container-fluid px-0 py-3 bg-darkgreen fs-6 fw-light-zen">
-                <a class="link-light text-decoration-underline me-5" href="#">{{__('Políticas de Privacidad')}}</a>
+                <a class="link-light text-decoration-underline me-5" href="{{route('view.privacy.policy')}}">{{__('Políticas de Privacidad')}}</a>
                 <span>Laguna Living &copy; 2022</span>
             </div>
         

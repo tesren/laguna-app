@@ -46,6 +46,14 @@
                         <input class="form-control" type="number" min="0" name="half_baths" id="half_baths" required>
                     </div>
 
+                    <div class="col-12 mb-3">
+                        <label for="name">Renta mensual proyectada a la entrega</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input class="form-control" type="number" name="future_rent" id="future_rent">
+                        </div>
+                    </div>
+
                     {{-- <div class="col-12 col-lg-4 mb-3">
                         <label for="const">Total de Metros cuadrados</label>
                         <input class="form-control" type="number" min="0" step="0.01" name="const" id="const" required>

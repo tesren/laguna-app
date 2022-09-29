@@ -31,6 +31,9 @@
                     <label for="units">Unidades en venta</label>
                     <input class="form-control mb-3" type="number" min="0" step="1" name="units" id="units" value="{{$tower->units}}" required onchange="enableBtn();">
 
+                    <label for="units">Fecha de Entrega (Solo se mostrará el mes y el año)</label>
+                    <input class="form-control mb-3" type="date" name="deliver_date" id="deliver_date" value="{{$tower->deliver_date}}" required onchange="enableBtn();">
+
                     {{-- <label for="floors">Pisos</label>
                     <input class="form-control mb-3" type="number" min="0" step="1" name="floors" id="floors" value="{{$tower->floors}}" required onchange="enableBtn();"> --}}
 

@@ -24,6 +24,7 @@
                             <th>#</th>
                             <th>Nombre</th>
                             <th>Unidades</th>
+                            <th>Fecha de Entrega</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                         </thead>
@@ -35,6 +36,7 @@
                                     <td>{{ $tower->id }}</td>
                                     <td>{{ $tower->name; }}</td>
                                     <td>{{ $tower->units; }}</td>
+                                    <th>{{ $tower->deliver_date; }}</th>
                                     <td class="d-flex justify-content-center">
                                         <a href="{{route('edit.tower',['id'=>$tower->id]);}}" class="btn btn-primary me-1">Editar</a>
 
